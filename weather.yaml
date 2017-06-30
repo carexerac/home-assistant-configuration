@@ -1,0 +1,13 @@
+- platform: yweather
+  name: "Weather"
+  woeid: 613836
+  monitored_conditions:
+    - weather
+    - weather_current
+    - temp_min
+    - temp_max
+    - wind_speed
+    - pressure
+    - visibility
+    - humidity
+    - temperature

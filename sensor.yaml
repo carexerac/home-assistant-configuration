@@ -1,0 +1,35 @@
+# Temperature
+- platform: mqtt
+  name: "Temperature"
+  state_topic: "tele/bedroom_light/SENSOR"
+  qos: 0
+  value_template: "{{ value_json['DHT22'].Temperature }}"
+  unit_of_measurement: "°C"
+
+# Humidity Sensor
+- platform: mqtt
+  name: "Humidity"
+  state_topic: "tele/bedroom_light/SENSOR"
+  qos: 0
+  value_template: "{{ value_json['DHT22'].Humidity }}"
+  unit_of_measurement: "%"
+
+- platform: yweather
+  name: "Weather"
+  woeid: 613836
+  monitored_conditions:
+    - weather
+    - weather_current
+    - temp_min
+    - temp_max
+    - wind_speed
+    - pressure
+    - visibility
+    - humidity
+    - temperature
+
+- platform: miflora
+  mac: C4:7C:8D:62:E8:72
+  name: Flower
+  force_update: false
+

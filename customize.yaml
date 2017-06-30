@@ -1,0 +1,47 @@
+binary_sensor.washing_machine:
+  friendly_name: "Washing Machine"
+  icon: mdi:washing-machine
+light.mp_bed_light:
+  friendly_name: "Matthieu's Bed Light"
+  emulated_hue_name: "Bedroom Light"
+  icon: mdi:lamp
+switch.ambient_lamp:
+  friendly_name: "Ambient Light"
+  icon: mdi:lightbulb-on-outline
+camera.rpi_camera:
+  friendly_name: "Raspberry Pi Camera"
+sensor.humidity:
+  icon: mdi:water-percent
+device_tracker.raspberry_pi_3:
+  friendly_name: "GameStation"
+  icon: mdi:gamepad-variant
+  # value_template: "{{ states('device_tracker.raspberry_pi_3') }}"
+switch.wall_switch_158d00014a1a13:
+  friendly_name: "Living Room Light"
+  icon: mdi:ceiling-light
+switch.wall_switch_158d00014dcb6a:
+  friendly_name: "Loung Light"
+  icon: mdi:ceiling-light
+switch.tv:
+  friendly_name: "TV"
+switch.chromecast:
+  friendly_name: "Chromecast"
+switch.rpi:
+  friendly_name: "Raspberry Pi"
+  emulated_hue_name: "Gaming Console"
+light.gateway_light_f0b429cc58ea:
+  friendly_name: "Xiaomi Gateway"
+  icon: mdi:google-circles-communities
+sensor.illumination_f0b429cc58ea:
+  friendly_name: "Illuminance"
+  icon: mdi:white-balance-sunny
+sensor.flower_battery:
+  icon: mdi:battery-charging-40
+sensor.flower_conductivity:
+  icon: mdi:waves
+sensor.flower_light_intensity:
+  icon: mdi:white-balance-sunny
+sensor.flower_moisture:
+  icon: mdi:water
+sensor.flower_temperature:
+  icon: mdi:thermometer

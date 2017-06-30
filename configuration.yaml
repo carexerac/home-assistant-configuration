@@ -1,0 +1,78 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 48.688016
+  longitude: 6.164681
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 221.24
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Paris
+
+  customize: !include customize.yaml
+
+logger: !include logger.yaml
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+# WebServer
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# MQTT Broker
+mqtt:
+
+# Emulated Hue Bridge
+emulated_hue:
+  type: google_home
+  listen_port: 80
+  exposed_domains:
+    - light
+    - switch
+
+# IFTTT service
+ifttt:
+  key: !secret ifttt_key
+
+sensor: !include sensor.yaml
+binary_sensor: !include binary_sensor.yaml
+camera: !include camera.yaml
+device_tracker: !include device_tracker.yaml
+switch: !include switch.yaml
+light: !include light.yaml
+remote: !include remote.yaml
+#weather: !include weather.yaml
+
+group: !include groups.yaml
+automation: !include automation.yaml
+
+xiaomi:
+  gateways:
+  - sid:
+    key: !secret xiaomi_gateway_password
+
+tts:
+  - platform: google
+
+sun:

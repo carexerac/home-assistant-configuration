@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: mp_bed_light
+  state_topic: "stat/bedroom_light/POWER"
+  command_topic: "cmnd/bedroom_light/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true

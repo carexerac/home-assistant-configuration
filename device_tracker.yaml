@@ -1,0 +1,7 @@
+- platform: nmap_tracker
+  hosts: 192.168.254.100/28
+
+- platform: nmap_tracker
+  hosts: 192.168.254.220/26
+
+  interval_seconds: 60

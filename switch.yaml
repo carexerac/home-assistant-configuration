@@ -1,0 +1,41 @@
+- platform: mqtt
+  name: ambient_lamp
+  state_topic: "stat/switch/POWER"
+  command_topic: "cmnd/switch/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: template
+  switches:
+    tv:
+      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'TV') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.harmony_hub
+        data:
+          activity: "24399786"
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.harmony_hub
+    chromecast:
+      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Chromecast') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.harmony_hub
+        data:
+          activity: "24402388"
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.harmony_hub
+    rpi:
+      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Raspberry Pi') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.harmony_hub
+        data:
+          activity: "24745598"
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.harmony_hub

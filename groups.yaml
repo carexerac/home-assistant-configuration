@@ -1,0 +1,90 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.lounge
+    - group.living_room
+    - group.bedroom
+    - group.bathroom
+    - group.hall
+    - device_tracker.mp_z3c
+    - device_tracker.jc_iphone
+
+weather_view:
+  view: yes
+  icon: mdi:weather-partlycloudy
+  entities:
+    - group.weather
+
+flower_view:
+  view: yes
+  icon: mdi:flower
+  entities:
+    - group.flower1
+
+lounge:
+  name: "Lounge"
+  control: hidden
+  entities:
+    - switch.wall_switch_158d00014dcb6a
+    - switch.ambient_lamp
+    - device_tracker.logitech_harmony
+    - device_tracker.raspberry_pi_3
+
+living_room:
+  name: "Living Room"
+  control: hidden
+  entities:
+    - switch.wall_switch_158d00014a1a13
+    - device_tracker.airport_extreme
+    - device_tracker.sagem_router
+    - device_tracker.logitech_circle
+    - device_tracker.mp_macbook_air
+    - device_tracker.jc_macbook_air
+    - camera.rpi_camera
+
+bedroom:
+  name: "Bedroom"
+  control: hidden
+  entities:
+    - light.mp_bed_light
+    - sensor.temperature
+    - sensor.humidity
+
+bathroom:
+  name: "Bathroom"
+  entities:
+    - binary_sensor.washing_machine
+    - device_tracker.washing_machine_esp
+
+hall:
+  name: "Hall"
+  control: hidden
+  entities:
+    - light.gateway_light_f0b429cc58ea
+    - sensor.illumination_f0b429cc58ea
+
+weather:
+  name: "Weather"
+  icon: mdi:weather-partlycloudy
+  entities:
+    - sensor.weather_condition
+    - sensor.weather_current
+    - sensor.weather_humidity
+    - sensor.weather_pressure
+    - sensor.weather_temperature
+    - sensor.weather_temperature_max
+    - sensor.weather_temperature_min
+    - sensor.weather_visibility
+    - sensor.weather_wind_speed
+    - sun.sun
+    - weather.weather
+
+flower1:
+  name: "Main flower"
+  entities:
+    - sensor.flower_temperature
+    - sensor.flower_moisture
+    - sensor.flower_light_intensity
+    - sensor.flower_conductivity
+    - sensor.flower_battery

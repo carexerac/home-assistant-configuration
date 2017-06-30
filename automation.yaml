@@ -1,0 +1,14 @@
+- alias: "Washing is done IFTTT notification" 
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.washing_machine
+    from: "on"
+    to: "off"
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  action:
+    service: ifttt.trigger
+    data: {"event":"washing_done"}
