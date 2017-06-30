@@ -6,3 +6,4 @@ home-assistant_v2.db
 harmony_harmony_hub.conf
 emulated_hue_ids.json
 .uuid
+known_devices.yaml
