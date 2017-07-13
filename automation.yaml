@@ -11,8 +11,35 @@
   action:
     - service: ifttt.trigger
       data: { "event": "washing_done" }
+
+- alias: "Washing is done Google notification"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.washing_machine
+    from: "on"
+    to: "off"
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: device_tracker.mp_z3c
+        state: 'home'
+      - condition: state
+        entity_id: device_tracker.mp_macbook_air
+        state: 'home'
+      - condition: state
+        entity_id: device_tracker.jc_iphone
+        state: 'home'
+      - condition: state
+        entity_id: device_tracker.jc_macbook_air
+        state: 'home'
+  action:
     - service: tts.google_say
       entity_id: media_player.living_room_home
       data:
-        message: "La machine à laver est terminée"
+        message: "Le linge est propre"
         language: "fr"
