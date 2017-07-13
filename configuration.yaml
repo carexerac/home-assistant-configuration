@@ -74,5 +74,6 @@ xiaomi:
 
 tts:
   - platform: google
+    language: 'fr'
 
 sun:

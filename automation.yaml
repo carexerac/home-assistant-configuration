@@ -1,5 +1,4 @@
 - alias: "Washing is done IFTTT notification" 
-  hide_entity: True
   trigger:
     platform: state
     entity_id: binary_sensor.washing_machine
@@ -8,7 +7,12 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 5
+      seconds: 10
   action:
-    service: ifttt.trigger
-    data: {"event":"washing_done"}
+    - service: ifttt.trigger
+      data: { "event": "washing_done" }
+    - service: tts.google_say
+      entity_id: media_player.living_room_home
+      data:
+        message: "La machine à laver est terminée"
+        language: "fr"
