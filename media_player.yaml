@@ -1,0 +1,2 @@
+- platform: cast
+  host: !secret google_home_host
