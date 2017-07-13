@@ -63,7 +63,7 @@ switch: !include switch.yaml
 light: !include light.yaml
 remote: !include remote.yaml
 #weather: !include weather.yaml
-
+zone: !include zone.yaml
 group: !include groups.yaml
 automation: !include automation.yaml
 
