@@ -23,16 +23,16 @@ flower_view:
     - group.flower1
 
 lounge:
-  name: "Lounge"
+  name: "Living Room"
   control: hidden
   entities:
     - switch.wall_switch_158d00014dcb6a
-    - switch.ambient_lamp
+    - light.ambient_yeelight
     - device_tracker.logitech_harmony
     - device_tracker.raspberry_pi_3
 
 living_room:
-  name: "Living Room"
+  name: "Dining Room"
   control: hidden
   entities:
     - switch.wall_switch_158d00014a1a13
@@ -42,14 +42,16 @@ living_room:
     - device_tracker.mp_macbook_air
     - device_tracker.jc_macbook_air
     - camera.rpi_camera
+#    - sensor.photo_frame_temperature
+#    - sensor.photo_frame_humidity
 
 bedroom:
   name: "Bedroom"
   control: hidden
   entities:
     - light.mp_bed_light
-    - sensor.temperature
-    - sensor.humidity
+    - sensor.bedroom_temperature
+    - sensor.bedroom_humidity
 
 bathroom:
   name: "Bathroom"

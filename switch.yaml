@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: ambient_lamp
+  name: Smart Power Socket
   state_topic: "stat/switch/POWER"
   command_topic: "cmnd/switch/POWER"
   qos: 1

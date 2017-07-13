@@ -5,23 +5,28 @@ light.mp_bed_light:
   friendly_name: "Matthieu's Bed Light"
   emulated_hue_name: "Bedroom Light"
   icon: mdi:lamp
-switch.ambient_lamp:
+light.ambient_yeelight:
   friendly_name: "Ambient Light"
   icon: mdi:lightbulb-on-outline
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
-sensor.humidity:
+sensor.bedroom_humidity:
   icon: mdi:water-percent
+sensor.bedroom_temperature:
+  icon: mdi:thermometer
 device_tracker.raspberry_pi_3:
   friendly_name: "GameStation"
   icon: mdi:gamepad-variant
   # value_template: "{{ states('device_tracker.raspberry_pi_3') }}"
 switch.wall_switch_158d00014a1a13:
-  friendly_name: "Living Room Light"
+  friendly_name: "Ceiling Light"
   icon: mdi:ceiling-light
 switch.wall_switch_158d00014dcb6a:
-  friendly_name: "Loung Light"
+  friendly_name: "Ceiling Light"
   icon: mdi:ceiling-light
+switch.smart_power_socket:
+  icon: mdi:power-socket-eu
+  emulated_hue: false
 switch.tv:
   friendly_name: "TV"
 switch.chromecast:

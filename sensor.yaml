@@ -1,6 +1,6 @@
 # Temperature
 - platform: mqtt
-  name: "Temperature"
+  name: "Bedroom Temperature"
   state_topic: "tele/bedroom_light/SENSOR"
   qos: 0
   value_template: "{{ value_json['DHT22'].Temperature }}"
@@ -8,7 +8,7 @@
 
 # Humidity Sensor
 - platform: mqtt
-  name: "Humidity"
+  name: "Bedroom Humidity"
   state_topic: "tele/bedroom_light/SENSOR"
   qos: 0
   value_template: "{{ value_json['DHT22'].Humidity }}"
@@ -28,8 +28,26 @@
     - humidity
     - temperature
 
-- platform: miflora
-  mac: C4:7C:8D:62:E8:72
-  name: Flower
-  force_update: false
+#- platform: miflora
+#  mac: C4:7C:8D:62:E8:72
+#  name: Flower
+#  force_update: false
 
+
+
+
+# Temperature
+- platform: mqtt
+  name: "Photo Frame Temperature"
+  state_topic: "photo_frame/SENSOR"
+  qos: 0
+  value_template: "{{ value_json.Temperature }}"
+  unit_of_measurement: "°C"
+
+# Humidity Sensor
+- platform: mqtt
+  name: "Photo Frame Humidity"
+  state_topic: "photo_frame/SENSOR"
+  qos: 0
+  value_template: "{{ value_json.Humidity }}"
+  unit_of_measurement: "%"
