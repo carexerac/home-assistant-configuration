@@ -28,25 +28,28 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
         for device in gateway.devices['switch']:
             model = device['model']
             if model == 'plug':
-                devices.append(XiaomiGenericSwitch(device, "Plug", 'status', gateway))
+                devices.append(XiaomiGenericSwitch(device, "Plug", 'status', True, gateway))
             elif model == 'ctrl_neutral1':
-                devices.append(XiaomiGenericSwitch(device, 'Wall Switch', 'channel_0', gateway))
+                devices.append(XiaomiGenericSwitch(device, 'Wall Switch', 'channel_0', False, gateway))
             elif model == 'ctrl_neutral2':
-                devices.append(XiaomiGenericSwitch(device, 'Wall Switch Left', 'channel_0', gateway))
-                devices.append(XiaomiGenericSwitch(device, 'Wall Switch Right', 'channel_1', gateway))
+                devices.append(XiaomiGenericSwitch(device, 'Wall Switch Left', 'channel_0', False, gateway))
+                devices.append(XiaomiGenericSwitch(device, 'Wall Switch Right', 'channel_1', False, gateway))
+            elif model == '86plug':
+                devices.append(XiaomiGenericSwitch(device, 'Wall Plug', 'status', True, gateway))
     add_devices(devices)
 
 
 class XiaomiGenericSwitch(XiaomiDevice, SwitchDevice):
     """Representation of a XiaomiPlug."""
 
-    def __init__(self, device, name, data_key, xiaomi_hub):
+    def __init__(self, device, name, data_key, supports_power_consumption, xiaomi_hub):
         """Initialize the XiaomiPlug."""
         self._state = False
         self._data_key = data_key
-        self._in_use = False
-        self._load_power = 0
-        self._power_consumed = 0
+        self._in_use = None
+        self._load_power = None
+        self._power_consumed = None
+        self._supports_power_consumption = supports_power_consumption
         XiaomiDevice.__init__(self, device, name, xiaomi_hub)
 
     @property
@@ -65,9 +68,12 @@ class XiaomiGenericSwitch(XiaomiDevice, SwitchDevice):
     @property
     def device_state_attributes(self):
         """Return the state attributes."""
-        attrs = {ATTR_IN_USE: self._in_use,
-                 ATTR_LOAD_POWER: self._load_power,
-                 ATTR_POWER_CONSUMED: self._power_consumed}
+        if self._supports_power_consumption:
+            attrs = {ATTR_IN_USE: self._in_use,
+                     ATTR_LOAD_POWER: self._load_power,
+                     ATTR_POWER_CONSUMED: self._power_consumed}
+        else:
+            attrs = {}
         attrs.update(super().device_state_attributes)
         return attrs
         

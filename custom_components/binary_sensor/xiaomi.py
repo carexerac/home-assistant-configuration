@@ -40,7 +40,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
             elif model == 'smoke':
                 devices.append(XiaomiSmokeSensor(device, gateway))
             elif model == 'natgas':
-                devices.append(XiaomiGasSensor(device, gateway))
+                devices.append(XiaomiNatgasSensor(device, gateway))
             elif model == 'switch':
                 devices.append(XiaomiButton(device, 'Switch', 'status', hass, gateway))
             elif model == '86sw1':
