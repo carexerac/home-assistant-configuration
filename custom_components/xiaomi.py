@@ -36,7 +36,7 @@ CONFIG_SCHEMA = vol.Schema({
     })
 }, extra=vol.ALLOW_EXTRA)
 
-XIAOMI_COMPONENTS = ['binary_sensor', 'sensor', 'switch', 'light']
+XIAOMI_COMPONENTS = ['binary_sensor', 'sensor', 'switch', 'light', 'cover']
 PY_XIAOMI_GATEWAY = None
 
 # Shortcut for the logger
@@ -95,7 +95,7 @@ def setup(hass, config):
     for component in XIAOMI_COMPONENTS:
         discovery.load_platform(hass, component, DOMAIN, {}, config)
 
-    
+
     def play_ringtone_service(call):
         """Service to play ringtone through Gateway."""
         if call.data.get(ATTR_RINGTONE_ID) is None or call.data.get(ATTR_GW_SID) is None:
@@ -103,18 +103,18 @@ def setup(hass, config):
            return
 
         ring_id = int(call.data.get(ATTR_RINGTONE_ID))
-        
+
         if ring_id in [9, 14-19]:
             _LOGGER.error('Specified mid: %s is not defined in gateway.', mid)
             return
-        
+
         ring_vol = call.data.get(ATTR_RINGTONE_VOL)
         if ring_vol is None:
             ringtone = {'mid': ring_id}
         else:
             ringtone = {'mid': ring_id, 'vol': int(ring_vol)}
 
-        gw_sid = call.data.get(ATTR_GW_SID) 
+        gw_sid = call.data.get(ATTR_GW_SID)
 
         gateways = PY_XIAOMI_GATEWAY.gateways
         for (ip_add, gateway) in gateways.items():
@@ -130,7 +130,7 @@ def setup(hass, config):
         if gw_sid is None:
            _LOGGER.error("Mandatory parameters is not specified.")
            return
-                
+
         gateways = PY_XIAOMI_GATEWAY.gateways
         for (ip_add, gateway) in gateways.items():
             if gateway.sid == gw_sid:
@@ -323,10 +323,12 @@ class XiaomiGateway:
 
         _LOGGER.info('Found %s devices', len(sids))
 
-        sensors = ['sensor_ht']
-        binary_sensors = ['magnet', 'motion', 'switch', '86sw1', '86sw2', 'cube', 'smoke', 'natgas']
-        switches = ['plug', 'ctrl_neutral1', 'ctrl_neutral2', '86plug']
-        gateway = ['gateway']
+        device_types = {
+            'sensor': ['sensor_ht', 'gateway', 'weather.v1', 'sensor_motion.aq2'],
+            'binary_sensor': ['magnet', 'sensor_magnet.aq2', 'motion', 'sensor_motion.aq2', 'switch', 'sensor_switch.aq2', '86sw1', '86sw2', 'cube', 'smoke', 'natgas'],
+            'switch': ['plug', 'ctrl_neutral1', 'ctrl_neutral2', '86plug'],
+            'light': ['gateway'],
+            'cover': ['curtain']}
 
         for sid in sids:
             cmd = '{"cmd":"read","sid":"' + sid + '"}'
@@ -339,29 +341,22 @@ class XiaomiGateway:
                 continue
 
             model = resp["model"]
-            device_type = None
-            if model in sensors:
-                device_type = 'sensor'
-            elif model in binary_sensors:
-                device_type = 'binary_sensor'
-            elif model in switches:
-                device_type = 'switch'
-            elif model in gateway:
-                device_type = 'gateway'
-            else:
-                _LOGGER.error('Unsupported devices : %s', model)
-                continue
+            supported = False
 
-            xiaomi_device = {
-                "model":model,
-                "sid":resp["sid"],
-                "short_id":resp["short_id"],
-                "data":data}
-            if device_type == 'gateway':
-               self.devices['light'].append(xiaomi_device)
-               self.devices['sensor'].append(xiaomi_device)
-            else:
-                self.devices[device_type].append(xiaomi_device)
+            for device_type in device_types:
+                if model in device_types[device_type]:
+                    supported = True
+                    xiaomi_device = {
+                        "model":model,
+                        "sid":resp["sid"],
+                        "short_id":resp["short_id"],
+                        "data":data}
+                    self.devices[device_type].append(xiaomi_device)
+                    _LOGGER.debug('Registering device %s, %s as: %s', sid, model, device_type)
+
+            if not supported:
+                _LOGGER.error('Unsupported devices: %s', model)
+                continue
         return True
 
     def _send_cmd(self, cmd, rtn_cmd):
@@ -442,10 +437,10 @@ class XiaomiDevice(Entity):
         """Initialize the xiaomi device."""
         self._sid = device['sid']
         self._name = '{}_{}'.format(name, self._sid)
-        self.xiaomi_hub = xiaomi_hub        
+        self.xiaomi_hub = xiaomi_hub
         self.parse_data(device['data'])
         self._device_state_attributes = {}
-        self.parse_voltage(device['data'])        
+        self.parse_voltage(device['data'])
         xiaomi_hub.ha_devices[self._sid].append(self)
 
     @property
@@ -482,7 +477,7 @@ class XiaomiDevice(Entity):
         percent = ((voltage - min_volt) / (max_volt - min_volt)) * 100
         self._device_state_attributes[ATTR_BATTERY_LEVEL] = round(percent)
         return True
-            
+
     def parse_data(self, data):
         """Parse data sent by gateway"""
         raise NotImplementedError()

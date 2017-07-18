@@ -101,7 +101,7 @@ class XiaomiGenericSwitch(XiaomiDevice, SwitchDevice):
             self._power_consumed = int(data[POWER_CONSUMED])
         
         if LOAD_POWER in data:
-            self._load_power = int(data[LOAD_POWER])        
+            self._load_power = float(data[LOAD_POWER])
         
         value = data.get(self._data_key)
         if value is None:

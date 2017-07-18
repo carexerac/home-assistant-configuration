@@ -58,13 +58,16 @@ bathroom:
   entities:
     - binary_sensor.washing_machine
     - device_tracker.washing_machine_esp
-
+    - sensor.temperature_158d0001a23103
+    - sensor.humidity_158d0001a23103
+    - sensor.pressure_158d0001a23103
 hall:
   name: "Hall"
   control: hidden
   entities:
     - light.gateway_light_f0b429cc58ea
     - sensor.illumination_f0b429cc58ea
+    - binary_sensor.door_window_sensor_158d0001a1f304
 
 weather:
   name: "Weather"
