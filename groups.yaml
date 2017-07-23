@@ -22,6 +22,12 @@ flower_view:
   entities:
     - group.flower1
 
+bikes_view:
+  view: yes
+  icon: mdi:bike
+  entities:
+    - group.nancy_bikes
+
 lounge:
   name: "Living Room"
   control: hidden
@@ -93,3 +99,8 @@ flower1:
     - sensor.flower_light_intensity
     - sensor.flower_conductivity
     - sensor.flower_battery
+
+nancy_bikes:
+  name: "Nancy Bikes"
+  entities:
+    - sensor.velostanlib_nancy_stations_10cd7436fee13bc82f9a1de82d55ae2f

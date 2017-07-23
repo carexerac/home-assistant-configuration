@@ -61,3 +61,8 @@
         {% else %}
           no
         {% endif %}
+
+- platform: citybikes
+  name: Nancy Stations
+  stations:
+    - 10cd7436fee13bc82f9a1de82d55ae2f
