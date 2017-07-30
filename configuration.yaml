@@ -70,7 +70,7 @@ automation: !include automation.yaml
 
 xiaomi:
   gateways:
-  - sid:
+  - mac:
     key: !secret xiaomi_gateway_password
 
 panel_iframe: !include panel_iframe.yaml
