@@ -22,7 +22,7 @@ device_tracker.raspberry_pi_3:
   # value_template: "{{ states('device_tracker.raspberry_pi_3') }}"
 switch.smart_power_socket:
   icon: mdi:power-socket-eu
-  emulated_hue: false
+  emulated_hue: true
 switch.tv:
   friendly_name: "TV"
 switch.chromecast:

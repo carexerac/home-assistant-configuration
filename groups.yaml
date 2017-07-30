@@ -2,8 +2,8 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-    - group.lounge
     - group.living_room
+    - group.dining_room
     - group.bedroom
     - group.bathroom
     - group.hall
@@ -28,16 +28,17 @@ bikes_view:
   entities:
     - group.nancy_bikes
 
-lounge:
+living_room:
   name: "Living Room"
   control: hidden
   entities:
     - switch.wall_switch_158d00014dcb6a
     - light.ambient_yeelight
+    - switch.smart_power_socket
     - device_tracker.logitech_harmony
     - device_tracker.raspberry_pi_3
 
-living_room:
+dining_room:
   name: "Dining Room"
   control: hidden
   entities:
