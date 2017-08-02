@@ -52,16 +52,6 @@
   value_template: "{{ value_json.Humidity }}"
   unit_of_measurement: "%"
 
-- platform: template
-  sensors:
-    is_someone_home:
-      value_template: >
-        {% if is_state('device_tracker.mp_z3c', 'home') or is_state('device_tracker.mp_macbook_air', 'home') or is_state('device_tracker.jc_iphone', 'home') or is_state('device_tracker.jc_macbook_air', 'home') %}
-          yes
-        {% else %}
-          no
-        {% endif %}
-
 - platform: citybikes
   name: Nancy Stations
   stations:
