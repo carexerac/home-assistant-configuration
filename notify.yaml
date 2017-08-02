@@ -1,0 +1,5 @@
+- name: ifttt
+  platform: rest
+  resource: !secret ifttt_endpoint
+  method: POST
+  message_param_name: value1
