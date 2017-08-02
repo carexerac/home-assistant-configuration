@@ -12,7 +12,7 @@ default: warning
 logs:
   homeassistant.components.automation: debug
 #  homeassistant.components.script: debug
-  homeassistant.components.sensor: debug
+#  homeassistant.components.sensor: debug
 #  homeassistant.components.discovery: warn
 #  homeassistant.components.camera: debug
 #  homeassistant.components.alexa: debug
@@ -22,7 +22,8 @@ logs:
 #  requests.packages.urllib3.connectionpool: warn
 #  homeassistant.core: debug
 #  homeassistant.components.apcupsd: debug
-  custom_components.xiaomi: debug
+#  custom_components.xiaomi: debug
 #  homeassistant.components.remote: debug
-  homeassistant.components.light.yeelight: debug
-
+#  homeassistant.components.light.yeelight: debug
+  homeassistant.components.notify: debug
+  homeassistant.components.device_tracker: debug

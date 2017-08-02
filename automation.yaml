@@ -9,29 +9,54 @@
       minutes: 0
       seconds: 10
   action:
-    - service: ifttt.trigger
-      data: { "event": "notification", "value1": "Washing is done" }
-
-- alias: "Washing is done GH notification"
-  trigger:
-    platform: state
-    entity_id: binary_sensor.washing_machine
-    from: "on"
-    to: "off"
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 10
-  condition:
-    condition: state
-    entity_id: sensor.is_someone_home
-    state: "yes"
-  action:
+    - service: notify.ifttt
+      data: { "message": "Le linge est propre" }
+    - condition: state
+      entity_id: sensor.is_someone_home
+      state: "on"
     - service: tts.google_say
       entity_id: media_player.living_room_home
       data:
         message: "Le linge est propre"
         language: "fr"
+
+- alias: "Alarm armed"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.is_someone_home
+    from: "on"
+    to: "off"
+  action:
+    - service: tts.google_say
+      entity_id: media_player.living_room_home
+      data:
+        message: "Alarme activée"
+        language: "fr"
+    - service: light.turn_on
+      data:
+        entity_id: light.gateway_light_f0b429cc58ea 
+        brightness: 255
+        color_name: red
+
+- alias: "Alarm disarmed"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.is_someone_home
+    from: "off"
+    to: "on"
+  action:
+    - service: tts.google_say
+      entity_id: media_player.living_room_home
+      data:
+        message: "Alarme désactivée"
+        language: "fr"
+    - service: light.turn_off
+      data:
+        entity_id: light.gateway_light_f0b429cc58ea 
+    - service: script.turn_off
+      entity_id: script.flash_light
+    - service: script.turn_off
+      entity_id: script.flash_light_loop
 
 - alias: "Alarm"
   trigger:
@@ -39,15 +64,20 @@
     entity_id: binary_sensor.door_window_sensor_158d0001a1f304
     from: "off"
     to: "on"
-  condition:
-    condition: state
-    entity_id: sensor.is_someone_home
-    state: "no"
   action:
+    - delay: 
+        minutes: 2
+    - condition: state
+      entity_id: binary_sensor.is_someone_home
+      state: "off"
     - service: tts.google_say
       entity_id: media_player.living_room_home
       data:
         message: "Alerte ! Un intrus est arrivé"
         language: "fr"
-    - service: ifttt.trigger
-      data: { "event": "notification", "value1": "Someone passed the door" }
+    - service: script.flash_light
+      data:
+        light_entity_id: 'light.gateway_light_f0b429cc58ea'
+    - service: notify.ifttt
+      data: { "message": "Un intrus est dans l'appartement" }
+
