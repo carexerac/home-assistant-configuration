@@ -68,6 +68,7 @@ zone: !include zone.yaml
 group: !include groups.yaml
 notify: !include notify.yaml
 automation: !include automation.yaml
+script: !include script.yaml
 
 xiaomi:
   gateways:

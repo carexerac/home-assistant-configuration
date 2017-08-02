@@ -1,0 +1,25 @@
+flash_light:
+  alias: Flash light
+  sequence:
+    - service: light.turn_on
+      # Using the variables in the script requires the use of data_template:
+      data_template:
+        entity_id: "{{ light_entity_id }}"
+    - delay:
+        milliseconds: 200
+    - service: light.turn_off
+      data_template:
+        entity_id: "{{ light_entity_id }}"
+    - service: script.flash_light_loop
+      data_template:
+        light_entity_id: "{{ light_entity_id }}"
+   
+
+flash_light_loop:
+  alias: Flash light loop
+  sequence:
+    - delay:
+        milliseconds: 200
+    - service: script.flash_light
+      data_template:
+        light_entity_id: "{{ light_entity_id }}"
