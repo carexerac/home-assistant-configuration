@@ -1,4 +1,4 @@
-- alias: "Washing is done IFTTT notification" 
+- alias: "Washing done"
   trigger:
     platform: state
     entity_id: binary_sensor.washing_machine
@@ -14,11 +14,19 @@
     - condition: state
       entity_id: sensor.is_someone_home
       state: "on"
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.living_room_home
+        volume_level: 0.5
     - service: tts.google_say
       entity_id: media_player.living_room_home
       data:
         message: "Le linge est propre"
         language: "fr"
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.living_room_home
+        volume_level: 0.3
 
 - alias: "Alarm armed"
   trigger:
