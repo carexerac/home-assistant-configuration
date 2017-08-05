@@ -42,6 +42,10 @@ logbook:
 
 # MQTT Broker
 mqtt:
+  broker: localhost
+  client_id: home-assistant
+  username: !secret mqtt_user
+  password: !secret mqtt_password
 
 # Emulated Hue Bridge
 emulated_hue:
