@@ -1,18 +1,20 @@
 flash_light:
   alias: Flash light
   sequence:
+    - condition: template
+      value_template: "{{ light_entity_id == '' }}"
     - service: light.turn_on
       # Using the variables in the script requires the use of data_template:
       data_template:
-        entity_id: "{{ light_entity_id }}"
+        entity_id: '{{ light_entity_id }}'
     - delay:
         milliseconds: 200
     - service: light.turn_off
       data_template:
-        entity_id: "{{ light_entity_id }}"
+        entity_id: '{{ light_entity_id }}'
     - service: script.flash_light_loop
       data_template:
-        light_entity_id: "{{ light_entity_id }}"
+        light_entity_id: '{{ light_entity_id }}'
    
 
 flash_light_loop:
@@ -22,4 +24,20 @@ flash_light_loop:
         milliseconds: 200
     - service: script.flash_light
       data_template:
-        light_entity_id: "{{ light_entity_id }}"
+        light_entity_id: '{{ light_entity_id }}'
+
+good_night:
+  alias: Good night
+  sequence:
+    - service: switch.turn_off
+      entity_id: switch.tv
+    - service: switch.turn_off
+      entity_id: group.living_room
+    - service: light.turn_off
+      entity_id: group.living_room
+    - service: switch.turn_off
+      entity_id: group.dining_room
+    - service: light.turn_off
+      entity_id: group.dining_room
+    - service: light.turn_on
+      entity_id: light.mp_bed_light

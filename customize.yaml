@@ -30,6 +30,9 @@ switch.chromecast:
 switch.rpi:
   friendly_name: "Raspberry Pi"
   emulated_hue_name: "Gaming Console"
+script.good_night:
+  emulated_hue: true
+  emulated_hue_name: "Good Night"
 
 # Xiaomi Gateway
 light.gateway_light_f0b429cc58ea:
