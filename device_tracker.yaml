@@ -9,3 +9,5 @@
   track_new_devices: false
 
 - platform: owntracks
+  track_new_devices: false
+
