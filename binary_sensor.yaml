@@ -1,27 +1,25 @@
 # Washing Machine
 - platform: mqtt
   name: "Washing Machine"
-  state_topic: "washing-machine/state"
-  payload_on: "1"
-  payload_off: "0"
-  qos: 1
+  state_topic: "stat/washing_machine/RESULT"
+  value_template: "{{ value_json['POWER'] }}"
+  payload_on: "ON"
+  payload_off: "OFF"
+  qos: 0
   retain: true
 
+# Test if somehome is currently at home
 - platform: template
   sensors:
     is_someone_home:
       value_template: >-
-        {%- if is_state("device_tracker.mp_z3c", "home")
-        or is_state("device_tracker.mp_macbook_air", "home")
-        or is_state("device_tracker.jc_iphone", "on")
-        or is_state("device_tracker.jc_macbook_air", "on")
+        {%- if is_state("group.matthieu", "home")
+        or is_state("group.julie", "home")
         -%}
           True
         {%- else -%}
           False
         {%- endif %}
       entity_id:
-        - device_tracker.mp_z3c
-        - device_tracker.mp_macbook_air
-        - device_tracker.jc_iphone
-        - device_tracker.jc_macbook_air
+        - group.matthieu
+        - group.julie

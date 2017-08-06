@@ -6,10 +6,24 @@
   value_template: "{{ value_json['DHT22'].Temperature }}"
   unit_of_measurement: "°C"
 
+- platform: mqtt
+  name: "Bathroom Temperature"
+  state_topic: "tele/washing_machine/SENSOR"
+  qos: 0
+  value_template: "{{ value_json['DHT22'].Temperature }}"
+  unit_of_measurement: "°C"
+
 # Humidity Sensor
 - platform: mqtt
   name: "Bedroom Humidity"
   state_topic: "tele/bedroom_light/SENSOR"
+  qos: 0
+  value_template: "{{ value_json['DHT22'].Humidity }}"
+  unit_of_measurement: "%"
+
+- platform: mqtt
+  name: "Bathroom Humidity"
+  state_topic: "tele/washing_machine/SENSOR"
   qos: 0
   value_template: "{{ value_json['DHT22'].Humidity }}"
   unit_of_measurement: "%"

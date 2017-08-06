@@ -10,12 +10,18 @@ light.ambient_yeelight:
   icon: mdi:lightbulb-on-outline
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
-sensor.bedroom_humidity:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
 sensor.bedroom_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
+sensor.bedroom_humidity:
+  friendly_name: "Humidity"
+  icon: mdi:water-percent
+sensor.bathroom_temperature:
+  friendly_name: "Temperature"
+  icon: mdi:thermometer
+sensor.bathroom_humidity:
+  friendly_name: "Humidity"
+  icon: mdi:water-percent
 device_tracker.raspberry_pi_3:
   friendly_name: "GameStation"
   icon: mdi:gamepad-variant
@@ -51,6 +57,7 @@ sensor.humidity_158d0001a23103:
 sensor.pressure_158d0001a23103:
   friendly_name: "Pressure"
   icon: mdi:gauge
+
 
 switch.wall_switch_158d00014a1a13:
   friendly_name: "Ceiling Light"

@@ -15,7 +15,6 @@ flash_light:
     - service: script.flash_light_loop
       data_template:
         light_entity_id: '{{ light_entity_id }}'
-   
 
 flash_light_loop:
   alias: Flash light loop
