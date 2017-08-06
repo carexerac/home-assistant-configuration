@@ -7,10 +7,15 @@ default_view:
     - group.bedroom
     - group.bathroom
     - group.hall
-    - camera.locations
-    - device_tracker.mp_z3c
-    - device_tracker.jc_iphone
     - alarm_control_panel.ha_alarm
+
+persons_view:
+  view: yes
+  icon: mdi:account-multiple
+  entities:
+    - camera.gps_locations
+    - group.matthieu
+    - group.julie
 
 weather_view:
   view: yes
@@ -37,6 +42,7 @@ living_room:
     - switch.wall_switch_158d00014dcb6a
     - light.ambient_yeelight
     - switch.smart_power_socket
+    - device_tracker.google_home
     - device_tracker.logitech_harmony
 
 dining_room:
@@ -44,9 +50,9 @@ dining_room:
   control: hidden
   entities:
     - switch.wall_switch_158d00014a1a13
+    - device_tracker.airport_extreme
+    - device_tracker.sagem_router
     - device_tracker.logitech_circle
-    - device_tracker.mp_macbook_air
-    - device_tracker.jc_macbook_air
     - camera.rpi_camera
 #    - sensor.photo_frame_temperature
 #    - sensor.photo_frame_humidity
@@ -73,6 +79,27 @@ hall:
     - light.gateway_light_f0b429cc58ea
     - sensor.illumination_f0b429cc58ea
     - binary_sensor.door_window_sensor_158d0001a1f304
+
+matthieu:
+  name: "Matthieu"
+  icon: mdi:account-box
+  control: hidden
+  entities:
+    - device_tracker.mp_z3c
+    - device_tracker.mp_z3c_nmap
+    - device_tracker.mp_macbook_air
+    - device_tracker.mp_z3c_bluetooth
+    - device_tracker.mp_pebble_time
+
+julie:
+  name: "Julie"
+  icon: mdi:account-box-outline
+  control: hidden
+  entities:
+    - device_tracker.jc_iphone
+    - device_tracker.jc_iphone_nmap
+    - device_tracker.jc_macbook_air
+    - device_tracker.jc_iphone_bluetooth
 
 weather:
   name: "Weather"
