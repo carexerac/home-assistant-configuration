@@ -7,8 +7,10 @@ default_view:
     - group.bedroom
     - group.bathroom
     - group.hall
+    - camera.locations
     - device_tracker.mp_z3c
     - device_tracker.jc_iphone
+    - alarm_control_panel.ha_alarm
 
 weather_view:
   view: yes
@@ -16,11 +18,11 @@ weather_view:
   entities:
     - group.weather
 
-flower_view:
-  view: yes
-  icon: mdi:flower
-  entities:
-    - group.flower1
+#flower_view:
+#  view: yes
+#  icon: mdi:flower
+#  entities:
+#    - group.flower1
 
 bikes_view:
   view: yes
@@ -36,15 +38,12 @@ living_room:
     - light.ambient_yeelight
     - switch.smart_power_socket
     - device_tracker.logitech_harmony
-    - device_tracker.raspberry_pi_3
 
 dining_room:
   name: "Dining Room"
   control: hidden
   entities:
     - switch.wall_switch_158d00014a1a13
-    - device_tracker.airport_extreme
-    - device_tracker.sagem_router
     - device_tracker.logitech_circle
     - device_tracker.mp_macbook_air
     - device_tracker.jc_macbook_air
@@ -64,7 +63,6 @@ bathroom:
   name: "Bathroom"
   entities:
     - binary_sensor.washing_machine
-    - device_tracker.washing_machine_esp
     - sensor.temperature_158d0001a23103
     - sensor.humidity_158d0001a23103
     - sensor.pressure_158d0001a23103
@@ -101,7 +99,40 @@ flower1:
     - sensor.flower_conductivity
     - sensor.flower_battery
 
+locations:
+  name: "Locations"
+  entities:
+    - camera.locations
+
 nancy_bikes:
   name: "Nancy Bikes"
   entities:
     - sensor.velostanlib_nancy_stations_10cd7436fee13bc82f9a1de82d55ae2f
+    - sensor.velostanlib_nancy_stations_18528a8fcb0fd547eb7c929c15eeac40
+    - sensor.velostanlib_nancy_stations_18706dcba496e8c7c7416cdd27fa7a37
+    - sensor.velostanlib_nancy_stations_19c3949daf1136d9b593f87c3ed67277
+    - sensor.velostanlib_nancy_stations_2b6a62371b1b45a936468c9cf16a3528
+    - sensor.velostanlib_nancy_stations_2c96e9ec111a7ac31507a2d7932f7191
+    - sensor.velostanlib_nancy_stations_34746e69b4b089019c6d95e041134fd4
+    - sensor.velostanlib_nancy_stations_63129120dfe828b8568df56e7f7accc6
+    - sensor.velostanlib_nancy_stations_67a2688328c4cd17cc3ab69321edc42e
+    - sensor.velostanlib_nancy_stations_6a5ee24122c78bdbd0b18e710de66012
+    - sensor.velostanlib_nancy_stations_726ef4c09e7d2137f9dda4dc0d707857
+    - sensor.velostanlib_nancy_stations_7bd334f83d16f15e923e21e53beca572
+    - sensor.velostanlib_nancy_stations_91e114170a5f8b6d3d7f75a762368ac7
+    - sensor.velostanlib_nancy_stations_94bfafc292252438f023bb79938dc795
+    - sensor.velostanlib_nancy_stations_95eeed3ddbdbd13c0212312a029772ea
+    - sensor.velostanlib_nancy_stations_99c80bacb965d235c4edbca5fcee930f
+    - sensor.velostanlib_nancy_stations_9d3f49929f6d5a8731b523c524505dc6
+    - sensor.velostanlib_nancy_stations_a09205bd630b4d1a23d2bd50428b13b0
+    - sensor.velostanlib_nancy_stations_a5587c8197681bdb17ca04d359769ca6
+    - sensor.velostanlib_nancy_stations_a6ccf4c7e55dfb1288606f3b10cbb69e
+    - sensor.velostanlib_nancy_stations_ab4126483d8e61e7d6d8b4e85aab7f3f
+    - sensor.velostanlib_nancy_stations_bf951da92ffe051752f657de2f2487d4
+    - sensor.velostanlib_nancy_stations_d39d77ba479c42dd67f0eb3661f840ed
+    - sensor.velostanlib_nancy_stations_de0bce341b81c9ea19fbc7d60eacfec8
+    - sensor.velostanlib_nancy_stations_de3cd1e32c9110db3372feaa85d52e57
+    - sensor.velostanlib_nancy_stations_dfbc1a6beddebf43ff4bd15728148d75
+    - sensor.velostanlib_nancy_stations_e40523f1637e10e585d511b2033aed56
+    - sensor.velostanlib_nancy_stations_e439a3cb38c6ab7d21ea80b833d41ea2
+    - sensor.velostanlib_nancy_stations_f40c9fbafe43def3ec1899aafc3c8588
