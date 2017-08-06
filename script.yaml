@@ -1,8 +1,8 @@
 flash_light:
   alias: Flash light
   sequence:
-    - condition: template
-      value_template: "{{ light_entity_id == '' }}"
+    # - condition: template
+    #   value_template: "{{ light_entity_id == '' }}"
     - service: light.turn_on
       # Using the variables in the script requires the use of data_template:
       data_template:
