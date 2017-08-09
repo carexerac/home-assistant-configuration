@@ -1,0 +1,6 @@
+- platform: polling
+  api_key: !secret telegram_api_key
+  parse_mode: html
+  allowed_chat_ids:
+    - !secret telegram_mp_chat_id
+    - !secret telegram_jc_chat_id
