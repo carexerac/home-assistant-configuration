@@ -9,3 +9,15 @@
   longitude: 6.143348
   radius: 50
   icon: mdi:briefcase
+
+- name: Charlotte
+  latitude: 48.695462
+  longitude: 6.177424
+  radius: 30
+  icon: mdi:human-female
+
+- name: Bouxières
+  latitude: 48.755417
+  longitude: 6.166386
+  radius: 50
+  icon: mdi:human-male-female
