@@ -10,3 +10,4 @@
 - platform: owntracks
 
 - platform: bluetooth_tracker
+  interval_seconds : 30
