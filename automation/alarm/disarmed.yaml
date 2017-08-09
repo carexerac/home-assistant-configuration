@@ -1,0 +1,23 @@
+alias: "Alarm disarmed"
+trigger:
+  platform: state
+  entity_id: alarm_control_panel.ha_alarm
+  to: disarmed
+action:
+  - service: telegram_bot.send_message
+    data: 
+      message: "Alarm disarmed"
+      target:
+        - !secret telegram_mp_chat_id
+  - service: tts.google_say
+    entity_id: media_player.living_room_home
+    data:
+      message: "Alarme désactivée"
+      language: "fr"
+  - service: light.turn_off
+    data:
+      entity_id: light.gateway_light_f0b429cc58ea 
+  - service: script.turn_off
+    entity_id: script.flash_light
+  - service: script.turn_off
+    entity_id: script.flash_light_loop

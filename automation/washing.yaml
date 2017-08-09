@@ -1,0 +1,41 @@
+alias: "Washing done"
+trigger:
+  platform: state
+  entity_id: binary_sensor.washing_machine
+  from: "on"
+  to: "off"
+  for:
+    hours: 0
+    minutes: 0
+    seconds: 10
+condition:
+  condition: state
+  entity_id: binary_sensor.washing_machine
+  state: "on"
+  for:
+    hours: 0
+    minutes: 1
+    seconds: 0
+action:
+  - service: telegram_bot.send_message
+    data: 
+      message: "Washing is done"
+      target:
+        - !secret telegram_mp_chat_id
+        - !secret telegram_jc_chat_id
+  - condition: state
+    entity_id: sensor.is_someone_home
+    state: "on"
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room_home
+      volume_level: 0.5
+  - service: tts.google_say
+    entity_id: media_player.living_room_home
+    data:
+      message: "Le linge est propre"
+      language: "fr"
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room_home
+      volume_level: 0.3

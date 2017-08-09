@@ -1,0 +1,15 @@
+id: telegram_disarm_callback
+alias: 'Telegram bot that redisarm the alarm'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_callback
+  event_data:
+    data: '/disarm'
+action:
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.ha_alarm
+  - service: telegram_bot.answer_callback_query
+    data_template:
+      callback_query_id: '{{ trigger.event.data.id }}'
+      message: 'Redisarmed alarm'

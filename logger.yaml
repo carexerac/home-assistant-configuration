@@ -27,3 +27,4 @@ logs:
 #  homeassistant.components.light.yeelight: debug
   homeassistant.components.notify: debug
   homeassistant.components.device_tracker: debug
+  homeassistant.components.telegram_bot: debug

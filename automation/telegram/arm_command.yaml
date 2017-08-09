@@ -1,0 +1,16 @@
+id: telegram_arm_alarm
+alias: 'Telegram bot that arm the alarm'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/arm'
+action:
+  - service: alarm_control_panel.alarm_arm_away
+    entity_id: alarm_control_panel.ha_alarm
+  - service: telegram_bot.send_message
+    data_template:
+      target: '{{ trigger.event.data.user_id }}'
+      message: 'Alarm is now armed'
+      disable_notification: true
