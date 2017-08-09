@@ -3,11 +3,12 @@ binary_sensor.washing_machine:
   icon: mdi:washing-machine
 light.mp_bed_light:
   friendly_name: "Matthieu's Bed Light"
-  emulated_hue_name: "Bedroom Light"
   icon: mdi:lamp
+  emulated_hue_name: "Lampe de Matthieu"
 light.ambient_yeelight:
   friendly_name: "Ambient Light"
   icon: mdi:lightbulb-on-outline
+  emulated_hue_name: "Lampe d'ambiance"
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
 sensor.bedroom_temperature:
@@ -31,6 +32,7 @@ switch.smart_power_socket:
   emulated_hue: true
 switch.tv:
   friendly_name: "TV"
+  emulated_hue_name: "Tele"
 switch.chromecast:
   friendly_name: "Chromecast"
 switch.rpi:
@@ -62,9 +64,11 @@ sensor.pressure_158d0001a23103:
 switch.wall_switch_158d00014a1a13:
   friendly_name: "Ceiling Light"
   icon: mdi:ceiling-light
+  emulated_hue_name: "Lustre séjour"
 switch.wall_switch_158d00014dcb6a:
   friendly_name: "Ceiling Light"
   icon: mdi:ceiling-light
+  emulated_hue_name: "Lustre salon"
 
 binary_sensor.door_window_sensor_158d0001a1f304:
   friendly_name: "Main Door"
