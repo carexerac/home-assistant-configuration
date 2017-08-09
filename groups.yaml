@@ -6,6 +6,7 @@ default_view:
     - group.dining_room
     - group.bedroom
     - group.bathroom
+    - group.kitchen
     - group.hall
     - alarm_control_panel.ha_alarm
 
@@ -74,7 +75,7 @@ bathroom:
     - sensor.bathroom_humidity
 
 kitchen:
-  name: "kitchen"
+  name: "Kitchen"
   control: hidden
   entities:
     - sensor.temperature_158d0001a23103
