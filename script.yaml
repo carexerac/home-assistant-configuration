@@ -40,3 +40,32 @@ good_night:
       entity_id: group.dining_room
     - service: light.turn_on
       entity_id: light.mp_bed_light
+
+movie_time:
+  alias: Movie time
+  sequence:
+    - service: switch.turn_on
+      entity_id: switch.chromecast
+    - service: switch.turn_off
+      entity_id: switch.wall_switch_158d00014a1a13
+    - service: switch.turn_off
+      entity_id: switch.wall_switch_158d00014dcb6a
+    - service: light.turn_on
+      entity_id: light.ambient_yeelight
+      data:
+        effect: "Stop"
+        color_name: "white"
+        brightness_pct: 40
+
+party_time:
+  alias: Party time
+  sequence:
+    - service: switch.turn_off
+      entity_id: switch.wall_switch_158d00014a1a13
+    - service: switch.turn_off
+      entity_id: switch.wall_switch_158d00014dcb6a
+    - service: light.turn_on
+      entity_id: light.ambient_yeelight
+      data:
+        effect: "Slowdown"
+        brightness_pct: 100

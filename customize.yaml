@@ -41,6 +41,14 @@ switch.rpi:
 script.good_night:
   emulated_hue: true
   emulated_hue_name: "Good Night"
+script.movie_time:
+  emulated_hue: true
+  emulated_hue_name: "Movie Time"
+script.party_time:
+  emulated_hue: true
+  emulated_hue_name: "Party Time"
+
+
 
 # Xiaomi Gateway
 light.gateway_light_f0b429cc58ea:
