@@ -1,0 +1,14 @@
+id: telegram_locations
+alias: 'Telegram bot that send the current location of all users'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/locations'
+action:
+  - service: telegram_bot.send_photo
+    data_template:
+      target: '{{ trigger.event.data.chat_id }}'
+      url: 'http://localhost:8123{{ states.camera.gps_locations.attributes.entity_picture }}'
+      disable_notification: true

@@ -11,6 +11,6 @@ action:
     entity_id: alarm_control_panel.ha_alarm
   - service: telegram_bot.send_message
     data_template:
-      target: '{{ trigger.event.data.user_id }}'
+      target: '{{ trigger.event.data.chat_id }}'
       message: 'Alarm is now armed'
       disable_notification: true

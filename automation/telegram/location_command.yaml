@@ -1,0 +1,25 @@
+id: telegram_location
+alias: 'Telegram bot that send the current location of the specified user'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/location'
+action:
+  - service: telegram_bot.send_location
+    data_template:
+      target: '{{ trigger.event.data.chat_id }}'
+      latitude: >
+        {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
+          {{ states.device_tracker.mp_z3c.attributes.latitude }}
+        {% else %}
+          {{ states.device_tracker.jc_iphone.attributes.latitude }}
+        {% endif %}
+      longitude: >
+        {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
+          {{ states.device_tracker.mp_z3c.attributes.longitude }}
+        {% else %}
+          {{ states.device_tracker.jc_iphone.attributes.longitude }}
+        {% endif %}
+      disable_notification: true

@@ -11,3 +11,6 @@
 - !include automation/telegram/arm_command.yaml
 # - !include automation/telegram/disarm_callback.yaml
 - !include automation/telegram/disarm_command.yaml
+- !include automation/telegram/location_command.yaml
+- !include automation/telegram/locations_command.yaml
+- !include automation/telegram/speak_command.yaml
