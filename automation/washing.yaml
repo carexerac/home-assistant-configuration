@@ -8,14 +8,6 @@ trigger:
     hours: 0
     minutes: 0
     seconds: 10
-condition:
-  condition: state
-  entity_id: binary_sensor.washing_machine
-  state: "on"
-  for:
-    hours: 0
-    minutes: 1
-    seconds: 0
 action:
   - service: telegram_bot.send_message
     data: 
