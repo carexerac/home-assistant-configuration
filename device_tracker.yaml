@@ -8,6 +8,7 @@
   interval_seconds: 300
 
 - platform: owntracks
+  max_gps_accuracy: 200
 
 - platform: bluetooth_tracker
   interval_seconds : 30
