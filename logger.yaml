@@ -22,7 +22,7 @@ logs:
 #  requests.packages.urllib3.connectionpool: warn
 #  homeassistant.core: debug
 #  homeassistant.components.apcupsd: debug
-#  custom_components.xiaomi: debug
+  homeassistant.components.xiaomi: debug
 #  homeassistant.components.remote: debug
 #  homeassistant.components.light.yeelight: debug
   homeassistant.components.notify: debug
