@@ -47,6 +47,12 @@ script.movie_time:
 script.party_time:
   emulated_hue: true
   emulated_hue_name: "Party Time"
+script.mute_tv:
+  emulated_hue: true
+  emulated_hue_name: "Mute TV"
+script.channel_2:
+  emulated_hue: true
+  emulated_hue_name: "France 2"
 
 
 
