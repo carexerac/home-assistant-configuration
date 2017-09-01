@@ -16,7 +16,7 @@ homeassistant:
 logger: !include logger.yaml
 
 # Enables the frontend
-frontend:
+frontend: !include frontend.yaml
 
 # Enables configuration UI
 config:
@@ -88,3 +88,4 @@ tts:
     language: 'fr'
 
 sun:
+
