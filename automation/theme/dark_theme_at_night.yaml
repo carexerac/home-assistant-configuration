@@ -1,0 +1,15 @@
+# Set dark theme for the night
+alias: 'Set dark theme for the night'
+initial_state: True
+trigger:
+  - platform: sun
+    event: sunset
+# condition:
+#   - condition: state
+#     entity_id: input_boolean.auto_darktheme
+#     state: 'on'
+action:
+  - service: frontend.set_theme
+    data:
+      name: 'midnight'
+

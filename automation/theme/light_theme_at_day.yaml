@@ -1,0 +1,10 @@
+# Set default theme for the day
+alias: 'Set default theme for the day'
+initial_state: True
+trigger:
+  - platform: sun
+    event: sunrise
+action:
+  - service: frontend.set_theme
+    data:
+      name: 'default'

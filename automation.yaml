@@ -14,3 +14,6 @@
 - !include automation/telegram/location_command.yaml
 - !include automation/telegram/locations_command.yaml
 - !include automation/telegram/speak_command.yaml
+
+- !include automation/theme/dark_theme_at_night.yaml
+- !include automation/theme/light_theme_at_day.yaml
