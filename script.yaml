@@ -60,6 +60,29 @@ movie_time:
 party_time:
   alias: Party time
   sequence:
+    - service: light.turn_on
+      entity_id: light.ambient_yeelight
+      data:
+        effect: "Strobe color"
+        brightness_pct: 100
+    - service: switch.turn_off
+      entity_id: switch.wall_switch_158d00014a1a13
+    - service: switch.turn_on
+      entity_id: switch.wall_switch_158d00014dcb6a
+    - delay:
+        milliseconds: 500
+    - service: switch.turn_on
+      entity_id: switch.wall_switch_158d00014a1a13
+    - service: switch.turn_off
+      entity_id: switch.wall_switch_158d00014dcb6a
+    - delay:
+        milliseconds: 500
+    - service: switch.turn_on
+      entity_id: switch.wall_switch_158d00014a1a13
+    - service: switch.turn_on
+      entity_id: switch.wall_switch_158d00014dcb6a
+    - delay:
+        milliseconds: 500
     - service: switch.turn_off
       entity_id: switch.wall_switch_158d00014a1a13
     - service: switch.turn_off
@@ -67,7 +90,8 @@ party_time:
     - service: light.turn_on
       entity_id: light.ambient_yeelight
       data:
-        effect: "Slowdown"
+        # effect: "Slowdown"
+        effect: "Disco"
         brightness_pct: 100
 
 mute_tv:
