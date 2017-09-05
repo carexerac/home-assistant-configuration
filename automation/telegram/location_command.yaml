@@ -6,6 +6,13 @@ trigger:
   event_type: telegram_command
   event_data:
     command: '/location'
+condition:
+  condition: or
+  conditions:
+    - condition: template
+      value_template: "{{ trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' }}"
+    - condition: template
+      value_template: "{{ trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' }}"
 action:
   - service: telegram_bot.send_location
     data_template:
@@ -13,13 +20,13 @@ action:
       latitude: >
         {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
           {{ states.device_tracker.mp_z3c.attributes.latitude }}
-        {% else %}
+        {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
           {{ states.device_tracker.jc_iphone.attributes.latitude }}
         {% endif %}
       longitude: >
         {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
           {{ states.device_tracker.mp_z3c.attributes.longitude }}
-        {% else %}
+        {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
           {{ states.device_tracker.jc_iphone.attributes.longitude }}
         {% endif %}
       disable_notification: true

@@ -12,5 +12,5 @@ action:
   - service: telegram_bot.send_message
     data_template:
       target: '{{ trigger.event.data.chat_id }}'
-      message: 'Alarm is now armed'
+      message: 'Arming alarm'
       disable_notification: true

@@ -1,0 +1,19 @@
+id: telegram_start
+alias: 'Display all commands availables'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/start'
+action:
+  - service: telegram_bot.send_message
+    data_template:
+      target: '{{ trigger.event.data.chat_id }}'
+      message: >
+        {{ 'Here is a list a of availables commands :\n' }}
+        {{ '\tArm the alarm : /arm\n' }}
+        {{ '\tDisarm the alarm : /disarm\n' }}
+        {{ '\tLocate someone : /location {mp|jc}\n' }}
+        {{ '\tSpeak through Google Home : /speak {message}\n' }}
+      disable_notification: true

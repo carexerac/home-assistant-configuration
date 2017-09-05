@@ -12,4 +12,4 @@ action:
   - service: telegram_bot.answer_callback_query
     data_template:
       callback_query_id: '{{ trigger.event.data.id }}'
-      message: 'Rearmed alarm'
+      message: 'Arming alarm'
