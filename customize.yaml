@@ -53,6 +53,9 @@ script.mute_tv:
 script.channel_2:
   emulated_hue: true
   emulated_hue_name: "France 2"
+script.geek_inc:
+  emulated_hue: true
+  emulated_hue_name: "Geek Inc"
 
 
 

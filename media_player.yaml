@@ -1,2 +1,5 @@
 - platform: cast
   host: !secret google_home_host
+
+- platform: cast
+  host: !secret chromecast_host
