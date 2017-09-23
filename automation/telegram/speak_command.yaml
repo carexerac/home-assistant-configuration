@@ -11,5 +11,6 @@ action:
     entity_id: media_player.living_room_home
     data_template:
       language: "fr"
+      cache: false
       message: >
         {{ trigger.event.data["from_first"] }} dit : {% for state in trigger.event.data["args"] %} {{ state }} {% endfor %}
