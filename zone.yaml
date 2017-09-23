@@ -10,6 +10,12 @@
   radius: 50
   icon: mdi:briefcase
 
+- name: Lorraine Au Coeur
+  latitude: 48.701687
+  longitude: 6.203182
+  radius: 50
+  icon: mdi:briefcase
+
 - name: Charlotte
   latitude: 48.695462
   longitude: 6.177424
