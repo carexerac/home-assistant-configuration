@@ -12,5 +12,13 @@
     192.168.254.238:
       name: Ambient Yeelight
       transition: 1000
-      use_music_mode: True #(defaults to False)
-      save_on_change: False #(defaults to True)
+      use_music_mode: True #defaults to False
+      save_on_change: False #defaults to True
+
+- platform: yeelight
+  devices:
+    192.168.254.237:
+      name: Sofa Yeelight Strip
+      transition: 1000
+      use_music_mode: True #defaults to False
+      save_on_change: False #defaults to True

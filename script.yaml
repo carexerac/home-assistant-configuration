@@ -51,11 +51,11 @@ movie_time:
     - service: switch.turn_off
       entity_id: switch.wall_switch_158d00014dcb6a
     - service: light.turn_on
-      entity_id: light.ambient_yeelight
+      entity_id: light.sofa_yeelight_strip
       data:
         effect: "Stop"
         color_name: "white"
-        brightness_pct: 40
+        brightness_pct: 100
 
 party_time:
   alias: Party time

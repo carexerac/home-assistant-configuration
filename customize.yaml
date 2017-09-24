@@ -9,6 +9,11 @@ light.ambient_yeelight:
   friendly_name: "Ambient Light"
   icon: mdi:lightbulb-on-outline
   emulated_hue_name: "Lampe d'ambiance"
+light.sofa_yeelight_strip:
+  friendly_name: "Sofa Light Strip"
+#  icon: mdi:led-strip
+  icon: mdi:sofa
+  emulated_hue_name: "Canapé"
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
 sensor.bedroom_temperature:
@@ -101,7 +106,8 @@ switch.wall_switch_158d00014dcb6a:
 
 binary_sensor.door_window_sensor_158d0001a1f304:
   friendly_name: "Main Door"
-  icon: mdi:glassdoor
+#  icon: mdi:glassdoor
+  icon: mdi:locker
 binary_sensor.motion_sensor_158d00016dad0e:
   friendly_name: "Motion"
   icon: mdi:run-fast
