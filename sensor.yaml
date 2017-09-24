@@ -67,7 +67,7 @@
   name: Nancy Stations
   radius: 5000
 
-- platform: waqi
-  token: !secret aqicn_token
-  locations:
-    - Charles III, Nancy-Centre
+#- platform: waqi
+#  token: !secret aqicn_token
+#  locations:
+#    - Charles III, Nancy-Centre

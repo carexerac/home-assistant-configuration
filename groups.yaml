@@ -132,7 +132,7 @@ weather:
     - sensor.weather_wind_speed
     - sun.sun
     - weather.weather
-    - sensor.waqi_charles_iii_nancycentre_france
+#    - sensor.waqi_charles_iii_nancycentre_france
 
 flower1:
   name: "Main flower"
