@@ -1,0 +1,21 @@
+alias: "Someone is home"
+trigger:
+  platform: state
+  entity_id: binary_sensor.is_someone_home
+  from: "off"
+  to: "on"
+action:
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.ha_alarm
+  - service_template: >
+      {% if "matthieu" in ([states.group.matthieu, states.group.julie] | selectattr('state', 'equalto', 'not_home') | first).entity_id %}
+      notify.telegram_mp
+      {% else %}
+      notify.telegram_jc
+      {% endif %}
+    data_template: 
+      message: >
+        {% for user in [states.group.matthieu, states.group.julie] if user.state == "home" %}
+        {{ user.attributes.friendly_name }} is {{ user.state }}
+        ({% for entity in user.attributes.entity_id if is_state(entity, "home") %}{{ entity }}{% if loop.index != loop.length %}, {% endif %}{% endfor %})
+        {% endfor %}

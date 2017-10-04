@@ -3,3 +3,11 @@
   resource: !secret ifttt_endpoint
   method: POST
   message_param_name: value1
+
+- name: telegram_mp
+  platform: telegram
+  chat_id: !secret telegram_mp_chat_id
+
+- name: telegram_jc
+  platform: telegram
+  chat_id: !secret telegram_jc_chat_id

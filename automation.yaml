@@ -1,11 +1,10 @@
-- !include automation/alarm/arm.yaml
 - !include automation/alarm/armed.yaml
-- !include automation/alarm/disarm.yaml
 - !include automation/alarm/disarmed.yaml
 - !include automation/alarm/trigger.yaml
 - !include automation/alarm/triggered.yaml
 
-- !include automation/washing.yaml
+- !include automation/presence/home.yaml
+- !include automation/presence/away.yaml
 
 - !include automation/telegram/arm_callback.yaml
 - !include automation/telegram/arm_command.yaml
@@ -13,7 +12,6 @@
 - !include automation/telegram/disarm_callback.yaml
 - !include automation/telegram/disarm_command.yaml
 - !include automation/telegram/location_command.yaml
-- !include automation/telegram/locations_command.yaml
 - !include automation/telegram/speak_command.yaml
 - !include automation/telegram/start_command.yaml
 

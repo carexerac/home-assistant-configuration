@@ -10,23 +10,35 @@ condition:
   condition: or
   conditions:
     - condition: template
+      value_template: "{{ trigger.event.data.args[0] is undefined }}"
+    - condition: template
       value_template: "{{ trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' }}"
     - condition: template
       value_template: "{{ trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' }}"
 action:
-  - service: telegram_bot.send_location
-    data_template:
+  - service_template: >
+      {% if trigger.event.data.args[0] is defined %}
+      telegram_bot.send_location
+      {% else %}
+      telegram_bot.send_photo
+      {% endif %}
+    data_template: 
+      disable_notification: true
       target: '{{ trigger.event.data.chat_id }}'
       latitude: >
-        {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
-          {{ states.device_tracker.mp_z3c.attributes.latitude }}
-        {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
-          {{ states.device_tracker.jc_iphone.attributes.latitude }}
+        {% if trigger.event.data.args[0] is defined %}
+          {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
+            {{ states.device_tracker.mp_z3c.attributes.latitude }}
+          {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
+            {{ states.device_tracker.jc_iphone.attributes.latitude }}
+          {% endif %}
         {% endif %}
       longitude: >
-        {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
-          {{ states.device_tracker.mp_z3c.attributes.longitude }}
-        {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
-          {{ states.device_tracker.jc_iphone.attributes.longitude }}
+        {% if trigger.event.data.args[0] is defined %}
+          {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
+            {{ states.device_tracker.mp_z3c.attributes.longitude }}
+          {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
+            {{ states.device_tracker.jc_iphone.attributes.longitude }}
+          {% endif %}
         {% endif %}
-      disable_notification: true
+      url: 'http://localhost:8123{{ states.camera.gps_locations.attributes.entity_picture }}'
