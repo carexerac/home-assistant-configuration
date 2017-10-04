@@ -16,18 +16,18 @@ light.sofa_yeelight_strip:
   emulated_hue_name: "Canapé"
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
-sensor.bedroom_temperature:
-  friendly_name: "Temperature"
-  icon: mdi:thermometer
-sensor.bedroom_humidity:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
-sensor.bathroom_temperature:
-  friendly_name: "Temperature"
-  icon: mdi:thermometer
-sensor.bathroom_humidity:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
+# sensor.bedroom_temperature:
+#   friendly_name: "Temperature"
+#   icon: mdi:thermometer
+# sensor.bedroom_humidity:
+#   friendly_name: "Humidity"
+#   icon: mdi:water-percent
+# sensor.bathroom_temperature:
+#   friendly_name: "Temperature"
+#   icon: mdi:thermometer
+# sensor.bathroom_humidity:
+#   friendly_name: "Humidity"
+#   icon: mdi:water-percent
 device_tracker.raspberry_pi_3:
   friendly_name: "GameStation"
   icon: mdi:gamepad-variant
