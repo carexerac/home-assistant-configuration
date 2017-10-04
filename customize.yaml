@@ -16,18 +16,6 @@ light.sofa_yeelight_strip:
   emulated_hue_name: "Canapé"
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
-# sensor.bedroom_temperature:
-#   friendly_name: "Temperature"
-#   icon: mdi:thermometer
-# sensor.bedroom_humidity:
-#   friendly_name: "Humidity"
-#   icon: mdi:water-percent
-# sensor.bathroom_temperature:
-#   friendly_name: "Temperature"
-#   icon: mdi:thermometer
-# sensor.bathroom_humidity:
-#   friendly_name: "Humidity"
-#   icon: mdi:water-percent
 device_tracker.raspberry_pi_3:
   friendly_name: "GameStation"
   icon: mdi:gamepad-variant
@@ -62,8 +50,6 @@ script.geek_inc:
   emulated_hue: true
   emulated_hue_name: "Geek Inc"
 
-
-
 # Xiaomi Gateway
 light.gateway_light_f0b429cc58ea:
   friendly_name: "Xiaomi Gateway"
@@ -71,28 +57,6 @@ light.gateway_light_f0b429cc58ea:
 sensor.illumination_f0b429cc58ea:
   friendly_name: "Illuminance"
   icon: mdi:white-balance-sunny
-
-# Xiaomi Temperature Kitchen
-sensor.temperature_158d0001a23103:
-  friendly_name: "Temperature"
-  icon: mdi:thermometer
-sensor.humidity_158d0001a23103:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
-sensor.pressure_158d0001a23103:
-  friendly_name: "Pressure"
-  icon: mdi:gauge
-
-# Xiaomi Temperature Living Room
-sensor.temperature_158d0001a35a71:
-  friendly_name: "Temperature"
-  icon: mdi:thermometer
-sensor.humidity_158d0001a35a71:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
-sensor.pressure_158d0001a35a71:
-  friendly_name: "Pressure"
-  icon: mdi:gauge
 
 
 switch.wall_switch_158d00014a1a13:
