@@ -9,6 +9,7 @@
 
 - !include automation/telegram/arm_callback.yaml
 - !include automation/telegram/arm_command.yaml
+- !include automation/telegram/bikes_command.yaml
 - !include automation/telegram/disarm_callback.yaml
 - !include automation/telegram/disarm_command.yaml
 - !include automation/telegram/location_command.yaml
@@ -18,3 +19,9 @@
 
 - !include automation/theme/dark_theme_at_night.yaml
 - !include automation/theme/light_theme_at_day.yaml
+
+- !include automation/bikes/almost_empty_PlaceBarrois.yaml
+- !include automation/bikes/almost_empty_PlaceCommanderie.yaml
+
+- !include automation/washing.yaml
+- !include automation/geekinc.yaml

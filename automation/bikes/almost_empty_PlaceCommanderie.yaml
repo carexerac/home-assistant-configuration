@@ -1,0 +1,31 @@
+alias: "Place de la Commanderie almost empty"
+trigger:
+  platform: state
+  entity_id: sensor.velostanlib_nancy_stations_10cd7436fee13bc82f9a1de82d55ae2f
+condition:
+  - condition: zone
+    entity_id: device_tracker.jc_iphone
+    zone: zone.home
+  - condition: time
+    # At least one of the following is required.
+    after: '8:00:00'
+    before: '9:30:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: numeric_state
+    entity_id: sensor.velostanlib_nancy_stations_10cd7436fee13bc82f9a1de82d55ae2f
+    value_template: '{{ state }}'
+    above: 1
+    below: 5
+action:
+  - service: telegram_bot.send_message
+    data_template: 
+      target:
+        - !secret telegram_mp_chat_id
+        - !secret telegram_jc_chat_id
+      message: >
+        Place de la Commanderie is almost empty : only {{ states.sensor.velostanlib_nancy_stations_10cd7436fee13bc82f9a1de82d55ae2f.state }} bikes left !

@@ -14,6 +14,7 @@ action:
         {{ 'Here is a list a of availables commands :\n' }}
         {{ '\tArm the alarm : /arm\n' }}
         {{ '\tDisarm the alarm : /disarm\n' }}
+        {{ '\tGet some bikes stations state : /bikes\n' }}
         {{ '\tLocate someone : /location {mp|jc}\n' }}
         {{ '\tSpeak through Google Home : /speak {message}\n' }}
       disable_notification: true

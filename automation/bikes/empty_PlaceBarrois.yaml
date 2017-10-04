@@ -1,0 +1,30 @@
+alias: "Place Barrois empty"
+trigger:
+  platform: state
+  entity_id: sensor.velostanlib_nancy_stations_2b6a62371b1b45a936468c9cf16a3528
+condition:
+  - condition: zone
+    entity_id: device_tracker.jc_iphone
+    zone: zone.lorraine_au_coeur
+  - condition: time
+    # At least one of the following is required.
+    after: '16:45:00'
+    before: '1:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: numeric_state
+    entity_id: sensor.velostanlib_nancy_stations_2b6a62371b1b45a936468c9cf16a3528
+    value_template: '{{ state }}'
+    below: 1
+action:
+  - service: telegram_bot.send_message
+    data_template: 
+      target:
+        - !secret telegram_mp_chat_id
+        - !secret telegram_jc_chat_id
+      message: >
+        Place Barrois is now empty :( !
