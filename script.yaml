@@ -122,5 +122,5 @@ geek_inc:
     - service: media_extractor.play_media
       data_template:
         entity_id: media_player.salon
-        media_content_id: https://www.twitch.tv/geek_inc
+        media_content_id: https://www.twitch.tv/geekinc
         media_content_type: video/mp4

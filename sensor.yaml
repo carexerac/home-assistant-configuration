@@ -1,7 +1,7 @@
 # Temperature
 - platform: mqtt
   name: "Bedroom Temperature"
-  state_topic: "tele/bedroom_light/SENSOR"
+  state_topic: "tele/bedlight/SENSOR"
   qos: 0
   value_template: "{{ value_json['DHT22'].Temperature }}"
   unit_of_measurement: "°C"
@@ -16,7 +16,7 @@
 # Humidity Sensor
 - platform: mqtt
   name: "Bedroom Humidity"
-  state_topic: "tele/bedroom_light/SENSOR"
+  state_topic: "tele/bedlight/SENSOR"
   qos: 0
   value_template: "{{ value_json['DHT22'].Humidity }}"
   unit_of_measurement: "%"
@@ -71,3 +71,7 @@
 #  token: !secret aqicn_token
 #  locations:
 #    - Charles III, Nancy-Centre
+
+- platform: twitch
+  channels:
+    - geekinc
