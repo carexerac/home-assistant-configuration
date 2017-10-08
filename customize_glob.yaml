@@ -1,9 +1,12 @@
-"sensor.*_humidity":
+"sensor.*humidity*":
   friendly_name: "Humidity"
   icon: mdi:water-percent
-"sensor.*_temperature":
+"sensor.*temperature*":
   friendly_name: "Temperature"
   icon: mdi:thermometer
-"sensor.*_humidity":
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
+"sensor.*pressure*":
+  friendly_name: "Pressure"
+  icon: mdi:gauge
+"sensor.*illumination*":
+  friendly_name: "Illuminance"
+  icon: mdi:white-balance-sunny
