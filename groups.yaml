@@ -76,6 +76,7 @@ bathroom:
   name: "Bathroom"
   control: hidden
   entities:
+    - light.yeelight_bathroom
     - binary_sensor.washing_machine
     - sensor.bathroom_temperature
     - sensor.bathroom_humidity
