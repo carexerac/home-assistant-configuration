@@ -22,7 +22,7 @@ device_tracker.raspberry_pi_3:
   # value_template: "{{ states('device_tracker.raspberry_pi_3') }}"
 switch.smart_power_socket:
   icon: mdi:power-socket-eu
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
 switch.tv:
   friendly_name: "TV"
   emulated_hue_name: "Tele"
@@ -32,22 +32,22 @@ switch.rpi:
   friendly_name: "Raspberry Pi"
   emulated_hue_name: "Gaming Console"
 script.good_night:
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
   emulated_hue_name: "Good Night"
 script.movie_time:
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
   emulated_hue_name: "Movie Time"
 script.party_time:
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
   emulated_hue_name: "Party Time"
 script.mute_tv:
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
   emulated_hue_name: "Mute TV"
 script.channel_2:
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
   emulated_hue_name: "France 2"
 script.geek_inc:
-  emulated_hue_hidden: true
+  emulated_hue_hidden: false
   emulated_hue_name: "Geek Inc"
 
 # Xiaomi Gateway
