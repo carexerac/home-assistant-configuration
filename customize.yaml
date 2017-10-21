@@ -72,6 +72,9 @@ binary_sensor.door_window_sensor_158d0001a1f304:
   friendly_name: "Main Door"
 #  icon: mdi:glassdoor
   icon: mdi:locker
+binary_sensor.door_window_sensor_158d0001a64dd9:
+  friendly_name: "Window"
+  icon: mdi:window-closed
 binary_sensor.motion_sensor_158d00016dad0e:
   friendly_name: "Motion"
   icon: mdi:run-fast
