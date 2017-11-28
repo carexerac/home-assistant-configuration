@@ -1,3 +1,7 @@
+# Uptime
+- platform: uptime
+  unit_of_measurement: minutes
+
 # Temperature
 - platform: mqtt
   name: "Bedroom Temperature"

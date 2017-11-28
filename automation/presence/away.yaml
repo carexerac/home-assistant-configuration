@@ -7,6 +7,9 @@ trigger:
 action:
   - service: alarm_control_panel.alarm_arm_away
     entity_id: alarm_control_panel.ha_alarm
+  - condition: numeric_state
+    entity_id: sensor.uptime
+    above: 1
   - service_template: >
       {% if "matthieu" in ([states.group.matthieu, states.group.julie] | sort(attribute="last_changed") | first).entity_id %}
       notify.telegram_mp
