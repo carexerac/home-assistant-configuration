@@ -17,5 +17,5 @@ action:
       message: >
         {% for user in [states.group.matthieu, states.group.julie] if user.state == "home" %}
         {{ user.attributes.friendly_name }} is {{ user.state }}
-        ({% for entity in user.attributes.entity_id if is_state(entity, "home") %}{{ entity }}{% if loop.index != loop.length %}, {% endif %}{% endfor %})
+        ({% for entity_id in user.attributes.entity_id if is_state(entity_id, "home") %}{{states[entity_id.split('.')[0]][entity_id.split('.')[1]].attributes.friendly_name}}{% if loop.index != loop.length %}, {% endif %}{% endfor %})
         {% endfor %}

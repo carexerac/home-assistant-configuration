@@ -1,7 +1,7 @@
 - name: Home
   latitude: 48.688016
   longitude: 6.164681
-  radius: 50
+  radius: 100
   icon: mdi:home
 
 - name: CitizenCam
