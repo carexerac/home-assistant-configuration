@@ -1,54 +1,66 @@
 binary_sensor.washing_machine:
   friendly_name: "Washing Machine"
   icon: mdi:washing-machine
-light.mp_bed_light:
-  friendly_name: "Matthieu's Bed Light"
-  icon: mdi:lamp
-  emulated_hue_name: "Lampe de Matthieu"
-light.ambient_yeelight:
-  friendly_name: "Ambient Light"
-  icon: mdi:lightbulb-on-outline
-  emulated_hue_name: "Lampe d'ambiance"
-light.sofa_yeelight_strip:
-  friendly_name: "Sofa Light Strip"
-#  icon: mdi:led-strip
-  icon: mdi:sofa
-  emulated_hue_name: "Canapé"
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
 device_tracker.raspberry_pi_3:
   friendly_name: "GameStation"
   icon: mdi:gamepad-variant
   # value_template: "{{ states('device_tracker.raspberry_pi_3') }}"
+remote.harmony_hub:
+  hidden: true
+
+# lights
+light.mp_bed_light:
+  friendly_name: "Matthieu's Bed Light"
+  icon: mdi:lamp
+  google_assistant_name: "Lampe de Matthieu"
+light.ambient_yeelight:
+  friendly_name: "Ambient Light"
+  icon: mdi:lightbulb-on-outline
+  google_assistant_name: "Lampe d'ambiance"
+light.sofa_yeelight_strip:
+  friendly_name: "Sofa Light Strip"
+#  icon: mdi:led-strip
+  icon: mdi:sofa
+  google_assistant_name: "Canapé"
+
+# switches
 switch.smart_power_socket:
   icon: mdi:power-socket-eu
-  emulated_hue_hidden: false
 switch.tv:
   friendly_name: "TV"
-  emulated_hue_name: "Tele"
+  google_assistant_name: "TV"
+  aliases:
+    - Television
+    - Tele
 switch.chromecast:
   friendly_name: "Chromecast"
 switch.rpi:
   friendly_name: "Raspberry Pi"
-  emulated_hue_name: "Gaming Console"
-script.good_night:
-  emulated_hue_hidden: false
-  emulated_hue_name: "Good Night"
-script.movie_time:
-  emulated_hue_hidden: false
-  emulated_hue_name: "Movie Time"
+  google_assistant_name: "Gaming Console"
+
+# Scenes
+scene.good_night:
+  google_assistant: true
+  google_assistant_name: "Good Night"
+scene.movie_time:
+  google_assistant: true
+  google_assistant_name: "Movie Time"
+
+# Scripts
 script.party_time:
-  emulated_hue_hidden: false
-  emulated_hue_name: "Party Time"
+  google_assistant: true
+  google_assistant_name: "Party Time"
 script.mute_tv:
-  emulated_hue_hidden: false
-  emulated_hue_name: "Mute TV"
+  google_assistant: true
+  google_assistant_name: "Mute TV"
 script.channel_2:
-  emulated_hue_hidden: false
-  emulated_hue_name: "France 2"
+  google_assistant: true
+  google_assistant_name: "France 2"
 script.geek_inc:
-  emulated_hue_hidden: false
-  emulated_hue_name: "Geek Inc"
+  google_assistant: true
+  google_assistant_name: "Geek Inc"
 
 # Xiaomi Gateway
 light.gateway_light_f0b429cc58ea:
@@ -62,11 +74,13 @@ sensor.illumination_f0b429cc58ea:
 switch.wall_switch_158d00014a1a13:
   friendly_name: "Ceiling Light"
   icon: mdi:ceiling-light
-  emulated_hue_name: "Lustre séjour"
+  google_assistant_name: "Lustre séjour"
+  google_assistant_type: light
 switch.wall_switch_158d00014dcb6a:
   friendly_name: "Ceiling Light"
   icon: mdi:ceiling-light
-  emulated_hue_name: "Lustre salon"
+  google_assistant_name: "Lustre salon"
+  google_assistant_type: light
 
 binary_sensor.door_window_sensor_158d0001a1f304:
   friendly_name: "Main Door"
