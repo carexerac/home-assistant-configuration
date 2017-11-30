@@ -1,0 +1,4 @@
+- platform: generic_thermostat
+  name: Thermostat
+  heater: sensor.temperature_158d0001a35a71
+  target_sensor: sensor.temperature_158d0001a35a71

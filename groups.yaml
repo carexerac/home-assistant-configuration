@@ -52,6 +52,7 @@ living_room:
     - sensor.pressure_158d0001a35a71
     - binary_sensor.motion_sensor_158d00016dad0e
     - sensor.illumination_158d00016dad0e
+    - climate.thermostat
 
 
 dining_room:
