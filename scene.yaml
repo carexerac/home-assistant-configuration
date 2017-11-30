@@ -1,0 +1,22 @@
+- name: Movie time
+  entities:
+    switch.chromecast:
+      state: on
+    switch.wall_switch_158d00014a1a13:
+      state: off
+    switch.wall_switch_158d00014dcb6a:
+      state: off
+    light.sofa_yeelight_strip:
+      state: on
+      effect: Stop
+      color_name: white
+      brightness_pct: 100
+
+- name: Good night
+  entities:
+    group.living_room:
+      state: off
+    group.dining_room:
+      state: off
+    group.bedroom:
+      state: on

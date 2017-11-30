@@ -25,38 +25,6 @@ flash_light_loop:
       data_template:
         light_entity_id: '{{ light_entity_id }}'
 
-good_night:
-  alias: Good night
-  sequence:
-    - service: switch.turn_off
-      entity_id: switch.tv
-    - service: switch.turn_off
-      entity_id: group.living_room
-    - service: light.turn_off
-      entity_id: group.living_room
-    - service: switch.turn_off
-      entity_id: group.dining_room
-    - service: light.turn_off
-      entity_id: group.dining_room
-    - service: light.turn_on
-      entity_id: light.mp_bed_light
-
-movie_time:
-  alias: Movie time
-  sequence:
-    - service: switch.turn_on
-      entity_id: switch.chromecast
-    - service: switch.turn_off
-      entity_id: switch.wall_switch_158d00014a1a13
-    - service: switch.turn_off
-      entity_id: switch.wall_switch_158d00014dcb6a
-    - service: light.turn_on
-      entity_id: light.sofa_yeelight_strip
-      data:
-        effect: "Stop"
-        color_name: "white"
-        brightness_pct: 100
-
 party_time:
   alias: Party time
   sequence:
@@ -118,7 +86,7 @@ geek_inc:
     - service: switch.turn_on
       entity_id: switch.chromecast
     # wait until media player have stop the playing
-    - wait_template: "{{ is_state('device_tracker.chromecast', 'home') }}"
+    #- wait_template: "{{ is_state('device_tracker.chromecast', 'home') }}"
     - service: media_extractor.play_media
       data_template:
         entity_id: media_player.salon
