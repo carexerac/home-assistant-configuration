@@ -108,7 +108,7 @@ matthieu:
   entities:
     - device_tracker.mp_z3c
     - device_tracker.mp_z3c_nmap
-    - device_tracker.mp_macbook_air
+#    - device_tracker.mp_macbook_air
     - device_tracker.mp_z3c_bluetooth
     - device_tracker.mp_pebble_time
 
@@ -119,8 +119,9 @@ julie:
   entities:
     - device_tracker.jc_iphone
     - device_tracker.jc_iphone_nmap
-    - device_tracker.jc_macbook_air
+#    - device_tracker.jc_macbook_air
     - device_tracker.jc_iphone_bluetooth
+    - device_tracker.jc_apple_watch
 
 weather:
   name: "Weather"
