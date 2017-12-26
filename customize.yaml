@@ -24,6 +24,9 @@ light.sofa_yeelight_strip:
 #  icon: mdi:led-strip
   icon: mdi:sofa
   google_assistant_name: "Canapé"
+light.yeelight_guinea_pig:
+  google_assistant_name: "Cochons d'inde"
+
 
 # switches
 switch.smart_power_socket:
@@ -47,6 +50,9 @@ scene.good_night:
 scene.movie_time:
   google_assistant: true
   google_assistant_name: "Movie Time"
+scene.christmas:
+  google_assistant: true
+  google_assistant_name: "Christmas"
 
 # Scripts
 script.party_time:

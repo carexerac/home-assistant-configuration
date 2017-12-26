@@ -7,3 +7,4 @@ exposed_domains:
   - switch
   - light
   - climate
+  - scene

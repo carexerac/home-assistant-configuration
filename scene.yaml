@@ -20,3 +20,18 @@
       state: off
     group.bedroom:
       state: on
+
+- name: Christmas
+  entities:
+    light.sofa_yeelight_strip:
+      state: on
+      effect: Christmas
+      brightness_pct: 100
+    light.yeelight_guinea_pig:
+      state: on
+      effect: Christmas
+      brightness_pct: 100
+    light.ambient_yeelight:
+      state: on
+      effect: Christmas
+      brightness_pct: 50

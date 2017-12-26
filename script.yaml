@@ -61,6 +61,18 @@ party_time:
         # effect: "Slowdown"
         effect: "Disco"
         brightness_pct: 100
+    - service: light.turn_on
+      entity_id: light.yeelight_guinea_pig
+      data:
+        # effect: "Slowdown"
+        effect: "Disco"
+        brightness_pct: 100
+    - service: light.turn_on
+      entity_id: light.sofa_yeelight_strip
+      data:
+        # effect: "Slowdown"
+        effect: "Disco"
+        brightness_pct: 100
 
 mute_tv:
   alias: Mute TV

@@ -60,6 +60,7 @@ dining_room:
   control: hidden
   entities:
     - switch.wall_switch_158d00014a1a13
+    - light.yeelight_guinea_pig
     - device_tracker.airport_extreme
     - device_tracker.sagem_router
     - device_tracker.logitech_circle
@@ -80,7 +81,7 @@ bathroom:
   name: "Bathroom"
   control: hidden
   entities:
-    - light.yeelight_bathroom
+#    - light.yeelight_bathroom
     - binary_sensor.washing_machine
     - sensor.bathroom_temperature
     - sensor.bathroom_humidity
