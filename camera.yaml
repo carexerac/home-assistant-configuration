@@ -2,13 +2,13 @@
 #  mjpeg_url: http://127.0.0.1:8081/html/cam_pic_new.php
 #  name: "RPi Camera"
 
-- platform: rpi_camera
-  name: "RPi Camera"
-  image_width: 1280
-  image_height: 720
-  image_quality: 5
-  horizontal_flip: 1
-  vertical_flip: 1
+#- platform: rpi_camera
+#  name: "RPi Camera"
+#  image_width: 1280
+#  image_height: 720
+#  image_quality: 5
+#  horizontal_flip: 1
+#  vertical_flip: 1
 
 - platform: generic
   name: GPS Locations

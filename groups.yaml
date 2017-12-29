@@ -64,7 +64,7 @@ dining_room:
     - device_tracker.airport_extreme
     - device_tracker.sagem_router
     - device_tracker.logitech_circle
-    - camera.rpi_camera
+#    - camera.rpi_camera
 #    - sensor.photo_frame_temperature
 #    - sensor.photo_frame_humidity
 
