@@ -6,6 +6,8 @@
       state: off
     switch.wall_switch_158d00014dcb6a:
       state: off
+    light.ambient_light:
+      state: off
     light.sofa_yeelight_strip:
       state: on
       effect: Stop

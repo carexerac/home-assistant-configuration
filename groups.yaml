@@ -107,10 +107,10 @@ matthieu:
   icon: mdi:account-box
   control: hidden
   entities:
-    - device_tracker.mp_z3c
-    - device_tracker.mp_z3c_nmap
+    - device_tracker.mp_iphone
+    - device_tracker.mp_iphone_nmap
 #    - device_tracker.mp_macbook_air
-    - device_tracker.mp_z3c_bluetooth
+    - device_tracker.mp_iphone_bluetooth
     - device_tracker.mp_pebble_time
 
 julie:
