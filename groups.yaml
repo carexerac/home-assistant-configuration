@@ -60,7 +60,7 @@ dining_room:
   control: hidden
   entities:
     - switch.wall_switch_158d00014a1a13
-    - light.yeelight_guinea_pig
+#    - light.yeelight_guinea_pig
     - device_tracker.airport_extreme
     - device_tracker.sagem_router
     - device_tracker.logitech_circle

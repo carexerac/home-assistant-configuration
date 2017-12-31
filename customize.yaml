@@ -41,7 +41,11 @@ switch.chromecast:
   friendly_name: "Chromecast"
 switch.rpi:
   friendly_name: "Raspberry Pi"
-  google_assistant_name: "Gaming Console"
+  google_assistant_name: "Console"
+  aliases:
+    - Console de jeux
+    - Raspberry Pi
+    - Raspberry
 
 # Scenes
 scene.good_night:
@@ -64,6 +68,9 @@ script.mute_tv:
 script.channel_2:
   google_assistant: true
   google_assistant_name: "France 2"
+  aliases:
+    - 2
+    - Deux
 script.geek_inc:
   google_assistant: true
   google_assistant_name: "Geek Inc"
