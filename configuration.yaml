@@ -57,8 +57,7 @@ mqtt:
 
 # Emulated Hue Bridge
 emulated_hue:
-  type: google_home
-  listen_port: 80
+  listen_port: 8300
   exposed_domains:
     - light
     - switch
