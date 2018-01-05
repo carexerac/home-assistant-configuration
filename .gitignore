@@ -8,3 +8,4 @@ emulated_hue_ids.json
 .uuid
 known_devices.yaml
 .HA_VERSION
+homebridge
