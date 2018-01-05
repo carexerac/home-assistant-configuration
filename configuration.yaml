@@ -19,6 +19,9 @@ logger: !include logger.yaml
 # Enables the frontend
 frontend: !include frontend.yaml
 
+# Enable Hassio configuration
+hassio:
+
 # Enables configuration UI
 config:
 
@@ -32,9 +35,9 @@ http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
 
-duckdns:
-  domain: !secret duckdns_domain
-  access_token: !secret duckdns_access_token
+#duckdns:
+#  domain: !secret duckdns_domain
+#  access_token: !secret duckdns_access_token
 
 # Checks for available updates
 updater:
@@ -50,8 +53,8 @@ logbook:
 
 # MQTT Broker
 mqtt:
-  broker: localhost
-  client_id: home-assistant
+#  broker: localhost
+#  client_id: home-assistant
   username: !secret mqtt_user
   password: !secret mqtt_password
 
