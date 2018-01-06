@@ -27,7 +27,7 @@ action:
   - condition: template
     value_template: "{{ trigger.event.data.args[0] is defined }}"
   - service: tts.google_say
-    entity_id: media_player.living_room_home
+    entity_id: media_player.google_home
     data_template:
       language: "fr"
       cache: false

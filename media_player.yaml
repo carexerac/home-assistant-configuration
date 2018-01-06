@@ -1,5 +1,12 @@
+# be careful to not change names inside the Google Home app
 - platform: cast
   host: !secret google_home_host
 
 - platform: cast
+  host: !secret google_home_mini_host
+
+- platform: cast
   host: !secret chromecast_host
+
+- platform: cast
+  host: !secret chromecast_audio_host

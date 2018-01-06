@@ -13,11 +13,21 @@ action:
         - !secret telegram_jc_chat_id
       inline_keyboard:
         - "Disarm:/disarm"
-  - service: tts.google_say
-    entity_id: media_player.living_room_home
-    data:
-      message: "Alerte ! Un intrus est arrivé"
-      language: "fr"
   - service: script.flash_light
     data:
       light_entity_id: 'light.gateway_light_f0b429cc58ea'
+  - service: tts.google_say
+    entity_id: media_player.google_home
+    data:
+      message: "Alerte ! Un intrus est arrivé"
+      language: "fr"
+  - service: tts.google_say
+    entity_id: media_player.google_home_mini
+    data:
+      message: "Alerte ! Un intrus est arrivé"
+      language: "fr"
+  - service: tts.google_say
+    entity_id: media_player.enceintes
+    data:
+      message: "Alerte ! Un intrus est arrivé"
+      language: "fr"
