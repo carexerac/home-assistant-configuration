@@ -28,7 +28,7 @@ action:
       latitude: >
         {% if trigger.event.data.args[0] is defined %}
           {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
-            {{ states.device_tracker.mp_z3c.attributes.latitude }}
+            {{ states.device_tracker.mp_iphone.attributes.latitude }}
           {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
             {{ states.device_tracker.jc_iphone.attributes.latitude }}
           {% endif %}
@@ -36,7 +36,7 @@ action:
       longitude: >
         {% if trigger.event.data.args[0] is defined %}
           {% if trigger.event.data.args[0] == 'mp' or trigger.event.data.args[0] == 'matthieu' %}
-            {{ states.device_tracker.mp_z3c.attributes.longitude }}
+            {{ states.device_tracker.mp_iphone.attributes.longitude }}
           {% elif trigger.event.data.args[0] == 'jc' or trigger.event.data.args[0] == 'julie' %}
             {{ states.device_tracker.jc_iphone.attributes.longitude }}
           {% endif %}
