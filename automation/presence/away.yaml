@@ -19,4 +19,4 @@ action:
     data_template:
       message: >
         {% set user = ([states.group.matthieu, states.group.julie] | sort(attribute="last_changed") | last) %}
-        {{ user.attributes.friendly_name }} just left home and is {{ 'away' if user.state == 'not home' else 'at ' + user.state }}
+        {{ user.attributes.friendly_name }} just left home and is {{ 'away' if user.state == 'not_home' else 'at ' + user.state }}

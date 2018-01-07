@@ -24,8 +24,8 @@ light.sofa_yeelight_strip:
 #  icon: mdi:led-strip
   icon: mdi:sofa
   google_assistant_name: "Canapé"
-light.yeelight_guinea_pig:
-  google_assistant_name: "Cochons d'inde"
+#light.yeelight_guinea_pig:
+#  google_assistant_name: "Cochons d'inde"
 
 
 # switches
@@ -35,8 +35,8 @@ switch.tv:
   friendly_name: "TV"
   google_assistant_name: "TV"
   aliases:
-    - Television
-    - Tele
+    - Télévision
+    - Télé
 switch.chromecast:
   friendly_name: "Chromecast"
 switch.rpi:
