@@ -40,7 +40,7 @@ living_room:
   name: "Living Room"
   control: hidden
   entities:
-    - switch.wall_switch_158d00014dcb6a
+    - light.living_room_ceiling
     - light.ambient_yeelight
     - light.sofa_yeelight_strip
     - switch.smart_power_socket
@@ -59,7 +59,7 @@ dining_room:
   name: "Dining Room"
   control: hidden
   entities:
-    - switch.wall_switch_158d00014a1a13
+    - light.dining_room_ceiling
 #    - light.yeelight_guinea_pig
     - device_tracker.airport_extreme
     - device_tracker.sagem_router

@@ -19,6 +19,11 @@ light.ambient_yeelight:
   friendly_name: "Ambient Light"
   icon: mdi:lightbulb-on-outline
   google_assistant_name: "Lampe d'ambiance"
+  aliases:
+    - Lumière d'ambiance
+    - Lumière ambiante
+    - Petite lampe
+    - Petite lumière
 light.sofa_yeelight_strip:
   friendly_name: "Sofa Light Strip"
 #  icon: mdi:led-strip
@@ -26,7 +31,19 @@ light.sofa_yeelight_strip:
   google_assistant_name: "Canapé"
 #light.yeelight_guinea_pig:
 #  google_assistant_name: "Cochons d'inde"
+light.dining_room_ceiling:
+  icon: mdi:ceiling-light
+  google_assistant_name: "Lustre séjour"
+  google_assistant_type: light
+light.living_room_ceiling:
+  icon: mdi:ceiling-light
+  google_assistant_name: "Lustre salon"
+  google_assistant_type: light
 
+switch.wall_switch_158d00014a1a13:
+  google_assistant: false
+switch.wall_switch_158d00014dcb6a:
+  google_assistant: false
 
 # switches
 switch.smart_power_socket:
@@ -83,18 +100,7 @@ sensor.illumination_f0b429cc58ea:
   friendly_name: "Illuminance"
   icon: mdi:white-balance-sunny
 
-
-switch.wall_switch_158d00014a1a13:
-  friendly_name: "Ceiling Light"
-  icon: mdi:ceiling-light
-  google_assistant_name: "Lustre séjour"
-  google_assistant_type: light
-switch.wall_switch_158d00014dcb6a:
-  friendly_name: "Ceiling Light"
-  icon: mdi:ceiling-light
-  google_assistant_name: "Lustre salon"
-  google_assistant_type: light
-
+# Sensor
 binary_sensor.door_window_sensor_158d0001a1f304:
   friendly_name: "Main Door"
 #  icon: mdi:glassdoor

@@ -24,3 +24,24 @@
 #      transition: 1000
 #      use_music_mode: True #defaults to False
 #      save_on_change: False #defaults to True
+
+- platform: template
+  lights:
+    dining_room_ceiling:
+      friendly_name: 'Dining Room Ceiling'
+      value_template: '{{ states("switch.wall_switch_158d00014a1a13") }}'
+      turn_on:
+        service: switch.turn_on
+        entity_id: switch.wall_switch_158d00014a1a13
+      turn_off:
+        service: switch.turn_off
+        entity_id: switch.wall_switch_158d00014a1a13
+    living_room_ceiling:
+      friendly_name: 'Living Room Ceiling'
+      value_template: '{{ states("switch.wall_switch_158d00014dcb6a") }}'
+      turn_on:
+        service: switch.turn_on
+        entity_id: switch.wall_switch_158d00014dcb6a
+      turn_off:
+        service: switch.turn_off
+        entity_id: switch.wall_switch_158d00014dcb6a
