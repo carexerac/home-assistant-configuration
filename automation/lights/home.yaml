@@ -1,0 +1,30 @@
+alias: "Turn lights on when someone comes home"
+trigger:
+  platform: state
+  entity_id: binary_sensor.door_window_sensor_158d0001a1f304
+  from: "off"
+  to: "on"
+condition:
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: 'binary_sensor.is_someone_home'
+        state: 'off'
+      - condition: template
+        value_template: '{{ as_timestamp(now()) - as_timestamp(states.binary_sensor.is_someone_home.last_updated) < 300 }}'
+  - condition: numeric_state
+    entity_id: sensor.illumination_f0b429cc58ea
+    below: 150
+  - condition: state
+    entity_id: group.all_lights
+    state: 'off'
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.gateway_light_f0b429cc58ea
+      brightness: 255
+      color_name: white
+  - service: script.turn_on_light_briefly
+    data:
+      entity_id: 'light.gateway_light_f0b429cc58ea'
+      delay: '00:01:00'

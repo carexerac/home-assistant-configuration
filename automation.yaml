@@ -6,6 +6,8 @@
 - !include automation/presence/home.yaml
 - !include automation/presence/away.yaml
 
+- !include automation/lights/home.yaml
+
 - !include automation/telegram/arm_callback.yaml
 - !include automation/telegram/arm_command.yaml
 - !include automation/telegram/bikes_command.yaml
