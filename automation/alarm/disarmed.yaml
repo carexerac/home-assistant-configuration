@@ -16,7 +16,7 @@ action:
       language: "fr"
   - service: light.turn_off
     data:
-      entity_id: light.gateway_light_f0b429cc58ea 
+      entity_id: light.ambient_yeelight
   - service: script.turn_off
     entity_id: script.flash_light
   - service: script.turn_off
