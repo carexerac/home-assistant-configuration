@@ -1,4 +1,4 @@
 - platform: manual
-  pending_time: 30
+  pending_time: 60
   trigger_time: 60
   disarm_after_trigger: true
