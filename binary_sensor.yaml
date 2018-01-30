@@ -13,13 +13,5 @@
   sensors:
     is_someone_home:
       value_template: >-
-        {%- if is_state("group.matthieu", "home")
-        or is_state("group.julie", "home")
-        -%}
-          True
-        {%- else -%}
-          False
-        {%- endif %}
-      entity_id:
-        - group.matthieu
-        - group.julie
+        {} is_state("group.matthieu", "home")
+        or is_state("group.julie", "home") }}
