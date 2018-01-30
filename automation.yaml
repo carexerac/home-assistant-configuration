@@ -25,3 +25,5 @@
 
 - !include automation/washing.yaml
 - !include automation/geekinc.yaml
+#- !include automation/vacuum.yaml
+- !include automation/window.yaml
