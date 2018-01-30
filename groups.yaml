@@ -24,6 +24,28 @@ weather_view:
   entities:
     - group.weather
 
+rpi_view:
+  view: yes
+  icon: mdi:raspberrypi
+  entities:
+    - group.raspberrypi
+
+
+raspberrypi:
+  name: "Raspberry Pi"
+  control: hidden
+  entities:
+    - sensor.last_boot
+    - sensor.since_last_boot
+    - sensor.uptime
+    - sensor.cpu_used
+    - sensor.average_load_1m
+    - sensor.ram_used
+    - sensor.disk_used_
+    - sensor.swap_used
+    - sensor.sent_eth0
+    - sensor.received_eth0
+
 living_room:
   name: "Living Room"
   control: hidden
@@ -55,6 +77,7 @@ dining_room:
 #    - camera.rpi_camera
 #    - sensor.photo_frame_temperature
 #    - sensor.photo_frame_humidity
+    - camera.les_bibous
 
 bedroom:
   name: "Bedroom"

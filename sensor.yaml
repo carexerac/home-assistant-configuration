@@ -2,6 +2,26 @@
 - platform: uptime
   unit_of_measurement: minutes
 
+- platform: cpuspeed
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: swap_use_percent
+    - type: load_1m
+    - type: network_in
+      arg: eth0
+    - type: network_out
+      arg: eth0
+    - type: packets_in
+      arg: eth0
+    - type: packets_out
+      arg: eth0
+    - type: processor_use
+    - type: last_boot
+    - type: since_last_boot
+
 # Temperature
 - platform: mqtt
   name: "Bedroom Temperature"
