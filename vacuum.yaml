@@ -1,0 +1,4 @@
+- platform: xiaomi_miio
+  name: "Xiaomi Mi Robot"
+  host: !secret xiaomi_mi_robot_host
+  token: !secret xiaomi_mi_robot_token

@@ -64,6 +64,7 @@ bedroom:
     - sensor.bedroom_temperature
     - sensor.bedroom_humidity
     - binary_sensor.door_window_sensor_158d0001a64dd9
+    - vacuum.xiaomi_mi_robot
 
 bathroom:
   name: "Bathroom"

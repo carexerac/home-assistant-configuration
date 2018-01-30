@@ -90,6 +90,7 @@ automation: !include automation.yaml
 script: !include script.yaml
 alarm_control_panel: !include alarm_control_panel.yaml
 telegram_bot: !include telegram_bot.yaml
+vacuum: !include vacuum.yaml
 
 xiaomi_aqara:
   gateways:
