@@ -2,9 +2,9 @@
   entities:
     switch.chromecast:
       state: on
-    switch.wall_switch_158d00014a1a13:
+    light.living_room_ceiling:
       state: off
-    switch.wall_switch_158d00014dcb6a:
+    light.dining_room_ceiling:
       state: off
     light.ambient_light:
       state: off
@@ -16,11 +16,19 @@
 
 - name: Good night
   entities:
-    group.living_room:
+    group.all_switches:
       state: off
-    group.dining_room:
+#    group.all_lights:
+#      state: off
+    light.living_room_ceiling:
       state: off
-    group.bedroom:
+    light.dining_room_ceiling:
+      state: off
+    light.ambient_light:
+      state: off
+    light.sofa_yeelight_strip:
+      state: off
+    light.mp_bed_light:
       state: on
 
 - name: Christmas
