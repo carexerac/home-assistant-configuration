@@ -1,7 +1,7 @@
 - platform: nmap_tracker
   hosts: 192.168.254.100/28
   interval_seconds: 60
-  track_new_devices: true
+  track_new_devices: false
 
 - platform: nmap_tracker
   hosts: 192.168.254.220/26
