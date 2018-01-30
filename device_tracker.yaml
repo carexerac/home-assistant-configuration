@@ -1,14 +1,11 @@
 - platform: nmap_tracker
   hosts: 192.168.254.100/28
   interval_seconds: 60
-  track_new_devices: false
+  track_new_devices: true
 
 - platform: nmap_tracker
   hosts: 192.168.254.220/26
   interval_seconds: 300
-
-- platform: owntracks
-  max_gps_accuracy: 200
 
 - platform: bluetooth_tracker
   interval_seconds : 30

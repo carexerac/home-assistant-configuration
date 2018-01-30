@@ -8,3 +8,61 @@ exposed_domains:
   - light
   - climate
   - scene
+entity_config:
+  vacuum.xiaomi_mi_robot:
+    expose: true
+    type: switch
+    name: "Aspirateur"
+    aliases:
+      - Mi Robot
+      - Robot
+  switch.wall_switch_158d00014a1a13:
+    expose: false
+  switch.wall_switch_158d00014dcb6a:
+    expose: false
+  light.mp_bed_light:
+    name: "Lampe de Matthieu"
+  light.ambient_yeelight:
+    name: "Lampe d'ambiance"
+    aliases:
+      - Lumière d'ambiance
+      - Lumière ambiante
+      - Petite lampe
+      - Petite lumière
+  light.sofa_yeelight_strip:
+    name: "Canapé"
+  light.dining_room_ceiling:
+    name: "Lustre séjour"
+  light.living_room_ceiling:
+    name: "Lustre salon"
+  switch.tv:
+    name: "TV"
+    aliases:
+      - Télévision
+      - Télé
+  switch.rpi:
+    name: "Console"
+    aliases:
+      - Console de jeux
+      - Raspberry Pi
+      - Raspberry
+      - Pi
+  scene.good_night:
+    expose: true
+    name: "Good Night"
+  scene.movie_time:
+    name: "Movie Time"
+  scene.christmas:
+    name: "Christmas"
+  script.party_time:
+    expose: true
+    name: "Party Time"
+  script.mute_tv:
+    expose: true
+    name: "Mute TV"
+  script.channel_2:
+    expose: true
+    name: "France 2"
+  script.geek_inc:
+    expose: true
+    name: "Geek Inc"

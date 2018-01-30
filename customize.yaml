@@ -14,83 +14,29 @@ remote.harmony_hub:
 light.mp_bed_light:
   friendly_name: "Matthieu's Bed Light"
   icon: mdi:lamp
-  google_assistant_name: "Lampe de Matthieu"
 light.ambient_yeelight:
   friendly_name: "Ambient Light"
   icon: mdi:lightbulb-on-outline
-  google_assistant_name: "Lampe d'ambiance"
-  aliases:
-    - Lumière d'ambiance
-    - Lumière ambiante
-    - Petite lampe
-    - Petite lumière
 light.sofa_yeelight_strip:
   friendly_name: "Sofa Light Strip"
 #  icon: mdi:led-strip
   icon: mdi:sofa
-  google_assistant_name: "Canapé"
 #light.yeelight_guinea_pig:
 #  google_assistant_name: "Cochons d'inde"
 light.dining_room_ceiling:
   icon: mdi:ceiling-light
-  google_assistant_name: "Lustre séjour"
-  google_assistant_type: light
 light.living_room_ceiling:
   icon: mdi:ceiling-light
-  google_assistant_name: "Lustre salon"
-  google_assistant_type: light
-
-switch.wall_switch_158d00014a1a13:
-  google_assistant: false
-switch.wall_switch_158d00014dcb6a:
-  google_assistant: false
 
 # switches
 switch.smart_power_socket:
   icon: mdi:power-socket-eu
 switch.tv:
   friendly_name: "TV"
-  google_assistant_name: "TV"
-  aliases:
-    - Télévision
-    - Télé
 switch.chromecast:
   friendly_name: "Chromecast"
 switch.rpi:
   friendly_name: "Raspberry Pi"
-  google_assistant_name: "Console"
-  aliases:
-    - Console de jeux
-    - Raspberry Pi
-    - Raspberry
-
-# Scenes
-scene.good_night:
-  google_assistant: true
-  google_assistant_name: "Good Night"
-scene.movie_time:
-  google_assistant: true
-  google_assistant_name: "Movie Time"
-scene.christmas:
-  google_assistant: true
-  google_assistant_name: "Christmas"
-
-# Scripts
-script.party_time:
-  google_assistant: true
-  google_assistant_name: "Party Time"
-script.mute_tv:
-  google_assistant: true
-  google_assistant_name: "Mute TV"
-script.channel_2:
-  google_assistant: true
-  google_assistant_name: "France 2"
-  aliases:
-    - 2
-    - Deux
-script.geek_inc:
-  google_assistant: true
-  google_assistant_name: "Geek Inc"
 
 # Xiaomi Gateway
 light.gateway_light_f0b429cc58ea:
