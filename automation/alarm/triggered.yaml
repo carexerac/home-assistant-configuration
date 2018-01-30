@@ -21,18 +21,6 @@ action:
   - service: script.flash_light
     data:
       light_entity_id: 'light.ambient_yeelight'
-  - service: tts.google_say
-    entity_id: media_player.google_home
+  - service: notify.google_assistant
     data:
-      message: "Alerte ! Un intrus est arrivé"
-      language: "fr"
-  - service: tts.google_say
-    entity_id: media_player.google_home_mini
-    data:
-      message: "Alerte ! Un intrus est arrivé"
-      language: "fr"
-  - service: tts.google_say
-    entity_id: media_player.enceintes
-    data:
-      message: "Alerte ! Un intrus est arrivé"
-      language: "fr"
+      message: "Alerte ! Un intrus est arrivé. Déclenchement immédiat des appels auprès des services de sécurité et démarrage de la séquence d'enregistrement vidéo."

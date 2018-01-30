@@ -9,11 +9,6 @@ action:
 #      message: "Alarm armed"
 #      target:
 #        - !secret telegram_mp_chat_id
-  - service: tts.google_say
-    entity_id: media_player.google_home
-    data:
-      message: "Alarme activée"
-      language: "fr"
   - service: script.turn_off
     entity_id: script.flash_light
   - service: script.turn_off
@@ -23,3 +18,6 @@ action:
 #      entity_id: light.gateway_light_f0b429cc58ea
 #      brightness: 255
 #      color_name: red
+  - service: notify.google_assistant
+    data:
+      message: "Alarme activée"

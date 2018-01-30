@@ -20,22 +20,18 @@ action:
           'Of course',
           'Sure thing',
           'You know you can open your mouth right ?',
-          'You owe me a flavor'
+          'You owe me a flavor',
+          'Here we go again...'
         ]|random }}
         {% endif %}
       disable_notification: true
   - condition: template
     value_template: "{{ trigger.event.data.args[0] is defined }}"
-  - service: tts.google_say
-    entity_id: media_player.google_home
+  - service: notify.google_assistant
     data_template:
-      language: "fr"
-      cache: false
       message: >
         {{ [
           trigger.event.data["from_first"] + ' dit : ',
           trigger.event.data["from_first"] + ' a dit : ',
-          'La bouche de ' + trigger.event.data["from_first"] + ' est coincée donc je vais parler à sa place. ',
-          trigger.event.data["from_first"] + ' a trop la flemme de parler mais voici sa pensée : ',
           trigger.event.data["from_first"] + ' pense que : '
         ]|random }}{% for state in trigger.event.data["args"] %} {{ state }} {% endfor %}
