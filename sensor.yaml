@@ -67,14 +67,14 @@
   value_template: "{{ value_json.Humidity }}"
   unit_of_measurement: "%"
 
-- platform: citybikes
-  name: Nancy Stations
-  radius: 5000
+#- platform: citybikes
+#  name: Nancy Stations
+#  radius: 5000
 
-#- platform: waqi
-#  token: !secret aqicn_token
-#  locations:
-#    - Charles III, Nancy-Centre
+- platform: waqi
+  token: !secret aqicn_token
+  locations:
+    - Charles III, Nancy-Centre
 
 - platform: twitch
   channels:
