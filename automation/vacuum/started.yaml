@@ -1,0 +1,13 @@
+alias: "Vacuum started"
+trigger:
+  platform: state
+  entity_id: vacuum.xiaomi_mi_robot
+  from: 'off'
+  to: 'on'
+action:
+  - service: telegram_bot.send_message
+    data:
+      message: "Vacuum has started"
+      target:
+        - !secret telegram_mp_chat_id
+        - !secret telegram_jc_chat_id

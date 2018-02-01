@@ -11,8 +11,7 @@ trigger:
 action:
   - service: telegram_bot.send_message
     data_template:
-      message: >
-        "Bedroom window has been opened for {{ trigger.to_state.attributes['Open since'] }} seconds"
+      message: "Bedroom window has been opened for {{ ( states.binary_sensor.door_window_sensor_158d0001a64dd9.attributes['Open since'] / 60) | int }} minutes"
       target:
         - !secret telegram_mp_chat_id
 #        - !secret telegram_jc_chat_id

@@ -86,7 +86,7 @@ climate: !include climate.yaml
 zone: !include zone.yaml
 group: !include groups.yaml
 notify: !include notify.yaml
-automation: !include automation.yaml
+automation: !include_dir_list automation/
 script: !include script.yaml
 alarm_control_panel: !include alarm_control_panel.yaml
 telegram_bot: !include telegram_bot.yaml
