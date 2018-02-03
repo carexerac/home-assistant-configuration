@@ -1,0 +1,16 @@
+name: "Living Room"
+control: hidden
+entities:
+  - light.living_room_ceiling
+  - light.ambient_yeelight
+  - light.sofa_yeelight_strip
+  - switch.smart_power_socket
+  - device_tracker.google_home
+  - device_tracker.logitech_harmony
+  - remote.harmony_hub
+  - sensor.temperature_158d0001a35a71
+  - sensor.humidity_158d0001a35a71
+  - sensor.pressure_158d0001a35a71
+  - binary_sensor.motion_sensor_158d00016dad0e
+  - sensor.illumination_158d00016dad0e
+  - climate.thermostat

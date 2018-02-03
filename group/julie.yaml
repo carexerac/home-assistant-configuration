@@ -1,0 +1,9 @@
+name: "Julie"
+icon: mdi:account-box-outline
+control: hidden
+entities:
+  - device_tracker.jc_iphone
+  - device_tracker.jc_iphone_nmap
+#  - device_tracker.jc_macbook_air
+  - device_tracker.jc_iphone_bluetooth
+  - device_tracker.jc_apple_watch

@@ -1,0 +1,15 @@
+name: "Weather"
+icon: mdi:weather-partlycloudy
+entities:
+  - sensor.weather_condition
+  - sensor.weather_current
+  - sensor.weather_humidity
+  - sensor.weather_pressure
+  - sensor.weather_temperature
+  - sensor.weather_temperature_max
+  - sensor.weather_temperature_min
+  - sensor.weather_visibility
+  - sensor.weather_wind_speed
+  - sun.sun
+  - weather.weather
+  - sensor.waqi_charles_iii_nancycentre_france

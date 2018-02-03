@@ -84,7 +84,7 @@ scene: !include scene.yaml
 climate: !include climate.yaml
 #weather: !include weather.yaml
 zone: !include zone.yaml
-group: !include groups.yaml
+group: !include_dir_named group/
 notify: !include notify.yaml
 automation: !include_dir_list automation/
 script: !include script.yaml

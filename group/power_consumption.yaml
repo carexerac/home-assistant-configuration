@@ -1,0 +1,10 @@
+name: Power Consumption
+control: hidden
+entities:
+  - sensor.kwh_unit_cost
+  - sensor.linky_daily_1d_consumption
+  - sensor.kwh_daily_cost
+  - sensor.linky_monthly_current_consumption
+  - sensor.kwh_monthly_cost
+  - sensor.linky_yearly_current_consumption
+  - sensor.kwh_yearly_cost

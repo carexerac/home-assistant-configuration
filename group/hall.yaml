@@ -1,0 +1,6 @@
+name: "Hall"
+control: hidden
+entities:
+  - light.gateway_light_f0b429cc58ea
+  - sensor.illumination_f0b429cc58ea
+  - binary_sensor.door_window_sensor_158d0001a1f304
