@@ -10,5 +10,8 @@
 - platform: bluetooth_tracker
   interval_seconds : 30
 
+#- platform: bluetooth_le_tracker
+#  device_id: hci0
+
 - platform: owntracks_http
   max_gps_accuracy: 200
