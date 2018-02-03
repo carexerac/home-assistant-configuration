@@ -2,7 +2,6 @@
 - platform: uptime
   unit_of_measurement: minutes
 
-- platform: cpuspeed
 - platform: systemmonitor
   resources:
     - type: disk_use_percent

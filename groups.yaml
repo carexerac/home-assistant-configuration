@@ -77,7 +77,7 @@ dining_room:
 #    - camera.rpi_camera
 #    - sensor.photo_frame_temperature
 #    - sensor.photo_frame_humidity
-    - camera.les_bibous
+#    - camera.les_bibous
 
 bedroom:
   name: "Bedroom"
@@ -88,6 +88,7 @@ bedroom:
     - sensor.bedroom_humidity
     - binary_sensor.door_window_sensor_158d0001a64dd9
     - vacuum.xiaomi_mi_robot
+#    - climate.bedroom
 
 bathroom:
   name: "Bathroom"
