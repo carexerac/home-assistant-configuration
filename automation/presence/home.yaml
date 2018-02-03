@@ -2,8 +2,8 @@ alias: "Someone is home"
 trigger:
   platform: state
   entity_id: binary_sensor.is_someone_home
-  from: "off"
-  to: "on"
+  from: 'off'
+  to: 'on'
 action:
   - service: alarm_control_panel.alarm_disarm
     entity_id: alarm_control_panel.ha_alarm
