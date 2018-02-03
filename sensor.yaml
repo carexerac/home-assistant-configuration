@@ -98,3 +98,22 @@
 - platform: twitch
   channels:
     - geekinc
+
+- platform: linky
+  username: !secret linky_username
+  password: !secret linky_password
+  monitored_variables:
+    - daily_1d_consumption
+    - monthly_current_consumption
+    - yearly_current_consumption
+
+- platform: speedtest
+  hour:
+    - 8
+    - 12
+    - 16
+    - 20
+  monitored_conditions:
+    - ping
+    - download
+    - upload

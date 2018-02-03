@@ -29,6 +29,8 @@ rpi_view:
   icon: mdi:raspberrypi
   entities:
     - group.raspberrypi
+    - group.speed_test
+    - group.power_consumption
 
 
 raspberrypi:
@@ -45,6 +47,22 @@ raspberrypi:
     - sensor.swap_used
     - sensor.sent_eth0
     - sensor.received_eth0
+
+power_consumption:
+  name: Power Consumption
+  control: hidden
+  entities:
+    - sensor.linky_daily_1d_consumption
+    - sensor.linky_monthly_current_consumption
+    - sensor.linky_yearly_current_consumption
+
+speed_test:
+  name: Speed test
+  control: hidden
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
 
 living_room:
   name: "Living Room"
