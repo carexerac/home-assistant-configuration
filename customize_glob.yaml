@@ -10,3 +10,12 @@
 "sensor.*illumination*":
   friendly_name: "Illuminance"
   icon: mdi:white-balance-sunny
+
+### Homebridge ###
+"light.*":
+  homebridge_visible: true
+"switch.tv":
+  homebridge_mfg: SamsungTV
+  homebridge_visible: true
+"climate.*":
+  homebridge_visible: true
