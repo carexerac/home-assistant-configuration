@@ -107,6 +107,30 @@
     - monthly_current_consumption
     - yearly_current_consumption
 
+- platform: template
+  sensors:
+    kwh_unit_cost:
+      friendly_name: "kWh unit cost"
+      unit_of_measurement: '€'
+      icon_template: mdi:currency-eur
+      value_template: "{{ 0.0887 * 1.20 }}"
+    kwh_daily_cost:
+      friendly_name: "kWh daily cost"
+      unit_of_measurement: '€'
+      icon_template: mdi:currency-eur
+      value_template: "{{ (states.sensor.linky_daily_1d_consumption.state | float) * (states.sensor.kwh_unit_cost.state | float) }}"
+    kwh_monthly_cost:
+      friendly_name: "kWh monthly cost"
+      unit_of_measurement: '€'
+      icon_template: mdi:currency-eur
+      value_template: "{{ (states.sensor.linky_monthly_current_consumption.state | float) * (states.sensor.kwh_unit_cost.state | float) }}"
+    kwh_yearly_cost:
+      friendly_name: "kWh yearly cost"
+      unit_of_measurement: '€'
+      icon_template: mdi:currency-eur
+      value_template: "{{ (states.sensor.linky_yearly_current_consumption.state | float) * (states.sensor.kwh_unit_cost.state | float) }}"
+
+
 - platform: speedtest
   hour:
     - 8
