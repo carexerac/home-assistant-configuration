@@ -9,3 +9,4 @@ emulated_hue_ids.json
 known_devices.yaml
 .HA_VERSION
 homebridge
+info.log
