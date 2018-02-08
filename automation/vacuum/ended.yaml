@@ -7,7 +7,9 @@ trigger:
 action:
   - service: telegram_bot.send_message
     data_template:
-      message: "Vacuum just finished cleaning {{ states.vacuum.xiaomi_mi_robot.attributes.cleaned_area }} m² in {{ (states.vacuum.xiaomi_mi_robot.attributes.cleaning_time / 60) | int }}m {{ states.vacuum.xiaomi_mi_robot.attributes.cleaning_time % 60 }}s with {{ states.vacuum.xiaomi_mi_robot.attributes.fan_speed }} mode"
+      message: "Vacuum just finished cleaning {{ states.vacuum.xiaomi_mi_robot.attributes.cleaned_area }} m² in {{ 
+(states.vacuum.xiaomi_mi_robot.attributes.cleaning_time / 60) | int }}h {{ states.vacuum.xiaomi_mi_robot.attributes.cleaning_time % 60 }}m with {{ 
+states.vacuum.xiaomi_mi_robot.attributes.fan_speed }} mode and {{ states.vacuum.xiaomi_mi_robot.attributes.battery_level }}% battery remaining"
       target:
         - !secret telegram_mp_chat_id
         - !secret telegram_jc_chat_id

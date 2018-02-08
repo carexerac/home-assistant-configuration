@@ -6,8 +6,9 @@ trigger:
   to: 'on'
 action:
   - service: telegram_bot.send_message
-    data:
-      message: "Vacuum has started"
+    data_template:
+      message: "Vacuum has started with {{
+states.vacuum.xiaomi_mi_robot.attributes.fan_speed }} mode and {{ states.vacuum.xiaomi_mi_robot.attributes.battery_level }}% battery remaining"
       target:
         - !secret telegram_mp_chat_id
         - !secret telegram_jc_chat_id
