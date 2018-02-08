@@ -13,4 +13,3 @@
   sensors:
     is_someone_home:
       value_template: "{{ is_state('group.matthieu', 'home') or is_state('group.julie', 'home') }}"
-
