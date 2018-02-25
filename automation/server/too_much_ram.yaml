@@ -1,0 +1,14 @@
+
+alias: "Server is using too much RAM"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.ram_used
+  above: 60
+  for:
+    hours: 0
+    minutes: 2
+    seconds: 0
+action:
+  - service: notify.telegram_mp
+    data:
+      message: "Server is using too much RAM !"
