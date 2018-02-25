@@ -10,3 +10,4 @@ known_devices.yaml
 .HA_VERSION
 homebridge
 info.log
+*.py[co]
