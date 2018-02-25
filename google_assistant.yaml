@@ -12,9 +12,9 @@ entity_config:
   vacuum.xiaomi_mi_robot:
     expose: true
     type: switch
-    name: "Aspirateur"
+    name: "Mi Robot"
     aliases:
-      - Mi Robot
+      - Aspirateur
       - Robot
   switch.wall_switch_158d00014a1a13:
     expose: false
@@ -59,7 +59,13 @@ entity_config:
     name: "Party Time"
   script.mute_tv:
     expose: true
-    name: "Mute TV"
+    name: "Son de la télé"
+    aliases:
+      - Son
+      - Son de la télévision
+      - Son de la TV
+      - Son TV
+    type: switch
   script.channel_2:
     expose: true
     name: "France 2"
