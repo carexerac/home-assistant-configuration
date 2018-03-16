@@ -2,5 +2,5 @@ view: yes
 icon: mdi:raspberrypi
 entities:
   - group.raspberrypi
-  - group.speed_test
-  - group.power_consumption
+#  - group.speed_test
+#  - group.power_consumption
