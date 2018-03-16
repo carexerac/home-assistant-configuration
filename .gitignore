@@ -11,3 +11,4 @@ known_devices.yaml
 homebridge
 info.log
 *.py[co]
+entity_registry.yaml
