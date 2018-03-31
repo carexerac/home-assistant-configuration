@@ -9,10 +9,9 @@ exposed_domains:
   - climate
   - scene
 entity_config:
-  vacuum.xiaomi_mi_robot:
-    expose: true
-    type: switch
+  switch.vacuum:
     name: "Mi Robot"
+    room: "Séjour"
     aliases:
       - Aspirateur
       - Robot
@@ -22,8 +21,10 @@ entity_config:
     expose: false
   light.mp_bed_light:
     name: "Lampe de Matthieu"
+    room: "Chambre"
   light.ambient_yeelight:
     name: "Lampe d'ambiance"
+    room: "Salon"
     aliases:
       - Lumière d'ambiance
       - Lumière ambiante
@@ -31,22 +32,26 @@ entity_config:
       - Petite lumière
   light.sofa_yeelight_strip:
     name: "Canapé"
+    room: "Salon"
   light.dining_room_ceiling:
     name: "Lustre séjour"
+    room: "Séjour"
   light.living_room_ceiling:
     name: "Lustre salon"
+    room: "Salon"
   switch.tv:
     name: "TV"
+    room: "Séjour"
     aliases:
       - Télévision
       - Télé
   switch.rpi:
     name: "Console"
+    room: "Séjour"
     aliases:
       - Console de jeux
-      - Raspberry Pi
-      - Raspberry
-      - Pi
+      - Switch
+      - Nintendo Switch
   scene.good_night:
     expose: true
     name: "Good Night"
@@ -62,10 +67,6 @@ entity_config:
     name: "Son de la télé"
     aliases:
       - Son
-      - Son de la télévision
-      - Son de la TV
-      - Son TV
-    type: switch
   script.channel_2:
     expose: true
     name: "France 2"

@@ -39,3 +39,11 @@
       turn_off:
         service: remote.turn_off
         entity_id: remote.harmony_hub
+    vacuum:
+      value_template: "{{ states.vacuum.xiaomi_mi_robot.state }}"
+      turn_on:
+        service: vacuum.turn_on
+        entity_id: vacuum.xiaomi_mi_robot
+      turn_off:
+        service: vacuum.turn_off
+        entity_id: vacuum.xiaomi_mi_robot
