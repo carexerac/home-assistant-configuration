@@ -1,0 +1,26 @@
+alias: "Julie is coming home"
+trigger:
+  platform: state
+  entity_id: group.julie
+  from: 'not_home'
+  to: 'home'
+condition:
+  # someone is already home
+  - condition: state
+    entity_id: binary_sensor.is_someone_home
+    state: 'on'
+  # and JC's GPS is reaching home
+  - condition: state
+    entity_id: device_tracker.jc_iphone
+    state: 'home'
+action:
+  - service: notify.google_assistant
+    data_template:
+      message: >
+        Julie {{ [
+          'arrive dans quelques minutes',
+          'sera bientôt là',
+          'sera là dans un instant',
+          'est en chemin sera là dans un instant',
+          'est de retour à la maison',
+        ]|random }}. Elle est actuellement à {{ distance(states.device_tracker.mp_iphone) | int }} mètres.
