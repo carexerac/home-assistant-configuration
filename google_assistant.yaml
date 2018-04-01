@@ -40,14 +40,15 @@ entity_config:
     name: "Lustre salon"
     room: "Salon"
   switch.tv:
+#  media_player.television:
     name: "TV"
-    room: "Séjour"
+    room: "Salon"
     aliases:
       - Télévision
       - Télé
   switch.rpi:
     name: "Console"
-    room: "Séjour"
+    room: "Salon"
     aliases:
       - Console de jeux
       - Switch
@@ -55,21 +56,25 @@ entity_config:
   scene.good_night:
     expose: true
     name: "Good Night"
+    room: "Scripts"
   scene.movie_time:
     name: "Movie Time"
+    room: "Scripts"
   scene.christmas:
     name: "Christmas"
+    room: "Scripts"
   script.party_time:
     expose: true
     name: "Party Time"
-  script.mute_tv:
+    room: "Scripts"
+  switch.sound:
     expose: true
-    name: "Son de la télé"
-    aliases:
-      - Son
+    name: "Son"
   script.channel_2:
     expose: true
     name: "France 2"
+    room: "Scripts"
   script.geek_inc:
     expose: true
     name: "Geek Inc"
+    room: "Scripts"

@@ -47,3 +47,17 @@
       turn_off:
         service: vacuum.turn_off
         entity_id: vacuum.xiaomi_mi_robot
+    sound:
+      value_template: false
+      turn_on:
+        - service: remote.send_command
+          data_template:
+            entity_id: remote.harmony_hub
+            command: Mute
+            device: 42051938
+      turn_off:
+        - service: remote.send_command
+          data_template:
+            entity_id: remote.harmony_hub
+            command: Mute
+            device: 42051938
