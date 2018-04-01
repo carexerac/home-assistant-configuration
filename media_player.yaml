@@ -10,3 +10,39 @@
 
 - platform: cast
   host: !secret chromecast_audio_host
+
+- platform: universal
+  name: Television
+  children:
+    - remote.harmony_hub
+  commands:
+    turn_on:
+      service: remote.turn_on
+      data:
+        entity_id: remote.harmony_hub
+        activity: "24399786"
+    turn_off:
+      service: remote.turn_off
+      data:
+        entity_id: remote.harmony_hub
+    volume_up:
+      service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeUp
+        device: "42051938"
+    volume_down:
+      service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeDown
+        device: "42051938"
+    volume_mute:
+      service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Mute
+        device: "42051938"
+  attributes:
+    state: remote.harmony_hub
+    is_volume_muted: false
