@@ -1,0 +1,29 @@
+id: telegram_text
+alias: 'Telegram bot that speak out loud through Google Home'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_text
+action:
+  - service: telegram_bot.send_message
+    data_template:
+      target: '{{ trigger.event.data.chat_id }}'
+      message: >
+        {{ [
+          'Your slave will speak in a moment...',
+          'Yes master',
+          'Of course',
+          'Sure thing',
+          'You know you can open your mouth right ?',
+          'You owe me a flavor',
+          'Here we go again...'
+        ]|random }}
+      disable_notification: true
+  - service: notify.google_assistant
+    data_template:
+      message: >
+        {{ trigger.event.data.from_first }} {{ [
+          'dit',
+          'a dit',
+          'pense que'
+        ]|random }} : {{ trigger.event.data.text }}
