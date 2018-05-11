@@ -5,6 +5,7 @@ entities:
   - light.ambient_yeelight
   - light.sofa_yeelight_strip
   - switch.smart_power_socket
+  - media_player.television
   - device_tracker.google_home
   - device_tracker.logitech_harmony
   - remote.harmony_hub
