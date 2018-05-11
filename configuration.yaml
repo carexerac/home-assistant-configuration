@@ -2,10 +2,10 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 48.688016
-  longitude: 6.164681
+  latitude: 49.358707
+  longitude: 6.167673
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 221.24
+  elevation: 156
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

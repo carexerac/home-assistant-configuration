@@ -1,19 +1,31 @@
 - name: Home
-  latitude: 48.688016
-  longitude: 6.164681
+  latitude: 49.358707
+  longitude: 6.167673
   radius: 50
   icon: mdi:home
 
-- name: CitizenCam
-  latitude: 48.705087
-  longitude: 6.143348
-  radius: 50
+- name: ING
+  latitude: 49.600176
+  longitude: 6.133044
+  radius: 25
   icon: mdi:briefcase
 
-- name: Lorraine Au Coeur
-  latitude: 48.701687
-  longitude: 6.203182
-  radius: 50
+- name: Concept Factory
+  latitude: 49.595498
+  longitude: 6.144146
+  radius: 25
+  icon: mdi:briefcase
+
+- name: Luxembourg Gare
+  latitude: 49.600357          
+  longitude: 6.134966
+  radius: 25
+  icon: mdi:briefcase
+
+- name: Thionville Gare
+  latitude: 49.354116   
+  longitude: 6.169686
+  radius: 25
   icon: mdi:briefcase
 
 - name: Charlotte
