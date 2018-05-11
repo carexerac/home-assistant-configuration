@@ -9,6 +9,7 @@ condition:
   - condition: state
     entity_id: binary_sensor.is_someone_home
     state: 'on'
+    for: '00:03:00'
   # and JC's GPS is reaching home
   - condition: state
     entity_id: device_tracker.jc_iphone
