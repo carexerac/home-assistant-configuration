@@ -23,7 +23,7 @@ light.sofa_yeelight_strip:
   icon: mdi:sofa
 #light.yeelight_guinea_pig:
 #  google_assistant_name: "Cochons d'inde"
-light.dining_room_ceiling:
+light.bedroom_ceiling:
   icon: mdi:ceiling-light
 light.living_room_ceiling:
   icon: mdi:ceiling-light
@@ -47,13 +47,13 @@ sensor.illumination_f0b429cc58ea:
   icon: mdi:white-balance-sunny
 
 # Sensor
-binary_sensor.door_window_sensor_158d0001a1f304:
-  friendly_name: "Main Door"
-#  icon: mdi:glassdoor
-  icon: mdi:locker
 binary_sensor.door_window_sensor_158d0001a64dd9:
-  friendly_name: "Window"
-  icon: mdi:window-closed
+  friendly_name: "Main Door"
+#  icon: mdi:door
+  icon: mdi:locker
+binary_sensor.door_window_sensor_158d0001a1f304:
+  friendly_name: "Door"
+  icon: mdi:door
 binary_sensor.motion_sensor_158d00016dad0e:
   friendly_name: "Motion"
   icon: mdi:run-fast

@@ -1,0 +1,4 @@
+name: "Toilet"
+control: hidden
+entities:
+  - binary_sensor.door_window_sensor_158d0001a1f304

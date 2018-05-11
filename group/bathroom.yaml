@@ -1,0 +1,6 @@
+name: "Bathroom"
+control: hidden
+entities:
+  - sensor.temperature_158d0001a35a71
+  - sensor.humidity_158d0001a35a71
+  - sensor.pressure_158d0001a35a71
