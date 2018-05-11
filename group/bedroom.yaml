@@ -1,4 +1,5 @@
 name: "Bedroom"
+icon: mdi:bed-empty
 control: hidden
 entities:
   - light.bedroom_ceiling

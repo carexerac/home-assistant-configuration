@@ -1,4 +1,5 @@
 name: "Hall"
+icon: mdi:door
 control: hidden
 entities:
   - light.gateway_light_f0b429cc58ea

@@ -1,4 +1,5 @@
 name: "Bathroom"
+icon: mdi:shower
 control: hidden
 entities:
   - sensor.temperature_158d0001a35a71

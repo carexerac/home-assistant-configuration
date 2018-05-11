@@ -1,4 +1,5 @@
 name: "Living Room"
+icon: mdi:sofa
 control: hidden
 entities:
   - light.ambient_yeelight
