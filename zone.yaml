@@ -14,19 +14,19 @@
   latitude: 49.595498
   longitude: 6.144146
   radius: 25
-  icon: mdi:briefcase
+  icon: mdi:briefcase-outline
 
 - name: Luxembourg Gare
   latitude: 49.600357          
   longitude: 6.134966
   radius: 25
-  icon: mdi:briefcase
+  icon: mdi:train-variant
 
 - name: Thionville Gare
   latitude: 49.354116   
   longitude: 6.169686
   radius: 25
-  icon: mdi:briefcase
+  icon: mdi:train
 
 - name: Charlotte
   latitude: 48.695462

@@ -19,16 +19,16 @@
       transition: 1000
       use_music_mode: True #defaults to False
       save_on_change: False #defaults to True
-#    192.168.254.236:
-#      name: Yeelight Guinea Pig
-#      transition: 1000
-#      use_music_mode: True #defaults to False
-#      save_on_change: False #defaults to True
+    192.168.254.236:
+      name: Hall Yeelight
+      transition: 1000
+      use_music_mode: True #defaults to False
+      save_on_change: False #defaults to True
 
 - platform: template
   lights:
-    dining_room_ceiling:
-      friendly_name: 'Dining Room Ceiling'
+    bedroom_ceiling:
+      friendly_name: 'Bedroom Ceiling'
       value_template: '{{ states("switch.wall_switch_158d00014a1a13") }}'
       turn_on:
         service: switch.turn_on
@@ -36,8 +36,8 @@
       turn_off:
         service: switch.turn_off
         entity_id: switch.wall_switch_158d00014a1a13
-    bedroom_ceiling:
-      friendly_name: 'Bedroom Ceiling'
+    living_room_ceiling:
+      friendly_name: 'Living Room Ceiling'
       value_template: '{{ states("switch.wall_switch_158d00014dcb6a") }}'
       turn_on:
         service: switch.turn_on

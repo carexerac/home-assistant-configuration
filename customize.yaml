@@ -3,6 +3,8 @@ binary_sensor.washing_machine:
   icon: mdi:washing-machine
 camera.rpi_camera:
   friendly_name: "Raspberry Pi Camera"
+camera.gps_locations:
+  icon: mdi:map-marker
 device_tracker.raspberry_pi_3:
   friendly_name: "GameStation"
   icon: mdi:gamepad-variant

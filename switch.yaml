@@ -25,17 +25,30 @@
         service: remote.turn_on
         entity_id: remote.harmony_hub
         data:
-          activity: "24402388"
+          activity: "24399786"
       turn_off:
         service: remote.turn_off
         entity_id: remote.harmony_hub
-    rpi:
-      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Raspberry Pi') %}on{% else %}off{% endif %}"
+    console:
+      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Console') %}on{% else %}off{% 
+endif %}"
       turn_on:
         service: remote.turn_on
         entity_id: remote.harmony_hub
         data:
           activity: "24745598"
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.harmony_hub
+    music:
+      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Listen to Music') %}on{% else 
+%}off{%
+endif %}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.harmony_hub
+        data:
+          activity: "33584591"
       turn_off:
         service: remote.turn_off
         entity_id: remote.harmony_hub

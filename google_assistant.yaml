@@ -11,7 +11,7 @@ exposed_domains:
 entity_config:
   switch.vacuum:
     name: "Mi Robot"
-    room: "Séjour"
+    room: "Salon"
     aliases:
       - Aspirateur
       - Robot
@@ -33,9 +33,16 @@ entity_config:
   light.sofa_yeelight_strip:
     name: "Canapé"
     room: "Salon"
-  light.dining_room_ceiling:
-    name: "Lustre séjour"
-    room: "Séjour"
+  light.hall_yeelight:
+    name: "Lumière d'entrée"
+    room: "Entrée"
+    aliases:
+      - Lampe de l'entrée
+      - Lampe d'entrée
+      - Lumière de l'entrée
+  light.bedroom_ceiling:
+    name: "Lustre chambre"
+    room: "Chambre"
   light.living_room_ceiling:
     name: "Lustre salon"
     room: "Salon"
@@ -46,13 +53,18 @@ entity_config:
     aliases:
       - Télévision
       - Télé
-  switch.rpi:
+  switch.console:
     name: "Console"
     room: "Salon"
     aliases:
       - Console de jeux
       - Switch
       - Nintendo Switch
+  switch.music:
+    name: "Ampli"
+    room: "Salon"
+    aliases:
+      - Musique
   scene.good_night:
     expose: true
     name: "Good Night"
@@ -60,21 +72,7 @@ entity_config:
   scene.movie_time:
     name: "Movie Time"
     room: "Scripts"
-  scene.christmas:
-    name: "Christmas"
-    room: "Scripts"
-  script.party_time:
-    expose: true
-    name: "Party Time"
-    room: "Scripts"
   switch.sound:
     expose: true
     name: "Son"
-  script.channel_2:
-    expose: true
-    name: "France 2"
-    room: "Scripts"
-  script.geek_inc:
-    expose: true
-    name: "Geek Inc"
     room: "Scripts"
