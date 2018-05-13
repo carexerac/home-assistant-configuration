@@ -26,7 +26,7 @@
   name: "Bedroom Temperature"
   state_topic: "tele/bedlight/SENSOR"
   qos: 0
-  value_template: "{{ value_json['DHT22'].Temperature }}"
+  value_template: "{{ value_json['DHT22'].Temperature - 2 }}"
   unit_of_measurement: "°C"
 
 - platform: mqtt
