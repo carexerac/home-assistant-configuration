@@ -16,14 +16,17 @@ homeassistant:
 
 logger: !include logger.yaml
 
-# Enables the frontend
+# Enable the frontend
 frontend: !include frontend.yaml
 
 # Enable Hassio configuration
 hassio:
 
-# Enables configuration UI
+# Enable configuration UI
 config:
+
+# Enable the geographic Map
+map:
 
 # WebServer
 http:
