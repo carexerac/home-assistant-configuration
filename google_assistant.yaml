@@ -22,14 +22,6 @@ entity_config:
   light.mp_bed_light:
     name: "Lampe de Matthieu"
     room: "Chambre"
-  light.ambient_yeelight:
-    name: "Lampe d'ambiance"
-    room: "Salon"
-    aliases:
-      - Lumière d'ambiance
-      - Lumière ambiante
-      - Petite lampe
-      - Petite lumière
   light.sofa_yeelight_strip:
     name: "Canapé"
     room: "Salon"
@@ -64,7 +56,9 @@ entity_config:
     name: "Ampli"
     room: "Salon"
     aliases:
-      - Musique
+      - Chaine HiFi
+      - HiFi
+      - Enceintes
   scene.good_night:
     expose: true
     name: "Good Night"

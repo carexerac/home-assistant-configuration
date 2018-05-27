@@ -19,16 +19,6 @@
       turn_off:
         service: remote.turn_off
         entity_id: remote.harmony_hub
-    chromecast:
-      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Chromecast') %}on{% else %}off{% endif %}"
-      turn_on:
-        service: remote.turn_on
-        entity_id: remote.harmony_hub
-        data:
-          activity: "24399786"
-      turn_off:
-        service: remote.turn_off
-        entity_id: remote.harmony_hub
     console:
       value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Console') %}on{% else %}off{% 
 endif %}"
