@@ -7,18 +7,21 @@ trigger:
 action:
   - service: alarm_control_panel.alarm_disarm
     entity_id: alarm_control_panel.ha_alarm
-  - condition: numeric_state
-    entity_id: sensor.uptime
-    above: 5
-  - service_template: >
-      {% if "matthieu" in ([states.group.matthieu, states.group.julie] | selectattr('state', 'equalto', 'not_home') | first).entity_id %}
-      notify.telegram_mp
-      {% else %}
-      notify.telegram_jc
-      {% endif %}
-    data_template: 
-      message: >
-        {% for user in [states.group.matthieu, states.group.julie] if user.state == "home" %}
-        {{ user.attributes.friendly_name }} is {{ user.state }}
-        ({% for entity_id in user.attributes.entity_id if is_state(entity_id, "home") %}{{states[entity_id.split('.')[0]][entity_id.split('.')[1]].attributes.friendly_name}}{% if loop.index != loop.length %}, {% endif %}{% endfor %})
-        {% endfor %}
+#  - condition: numeric_state
+#    entity_id: sensor.uptime
+#    above: 5
+#  - service_template: >
+#      {% if "matthieu" in ([states.group.matthieu, states.group.julie] | selectattr('state', 'equalto', 
+#'not_home') | first).entity_id %}
+#      notify.telegram_mp
+#      {% else %}
+#      notify.telegram_jc
+#      {% endif %}
+#    data_template: 
+#      message: >
+#        {% for user in [states.group.matthieu, states.group.julie] if user.state == "home" %}
+#        {{ user.attributes.friendly_name }} is {{ user.state }}
+#        ({% for entity_id in user.attributes.entity_id if is_state(entity_id, "home") 
+#%}{{states[entity_id.split('.')[0]][entity_id.split('.')[1]].attributes.friendly_name}}{% if loop.index != 
+#loop.length %}, {% endif %}{% endfor %})
+#        {% endfor %}

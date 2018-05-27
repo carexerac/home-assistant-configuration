@@ -1,0 +1,20 @@
+alias: "Someone is moving"
+trigger:
+  platform: state
+  entity_id: device_tracker.mp_s9, device_tracker.jc_iphone
+condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
+# si tout le monde est au même endroit, pas la peine d'envoyer une notification
+  - condition: template
+    value_template: "{{ (states.device_tracker.mp_s9.state != states.device_tracker.jc_iphone.state) if trigger.to_state.state != 'not_home' else 'true' }}"
+action:
+  - service_template: >
+      {% if 'mp' in trigger.to_state.entity_id %}
+      notify.telegram_jc
+      {% else %}
+      notify.telegram_mp
+      {% endif %}
+    data_template:
+      message: >
+        {{ 'Matthieu' if 'mp' in trigger.to_state.entity_id else 'Julie' }} is {{ ('leaving ' + trigger.from_state.state) if trigger.to_state.state == 'not_home' else 'at ' + (trigger.to_state.state) }}
