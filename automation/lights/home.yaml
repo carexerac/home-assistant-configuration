@@ -1,7 +1,7 @@
 alias: "Turn lights on when someone comes home"
 trigger:
   platform: state
-  entity_id: binary_sensor.door_window_sensor_158d0001a1f304
+  entity_id: binary_sensor.door_window_sensor_158d0001a64dd9
   from: "off"
   to: "on"
 condition:
@@ -21,10 +21,10 @@ condition:
 action:
   - service: light.turn_on
     data:
-      entity_id: light.gateway_light_f0b429cc58ea
+      entity_id: light.hall_yeelight
       brightness: 255
       color_name: white
   - service: script.turn_on_light_briefly
     data:
-      entity_id: 'light.gateway_light_f0b429cc58ea'
+      entity_id: 'light.hall_yeelight'
       delay: '00:01:00'
