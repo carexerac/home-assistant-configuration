@@ -22,9 +22,13 @@ entity_config:
   light.mp_bed_light:
     name: "Lampe de Matthieu"
     room: "Chambre"
-  light.sofa_yeelight_strip:
-    name: "Canapé"
+  light.yeelight_strip:
+    name: "Bandeau"
     room: "Salon"
+    aliases:
+      - Bandeau lumineux
+      - Cube
+      - Meubles
   light.hall_yeelight:
     name: "Lumière d'entrée"
     room: "Entrée"
@@ -32,6 +36,8 @@ entity_config:
       - Lampe de l'entrée
       - Lampe d'entrée
       - Lumière de l'entrée
+  light.toilet_yeelight:
+    expose: false
   light.bedroom_ceiling:
     name: "Lustre chambre"
     room: "Chambre"

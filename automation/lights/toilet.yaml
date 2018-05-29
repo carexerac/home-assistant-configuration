@@ -1,0 +1,9 @@
+alias: "Turn toilet light on when someone opens the door"
+trigger:
+  platform: state
+  entity_id: binary_sensor.motion_sensor_158d00016dad0e
+action:
+  - service_template: >
+      light.{{ 'turn_on' if trigger.to_state.state == 'on' else 'turn_off' }}
+    data:
+      entity_id: light.toilet_yeelight

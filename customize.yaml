@@ -16,15 +16,15 @@ remote.harmony_hub:
 light.mp_bed_light:
   friendly_name: "Matthieu's Bed Light"
   icon: mdi:lamp
-light.ambient_yeelight:
-  friendly_name: "Ambient Light"
+light.hall_yeelight:
+  friendly_name: "Hall Light"
   icon: mdi:lightbulb-on-outline
-light.sofa_yeelight_strip:
-  friendly_name: "Sofa Light Strip"
-#  icon: mdi:led-strip
-  icon: mdi:sofa
-#light.yeelight_guinea_pig:
-#  google_assistant_name: "Cochons d'inde"
+light.toilet_yeelight:
+  friendly_name: "Toilet Light"
+light.yeelight_strip:
+  friendly_name: "Light Strip"
+  icon: mdi:led-strip
+#  icon: mdi:sofa
 light.bedroom_ceiling:
   icon: mdi:ceiling-light
 light.living_room_ceiling:
