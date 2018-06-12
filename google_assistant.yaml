@@ -44,6 +44,9 @@ entity_config:
   light.living_room_ceiling:
     name: "Lustre salon"
     room: "Salon"
+    expose: false
+  light.dining_room_ceiling:
+    expose: false
   switch.tv:
 #  media_player.television:
     name: "TV"
