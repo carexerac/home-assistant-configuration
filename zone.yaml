@@ -13,7 +13,7 @@
 - name: Concept Factory
   latitude: 49.595498
   longitude: 6.144146
-  radius: 25
+  radius: 50
   icon: mdi:briefcase-outline
 
 - name: Luxembourg Gare
