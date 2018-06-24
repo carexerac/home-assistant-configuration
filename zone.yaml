@@ -25,13 +25,13 @@
 - name: Thionville Gare
   latitude: 49.354116   
   longitude: 6.169686
-  radius: 25
+  radius: 50
   icon: mdi:train
 
 - name: Charlotte
   latitude: 48.695462
   longitude: 6.177424
-  radius: 30
+  radius: 50
   icon: mdi:human-female
 
 - name: Bouxières
