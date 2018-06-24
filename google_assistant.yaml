@@ -27,6 +27,8 @@ entity_config:
     room: "Salon"
     aliases:
       - Bandeau lumineux
+      - Bande lumineuse
+      - Bande
       - Cube
       - Meubles
   light.hall_yeelight:
