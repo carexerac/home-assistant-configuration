@@ -1,14 +1,14 @@
 alias: "GeekInc started"
 trigger:
   platform: state
-  entity_id: sensor.geekinc
+  entity_id: sensor.studiorenegade
   to: streaming
 condition:
   - condition: state
     entity_id: binary_sensor.is_someone_home
     state: "on"
   - condition: time
-    after: '20:45:00'
+    after: '19:45:00'
     before: '22:00:00'
     weekday:
       - wed
@@ -18,4 +18,4 @@ action:
     entity_id: script.geek_inc
   - service: notify.google_assistant
     data:
-      message: "C'est l'heure de GeekInc"
+      message: "C'est l'heure de StudioRenegade"

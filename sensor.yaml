@@ -97,7 +97,7 @@
 
 - platform: twitch
   channels:
-    - geekinc
+    - studiorenegade
 
 #- platform: linky
 #  username: !secret linky_username
