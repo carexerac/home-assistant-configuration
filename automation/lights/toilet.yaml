@@ -1,0 +1,10 @@
+alias: "Toggle light when toilet door opens"
+trigger:
+  platform: state
+  entity_id: binary_sensor.door_window_sensor_158d0001a1f304
+  from: "off"
+  to: "on"
+action:
+  - service: light.toggle
+    data:
+      entity_id: light.toilet

@@ -36,12 +36,12 @@
       turn_off:
         service: switch.turn_off
         entity_id: switch.wall_switch_158d00014a1a13
-    living_room_ceiling:
-      friendly_name: 'Living Room Ceiling'
-      value_template: '{{ states("switch.wall_switch_158d00014dcb6a") }}'
+    toilet:
+      friendly_name: 'Toilet'
+      value_template: '{{ states("switch.wall_switch_158d0001a4c24e") }}'
       turn_on:
         service: switch.turn_on
-        entity_id: switch.wall_switch_158d00014dcb6a
+        entity_id: switch.wall_switch_158d0001a4c24e
       turn_off:
         service: switch.turn_off
-        entity_id: switch.wall_switch_158d00014dcb6a
+        entity_id: switch.wall_switch_158d0001a4c24e
