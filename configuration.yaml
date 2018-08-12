@@ -83,6 +83,7 @@ switch: !include switch.yaml
 light: !include light.yaml
 remote: !include remote.yaml
 media_player: !include media_player.yaml
+cast: !include cast.yaml
 scene: !include scene.yaml
 climate: !include climate.yaml
 #weather: !include weather.yaml
@@ -109,4 +110,4 @@ tts:
 sun:
 
 media_extractor:
-
+influxdb: !include influxdb.yaml
