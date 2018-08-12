@@ -6,7 +6,6 @@ trigger:
   event_type: telegram_text
 action:
   - service: notify.google_assistant
-    entity_id: media_player.google_home
     data_template:
       message: >
         {{ trigger.event.data["from_first"] }} {{ [
