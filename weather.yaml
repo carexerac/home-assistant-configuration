@@ -1,6 +1,6 @@
 - platform: yweather
   name: "Weather"
-  woeid: 613836
+  woeid: 22527972
   monitored_conditions:
     - weather
     - weather_current
