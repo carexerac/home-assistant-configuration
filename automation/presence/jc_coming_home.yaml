@@ -24,4 +24,4 @@ action:
           'sera là dans un instant',
           'est en chemin sera là dans un instant',
           'est de retour à la maison',
-        ]|random }}. Elle est actuellement à {{ distance(states.device_tracker.mp_iphone) | int }} mètres.
+        ]|random }}. Elle est actuellement à {{ distance(states.device_tracker.jc_iphone) | int }} mètres.
