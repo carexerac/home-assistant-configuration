@@ -73,7 +73,7 @@ ifttt:
   key: !secret ifttt_key
 
 # Google Assistant
-google_assistant: !include google_assistant.yaml
+#google_assistant: !include google_assistant.yaml
 
 sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
@@ -110,4 +110,7 @@ tts:
 sun:
 
 media_extractor:
-influxdb: !include influxdb.yaml
+logi:
+  username: !secret logi_circle_email
+  password: !secret logi_circle_password
+

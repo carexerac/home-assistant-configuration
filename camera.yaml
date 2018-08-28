@@ -12,9 +12,7 @@
 
 - platform: generic
   name: GPS Locations
-  still_image_url: https://maps.googleapis.com/maps/api/staticmap?size=400x400&maptype=satellite&markers=color:blue|label:M|{{ states.device_tracker.mp_s9.attributes.latitude }},{{ states.device_tracker.mp_s9.attributes.longitude }}&markers=color:pink|label:J|{{ states.device_tracker.jc_iphone.attributes.latitude }},{{ states.device_tracker.jc_iphone.attributes.longitude }}
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?size=400x400&markers=color:blue|label:M|{{ states.device_tracker.mp_s9.attributes.latitude }},{{ states.device_tracker.mp_s9.attributes.longitude }}&markers=color:pink|label:J|{{ states.device_tracker.jc_iphone.attributes.latitude }},{{ states.device_tracker.jc_iphone.attributes.longitude }}
   limit_refetch_to_url_change: true
 
-#- platform: logi_circle
-#  email: !secret logi_circle_email
-#  password: !secret logi_circle_password
+- platform: logi
