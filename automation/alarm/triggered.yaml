@@ -4,10 +4,16 @@ trigger:
   entity_id: alarm_control_panel.ha_alarm
   to: triggered
 action:
-  - service: telegram_bot.send_message
+  - service: camera.snapshot
     data:
-      title: "Alert !"
-      message: "Someone passed the door !"
+      entity_id: camera.les_bibous
+#      filename: 'www/tmp/snapshot_{{ now().strftime("%Y-%m-%d %H.%M.%S") }}_{{ camera.les_bibous }}.jpg'
+      filename: 'www/tmp/snapshot_camera.jpg'
+  - service: telegram_bot.send_photo
+    data:
+      title: "Alarm has been triggered !"
+#      file: 'www/tmp/snapshot_{{ now().strftime("%Y-%m-%d %H.%M.%S") }}_{{ camera.les_bibous }}.jpg'
+      file: 'www/tmp/snapshot_camera.jpg'
       target:
         - !secret telegram_mp_chat_id
         - !secret telegram_jc_chat_id
@@ -15,12 +21,12 @@ action:
         - "Disarm:/disarm"
   - service: light.turn_on
     data:
-      entity_id: light.ambient_yeelight
+      entity_id: light.yeelight_strip
       brightness: 255
       color_name: red
   - service: script.flash_light
     data:
-      light_entity_id: 'light.ambient_yeelight'
+      light_entity_id: 'light.yeelight_strip'
   - service: notify.google_assistant
     data:
       message: "Alerte ! Un intrus est arrivé. Déclenchement immédiat des appels auprès des services de sécurité et démarrage de la séquence d'enregistrement vidéo."
