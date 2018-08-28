@@ -12,3 +12,4 @@ homebridge
 info.log
 *.py[co]
 entity_registry.yaml
+.storage/
