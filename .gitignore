@@ -13,3 +13,5 @@ info.log
 *.py[co]
 entity_registry.yaml
 .storage/
+.logi_cache.pickle
+www/tmp/
