@@ -14,3 +14,8 @@ action:
       target: '{{ trigger.event.data.chat_id }}'
       message: 'Arming alarm'
       disable_notification: true
+  - wait_template: "{{ is_state('alarm_control_panel.ha_alarm', 'armed_away') }}"
+  - service: telegram_bot.send_message
+    data_template:
+      target: '{{ trigger.event.data.chat_id }}'
+      message: 'Alarm armed'
