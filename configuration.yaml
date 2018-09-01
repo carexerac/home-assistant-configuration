@@ -73,7 +73,7 @@ ifttt:
   key: !secret ifttt_key
 
 # Google Assistant
-#google_assistant: !include google_assistant.yaml
+google_assistant: !include google_assistant.yaml
 
 sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml

@@ -3,62 +3,60 @@ client_id: !secret ga_client_id
 access_token: !secret ga_access_token
 agent_user_id: !secret ga_agent_user_id
 api_key: !secret ga_api_key
-exposed_domains:
-  - switch
-  - light
-  - climate
-  - scene
+# exposed_domains:
+#  - switch
+#  - light
+#  - climate
+#  - scene
+expose_by_default: false
 entity_config:
-  switch.vacuum:
-    name: "Mi Robot"
-    room: "Salon"
-    aliases:
-      - Aspirateur
-      - Robot
-  switch.wall_switch_158d00014a1a13:
-    expose: false
-  switch.wall_switch_158d00014dcb6a:
-    expose: false
+# Lights
   light.mp_bed_light:
     name: "Lampe de Matthieu"
     room: "Chambre"
+    expose: true
+  light.bedroom_ceiling:
+    name: "Lustre chambre"
+    room: "Chambre"
+    expose: true
   light.yeelight_strip:
     name: "Bandeau"
     room: "Salon"
+    expose: true
     aliases:
       - Bandeau lumineux
       - Bande lumineuse
       - Bande
       - Cube
       - Meubles
-  light.hall_yeelight:
+  light.gateway_light_f0b429cc58ea:
     name: "Lumière d'entrée"
     room: "Entrée"
+    expose: true
     aliases:
       - Lampe de l'entrée
       - Lampe d'entrée
       - Lumière de l'entrée
-  light.toilet_yeelight:
-    expose: false
-  light.bedroom_ceiling:
-    name: "Lustre chambre"
-    room: "Chambre"
-  light.living_room_ceiling:
-    name: "Lustre salon"
+# Switches
+  switch.vacuum:
+    name: "Mi Robot"
     room: "Salon"
-    expose: false
-  light.dining_room_ceiling:
-    expose: false
+    expose: true
+    aliases:
+      - Aspirateur
+      - Robot
   switch.tv:
 #  media_player.television:
     name: "TV"
     room: "Salon"
+    expose: true
     aliases:
       - Télévision
       - Télé
   switch.console:
     name: "Console"
     room: "Salon"
+    expose: true
     aliases:
       - Console de jeux
       - Switch
@@ -66,18 +64,34 @@ entity_config:
   switch.music:
     name: "Ampli"
     room: "Salon"
+    expose: true
     aliases:
       - Chaine HiFi
       - HiFi
       - Enceintes
-  scene.good_night:
+  switch.sound:
+    name: "Son"
+    room: "Scripts"
     expose: true
+# Thermostats
+  climate.living_room:
+    name: "Salon"
+    room: "Salon"
+    expose: true
+  climate.bathroom:
+    name: "Salle de bain"
+    room: "Salle de bain"
+    expose: true
+  climate.bedroom:
+    name: "Chambre"
+    room: "Chambre"
+    expose: true
+# Scenes :
+  scene.good_night:
     name: "Good Night"
     room: "Scripts"
+    expose: true
   scene.movie_time:
     name: "Movie Time"
     room: "Scripts"
-  switch.sound:
     expose: true
-    name: "Son"
-    room: "Scripts"

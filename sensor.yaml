@@ -29,24 +29,10 @@
   value_template: "{{ value_json['DHT22'].Temperature - 2 }}"
   unit_of_measurement: "°C"
 
-- platform: mqtt
-  name: "Bathroom Temperature"
-  state_topic: "tele/washing_machine/SENSOR"
-  qos: 0
-  value_template: "{{ value_json['DHT22'].Temperature }}"
-  unit_of_measurement: "°C"
-
 # Humidity Sensor
 - platform: mqtt
   name: "Bedroom Humidity"
   state_topic: "tele/bedlight/SENSOR"
-  qos: 0
-  value_template: "{{ value_json['DHT22'].Humidity }}"
-  unit_of_measurement: "%"
-
-- platform: mqtt
-  name: "Bathroom Humidity"
-  state_topic: "tele/washing_machine/SENSOR"
   qos: 0
   value_template: "{{ value_json['DHT22'].Humidity }}"
   unit_of_measurement: "%"
@@ -69,22 +55,6 @@
 #  mac: C4:7C:8D:62:E8:72
 #  name: Flower
 #  force_update: false
-
-# Temperature
-- platform: mqtt
-  name: "Photo Frame Temperature"
-  state_topic: "photo_frame/SENSOR"
-  qos: 0
-  value_template: "{{ value_json.Temperature }}"
-  unit_of_measurement: "°C"
-
-# Humidity Sensor
-- platform: mqtt
-  name: "Photo Frame Humidity"
-  state_topic: "photo_frame/SENSOR"
-  qos: 0
-  value_template: "{{ value_json.Humidity }}"
-  unit_of_measurement: "%"
 
 #- platform: citybikes
 #  name: Nancy Stations
