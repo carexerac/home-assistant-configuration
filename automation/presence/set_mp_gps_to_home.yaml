@@ -1,0 +1,19 @@
+alias: "Set Matthieu GPS to home when arriving"
+trigger:
+  platform: state
+  entity_id: group.matthieu
+  from: 'not_home'
+  to: 'home'
+condition:
+  # and JC's GPS is not reaching home
+  - condition: state
+    entity_id: device_tracker.mp_s9
+    state: 'not_home'
+action:
+  - service: device_tracker.see
+    data_template:
+      dev_id: mp_s9
+      gps: 
+        - '{{states.zone.home.attributes.latitude}}'
+        - '{{states.zone.home.attributes.longitude}}'
+      gps_accuracy: 100
