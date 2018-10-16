@@ -26,7 +26,7 @@
   name: "Bedroom Temperature"
   state_topic: "tele/bedlight/SENSOR"
   qos: 0
-  value_template: "{{ value_json['DHT22'].Temperature - 2 }}"
+  value_template: "{{ value_json['SI7021'].Temperature - 2 }}"
   unit_of_measurement: "°C"
 
 # Humidity Sensor
@@ -34,7 +34,7 @@
   name: "Bedroom Humidity"
   state_topic: "tele/bedlight/SENSOR"
   qos: 0
-  value_template: "{{ value_json['DHT22'].Humidity }}"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
   unit_of_measurement: "%"
 
 - platform: yweather
