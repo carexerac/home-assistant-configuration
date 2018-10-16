@@ -4,16 +4,21 @@ trigger:
   entity_id: alarm_control_panel.ha_alarm
   to: triggered
 action:
-  - service: camera.snapshot
+  - service: camera.logi_download_livestream
     data:
       entity_id: camera.les_bibous
 #      filename: 'www/tmp/snapshot_{{ now().strftime("%Y-%m-%d %H.%M.%S") }}_{{ camera.les_bibous }}.jpg'
-      filename: 'www/tmp/snapshot_camera.jpg'
-  - service: telegram_bot.send_photo
+      filename: 'www/tmp/livestream_camera.mp4'
+      duration: 30
+  - delay: 00:00:40
+  - condition: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: triggered
+  - service: telegram_bot.send_video
     data:
-      title: "Alarm has been triggered !"
+      caption: "Alarm has been triggered !"
 #      file: 'www/tmp/snapshot_{{ now().strftime("%Y-%m-%d %H.%M.%S") }}_{{ camera.les_bibous }}.jpg'
-      file: 'www/tmp/snapshot_camera.jpg'
+      file: 'www/tmp/livestream_camera.mp4'
       target:
         - !secret telegram_mp_chat_id
         - !secret telegram_jc_chat_id

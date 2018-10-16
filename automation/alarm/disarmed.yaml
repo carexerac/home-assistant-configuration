@@ -9,13 +9,12 @@ action:
 #      message: "Alarm disarmed"
 #      target:
 #        - !secret telegram_mp_chat_id
-  - service: light.turn_off
-    data:
-      entity_id: light.ambient_yeelight
   - service: script.turn_off
     entity_id: script.flash_light
   - service: script.turn_off
     entity_id: script.flash_light_loop
+  - service: light.turn_off
+    entity_id: light.yeelight_strip
   - service: notify.google_assistant
     data:
       message: "Alarme désactivée"

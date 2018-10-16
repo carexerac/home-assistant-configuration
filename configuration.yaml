@@ -110,7 +110,6 @@ tts:
 sun:
 
 media_extractor:
-logi:
+logi_circle:
   username: !secret logi_circle_email
   password: !secret logi_circle_password
-
