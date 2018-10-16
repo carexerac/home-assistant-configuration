@@ -28,7 +28,7 @@
 - platform: template
   lights:
     bedroom_ceiling:
-      friendly_name: 'Bedroom Ceiling'
+      friendly_name: 'Bedroom ceiling'
       value_template: '{{ states("switch.wall_switch_158d00014a1a13") }}'
       turn_on:
         service: switch.turn_on
@@ -45,3 +45,21 @@
       turn_off:
         service: switch.turn_off
         entity_id: switch.wall_switch_158d0001a4c24e
+    living_room_ceiling:
+      friendly_name: 'Living room ceiling'
+      value_template: '{{ states("switch.wall_switch_right_158d00026dfd4b") }}'
+      turn_on:
+        service: switch.turn_on
+        entity_id: switch.wall_switch_right_158d00026dfd4b
+      turn_off:
+        service: switch.turn_off
+        entity_id: switch.wall_switch_right_158d00026dfd4b
+    dining_room_ceiling:
+      friendly_name: 'Dining room ceiling'
+      value_template: '{{ states("switch.wall_switch_left_158d00026dfd4b") }}'
+      turn_on:
+        service: switch.turn_on
+        entity_id: switch.wall_switch_left_158d00026dfd4b
+      turn_off:
+        service: switch.turn_off
+        entity_id: switch.wall_switch_left_158d00026dfd4b

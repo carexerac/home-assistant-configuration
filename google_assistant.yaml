@@ -12,12 +12,25 @@ expose_by_default: false
 entity_config:
 # Lights
   light.mp_bed_light:
-    name: "Lampe de Matthieu"
+    name: "Lampe de chevet"
     room: "Chambre"
     expose: true
+    aliases:
+      - Lampe de Matthieu
+      - Petite lampe
+      - Lit
+      - Lampe du lit
   light.bedroom_ceiling:
     name: "Lustre chambre"
     room: "Chambre"
+    expose: true
+  light.living_room_ceiling:
+    name: "Lustre salon"
+    room: "Salon"
+    expose: true
+  light.dining_room_ceiling:
+    name: "Lustre salle à manger"
+    room: "Salle à manger"
     expose: true
   light.yeelight_strip:
     name: "Bandeau"
@@ -85,13 +98,4 @@ entity_config:
   climate.bedroom:
     name: "Chambre"
     room: "Chambre"
-    expose: true
-# Scenes :
-  scene.good_night:
-    name: "Good Night"
-    room: "Scripts"
-    expose: true
-  scene.movie_time:
-    name: "Movie Time"
-    room: "Scripts"
     expose: true

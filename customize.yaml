@@ -29,6 +29,8 @@ light.bedroom_ceiling:
   icon: mdi:ceiling-light
 light.living_room_ceiling:
   icon: mdi:ceiling-light
+light.dining_room_ceiling:
+  icon: mdi:ceiling-light
 
 # switches
 switch.smart_power_socket:
