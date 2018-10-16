@@ -11,6 +11,9 @@ device_tracker.raspberry_pi_3:
   # value_template: "{{ states('device_tracker.raspberry_pi_3') }}"
 remote.harmony_hub:
   hidden: true
+climate.living_room_valve:
+  friendly_name: "Window radiator"
+  icon: mdi:radiator
 
 # lights
 light.mp_bed_light:

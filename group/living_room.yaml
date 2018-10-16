@@ -2,14 +2,16 @@ name: "Living Room"
 icon: mdi:sofa
 control: hidden
 entities:
+  - light.living_room_ceiling
+  - light.dining_room_ceiling
   - light.yeelight_strip
   - switch.smart_power_socket
   - media_player.television
   - device_tracker.google_home
   - device_tracker.logitech_harmony
   - remote.harmony_hub
+  - climate.living_room_valve
   - sensor.temperature_158d0001a23103
   - sensor.humidity_158d0001a23103
   - sensor.pressure_158d0001a23103
   - sensor.illumination_158d00016dad0e
-  - climate.thermostat

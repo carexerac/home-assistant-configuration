@@ -64,3 +64,15 @@ endif %}"
             entity_id: remote.harmony_hub
             command: Mute
             device: 42051938
+    heater:
+      value_template: "{{ states.climate.living_room_valve.attributes.away_mode }}"
+      turn_on:
+        service: climate.set_away_mode
+        entity_id: climate.living_room_valve
+        data:
+          away_mode: false
+      turn_off:
+        service: climate.set_away_mode
+        entity_id: climate.living_room_valve
+        data:
+          away_mode: true

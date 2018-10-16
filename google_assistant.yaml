@@ -88,14 +88,17 @@ entity_config:
     expose: true
 # Thermostats
   climate.living_room:
-    name: "Salon"
+    name: "Chauffage"
     room: "Salon"
     expose: true
+    aliases:
+      - Chauffage salon
+      - Radiateur
   climate.bathroom:
-    name: "Salle de bain"
+    name: "Température salle de bain"
     room: "Salle de bain"
     expose: true
   climate.bedroom:
-    name: "Chambre"
+    name: "Température chambre"
     room: "Chambre"
     expose: true
