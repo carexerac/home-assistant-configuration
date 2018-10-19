@@ -21,10 +21,8 @@ condition:
 action:
   - service: light.turn_on
     data:
-      entity_id: light.gateway_light_f0b429cc58ea
-      brightness: 255
-      color_name: white
-  - service: script.turn_on_light_briefly
-    data:
-      entity_id: 'light.gateway_light_f0b429cc58ea'
-      delay: '00:01:00'
+      entity_id: group.living_room
+  - service: notify.google_assistant
+    data_template:
+      message: >
+        Bienvenue {% for user in [states.group.matthieu, states.group.julie] if user.state == "home" %}{{ user.attributes.friendly_name }}{% if not loop.last %} et {% endif %}{% endfor %} à la maison. J'ai allumé la lumière pour vous.
