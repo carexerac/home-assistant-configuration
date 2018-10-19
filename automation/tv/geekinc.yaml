@@ -9,10 +9,9 @@ condition:
     state: "on"
   - condition: time
     after: '19:45:00'
-    before: '22:00:00'
+    before: '21:00:00'
     weekday:
       - wed
-      - fri
 action:
   - service: script.turn_on
     entity_id: script.geek_inc
