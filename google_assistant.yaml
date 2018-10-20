@@ -1,13 +1,5 @@
 project_id: asssitant-ha
-client_id: !secret ga_client_id
-access_token: !secret ga_access_token
-agent_user_id: !secret ga_agent_user_id
 api_key: !secret ga_api_key
-# exposed_domains:
-#  - switch
-#  - light
-#  - climate
-#  - scene
 expose_by_default: false
 entity_config:
 # Lights
@@ -25,13 +17,19 @@ entity_config:
     room: "Chambre"
     expose: true
   light.living_room_ceiling:
-    name: "Lustre salon"
+    name: "Lustre canapé"
     room: "Salon"
     expose: true
+    aliases:
+      - Canapé
   light.dining_room_ceiling:
-    name: "Lustre salle à manger"
-    room: "Salle à manger"
+    name: "Lustre table"
+    room: "Salon"
     expose: true
+    aliases:
+      - Table
+      - Salle à manger
+      - Cuisine
   light.yeelight_strip:
     name: "Bandeau"
     room: "Salon"
@@ -42,11 +40,13 @@ entity_config:
       - Bande
       - Cube
       - Meubles
+      - Bureau
   light.gateway_light_f0b429cc58ea:
     name: "Lumière d'entrée"
     room: "Entrée"
     expose: true
     aliases:
+      - Hall
       - Lampe de l'entrée
       - Lampe d'entrée
       - Lumière de l'entrée
@@ -92,7 +92,6 @@ entity_config:
     room: "Salon"
     expose: true
     aliases:
-      - Chauffage salon
       - Radiateur
   climate.bathroom:
     name: "Température salle de bain"
