@@ -20,7 +20,7 @@ action:
       {% if trigger.event.data.args[0] is defined %}
       telegram_bot.send_location
       {% else %}
-      telegram_bot.send_photo
+      telegram_bot.send_message
       {% endif %}
     data_template: 
       disable_notification: true
@@ -41,4 +41,4 @@ action:
             {{ states.device_tracker.jc_iphone.attributes.longitude }}
           {% endif %}
         {% endif %}
-      url: 'http://localhost:8123{{ states.camera.gps_locations.attributes.entity_picture }}'
+      message: 'Provide a person. Like : "/location mp" or "/location jc"'

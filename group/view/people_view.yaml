@@ -1,6 +1,5 @@
 view: yes
 icon: mdi:account-multiple
 entities:
-  - camera.gps_locations
   - group.matthieu
   - group.julie
