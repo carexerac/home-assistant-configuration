@@ -17,7 +17,7 @@
   initial_operation_mode: 'off'
 #  ac_mode: true
 
-- platform: eq3btsmart
-  devices:
-    living_room_valve:
-      mac: !secret eq3bt_bedroom_mac
+#- platform: eq3btsmart
+#  devices:
+#    living_room_valve:
+#      mac: !secret eq3bt_bedroom_mac
