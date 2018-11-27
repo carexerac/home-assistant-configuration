@@ -21,7 +21,7 @@ condition:
 action:
   - service: light.turn_on
     data:
-      entity_id: group.living_room
+      entity_id: light.living_room_ceiling
   - service: notify.google_assistant
     data_template:
       message: >
