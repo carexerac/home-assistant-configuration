@@ -31,8 +31,10 @@ light.yeelight_strip:
 light.bedroom_ceiling:
   icon: mdi:ceiling-light
 light.living_room_ceiling:
+  friendly_name: "Sofa"
   icon: mdi:ceiling-light
 light.dining_room_ceiling:
+  friendly_name: "Table"
   icon: mdi:ceiling-light
 
 # switches
