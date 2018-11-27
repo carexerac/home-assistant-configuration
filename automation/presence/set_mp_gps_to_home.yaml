@@ -2,13 +2,11 @@ alias: "Set Matthieu GPS to home when arriving"
 trigger:
   platform: state
   entity_id: group.matthieu
-  from: 'not_home'
   to: 'home'
 condition:
   # and MP's GPS is not reaching home
-  - condition: state
-    entity_id: device_tracker.mp_s9
-    state: 'not_home'
+  - condition: template
+    value_template: "{{ not is_state('device_tracker.mp_s9','home') }}"
 action:
   - service: device_tracker.see
     data_template:
