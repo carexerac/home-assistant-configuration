@@ -1,0 +1,19 @@
+alias: "Turn lights on when someone comes home"
+trigger:
+  platform: state
+  entity_id: binary_sensor.is_someone_home
+  from: 'on'
+  to: 'off'
+condition:
+  - condition: template
+    value_template: "{{ is_state('group.all_lights', 'on') }}"
+action:
+  - service: telegram_bot.send_message
+    data_template:
+      message: "Turned off all lights because some lights were on ({% for entity_id in states.group.all_lights.attributes.entity_id if is_state(entity_id, 'on')%}{{state_attr(entity_id, 'friendly_name')}}{{loop.index}}{{loop.length}}{% if loop.index != loop.length %}, {% endif %}{% endfor %})."
+      target:
+        - !secret telegram_mp_chat_id
+        - !secret telegram_jc_chat_id
+  - service: light.turn_off
+    data:
+      entity_id: group.all_lights
