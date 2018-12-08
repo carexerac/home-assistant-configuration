@@ -4,6 +4,9 @@ control: hidden
 entities:
   - device_tracker.mp_s9
   - device_tracker.mp_s9_nmap
-  - device_tracker.mp_macbook_air
   - device_tracker.mp_s9_bluetooth
+#  - device_tracker.mp_macbook_air
   - device_tracker.mp_pebble_time
+  - device_tracker.mp_pebble_time_ble
+  - device_tracker.gh_mp_pebble_time
+  - device_tracker.gh_mp_pebble_time_ble
