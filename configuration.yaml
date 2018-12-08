@@ -68,12 +68,13 @@ emulated_hue:
     - light
     - switch
 
+# Misc
+sun:
+media_extractor:
+
 # IFTTT service
 ifttt:
   key: !secret ifttt_key
-
-# Google Assistant
-google_assistant: !include google_assistant.yaml
 
 sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
@@ -94,25 +95,9 @@ automation: !include_dir_list automation/
 script: !include script.yaml
 alarm_control_panel: !include alarm_control_panel.yaml
 telegram_bot: !include telegram_bot.yaml
+google_assistant: !include google_assistant.yaml
+logi_circle: !include logi_circle.yaml
+xiaomi_aqara: !include xiaomi_aqara.yaml
 vacuum: !include vacuum.yaml
-
-xiaomi_aqara:
-  gateways:
-  - mac:
-    key: !secret xiaomi_gateway_password
-
 panel_iframe: !include panel_iframe.yaml
-
-tts:
-  - platform: google
-    language: 'fr'
-
-sun:
-
-media_extractor:
-logi_circle:
-  username: !secret logi_circle_email
-  password: !secret logi_circle_password
-
-owntracks:
-  max_gps_accuracy: 200
+owntracks: !include owntracks.yaml
