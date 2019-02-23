@@ -1,9 +1,0 @@
-name: "Dining Room"
-control: hidden
-entities:
-  - light.dining_room_ceiling
-#  - light.yeelight_guinea_pig
-#  - camera.rpi_camera
-#  - sensor.photo_frame_temperature
-#  - sensor.photo_frame_humidity
-#  - camera.les_bibous

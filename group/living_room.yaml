@@ -7,11 +7,11 @@ entities:
   - light.yeelight_strip
   - switch.smart_power_socket
   - media_player.television
-  - device_tracker.google_home
-  - device_tracker.logitech_harmony
   - remote.harmony_hub
   - climate.living_room_valve
   - sensor.temperature_158d0001a23103
   - sensor.humidity_158d0001a23103
   - sensor.pressure_158d0001a23103
   - sensor.illumination_158d00016dad0e
+  - binary_sensor.vibration_158d0002a4f770
+  - vacuum.xiaomi_mi_robot

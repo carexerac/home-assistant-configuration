@@ -2,8 +2,8 @@ alias: "Vacuum ended"
 trigger:
   platform: state
   entity_id: vacuum.xiaomi_mi_robot
-  from: 'on'
-  to: 'off'
+  from: 'cleaning'
+#  to: 'error'
 action:
   - service: telegram_bot.send_message
     data_template:

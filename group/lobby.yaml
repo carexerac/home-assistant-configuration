@@ -1,4 +1,4 @@
-name: "Hall"
+name: "Lobby"
 icon: mdi:door
 control: hidden
 entities:
@@ -6,6 +6,3 @@ entities:
   - light.gateway_light_f0b429cc58ea
   - sensor.illumination_f0b429cc58ea
   - binary_sensor.door_window_sensor_158d0001a64dd9
-#  - device_tracker.logitech_circle
-  - vacuum.xiaomi_mi_robot
-  - camera.les_bibous

@@ -1,0 +1,22 @@
+title: People
+icon: mdi:account-multiple
+path: people
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+            name: Julie
+            entity: group.julie
+            image: /local/people/jc.png
+          - type: picture-entity
+            name: Matthieu
+            entity: group.matthieu
+            image: /local/people/mp.png
+      - type: map
+        aspect_ratio: 16x9
+        default_zoom: 16
+        entities:
+          - device_tracker.mp_s9
+          - device_tracker.jc_iphone

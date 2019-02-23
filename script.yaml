@@ -115,3 +115,22 @@ geek_inc:
         entity_id: media_player.salon
         media_content_id: https://www.twitch.tv/studiorenegade
         media_content_type: video/mp4
+
+cast_car_location:
+  sequence:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.chromecast
+        media_content_id: "https://www.mapquestapi.com/staticmap/v4/getplacemap?key={{states.sensor.mapquest_api_key.state}}&location={{states.device_tracker.ford_fiesta.attributes.latitude}},{{states.device_tracker.ford_fiesta.attributes.longitude}}&size=1280,720&type=map&zoom=17&imagetype=png&scalebar=false&showicon=blue-C"
+        media_content_type: image/png
+
+send_car_location_to_mp:
+  sequence:
+    - service: notify.telegram_mp
+      data_template:
+        title: Car location
+        message: Here is the location of the car.
+        data:
+          location:
+            latitude: '{{ states.device_tracker.ford_fiesta.attributes.latitude }}'
+            longitude: '{{ states.device_tracker.ford_fiesta.attributes.longitude }}'

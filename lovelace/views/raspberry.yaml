@@ -1,0 +1,42 @@
+title: Server
+icon: mdi:raspberrypi
+path: server
+cards:
+  - type: vertical-stack
+    cards:
+      - type: sensor
+        entity: sensor.uptime
+        name: Uptime
+      - type: horizontal-stack
+        cards:
+        - type: gauge
+          name: CPU Usage
+          entity: sensor.processor_use
+          severity:
+            green: 0
+            yellow: 45
+            red: 85
+        - type: gauge
+          name: Memory Usage
+          entity: sensor.memory_use
+          max: 1000
+          severity:
+            green: 0
+            yellow: 450
+            red: 800
+      - type: history-graph
+        title: Network IO
+        entities:
+          - entity: sensor.network_in_eth0
+            name: In
+          - entity: sensor.network_out_eth0
+            name: Out
+      - type: sensor
+        entity: sensor.swap_use
+        name: Disk swap
+        graph: line
+      - type: sensor
+        entity: sensor.linky
+        name: Power consumption
+        graph: line
+        icon: mdi:flash

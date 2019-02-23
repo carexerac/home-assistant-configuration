@@ -17,7 +17,7 @@ logs:
 #  homeassistant.components.camera: debug
 #  homeassistant.components.alexa: debug
 #  homeassistant.components.emulated_hue: debug
-#  homeassistant.components.http: debug
+#  homeassistant.components.http.view: notset
 #  homeassistant.components.mqtt: debug
 #  requests.packages.urllib3.connectionpool: warn
 #  homeassistant.core: debug
@@ -30,3 +30,5 @@ logs:
   homeassistant.components.telegram_bot: debug
   homeassistant.components.media_extractor: debug
   homeassistant.components.climate: debug
+  homeassistant.components.google_assistant: debug
+  homeassistant.components.linky: debug

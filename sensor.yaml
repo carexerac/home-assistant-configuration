@@ -4,22 +4,15 @@
 
 - platform: systemmonitor
   resources:
-    - type: disk_use_percent
+    - type: processor_use
+    - type: memory_use
+    - type: swap_use
+    - type: disk_use
       arg: /
-    - type: memory_use_percent
-    - type: swap_use_percent
-    - type: load_1m
     - type: network_in
       arg: eth0
     - type: network_out
       arg: eth0
-    - type: packets_in
-      arg: eth0
-    - type: packets_out
-      arg: eth0
-    - type: processor_use
-    - type: last_boot
-    - type: since_last_boot
 
 # Temperature
 - platform: mqtt
@@ -37,20 +30,6 @@
   value_template: "{{ value_json.SI7021.Humidity }}"
   unit_of_measurement: "%"
 
-- platform: yweather
-  name: "Weather"
-  woeid: 613836
-  monitored_conditions:
-    - weather
-    - weather_current
-    - temp_min
-    - temp_max
-    - wind_speed
-    - pressure
-    - visibility
-    - humidity
-    - temperature
-
 #- platform: miflora
 #  mac: C4:7C:8D:62:E8:72
 #  name: Flower
@@ -60,23 +39,19 @@
 #  name: Nancy Stations
 #  radius: 5000
 
-- platform: waqi
-  token: !secret aqicn_token
-  locations:
-    - Charles III, Nancy-Centre
+# - platform: waqi
+#   token: !secret aqicn_token
+#   locations:
+#     - Charles III, Nancy-Centre
 
 - platform: twitch
   client_id: !secret twitch_client_id
   channels:
     - studiorenegade
 
-#- platform: linky
-#  username: !secret linky_username
-#  password: !secret linky_password
-#  monitored_variables:
-#    - daily_1d_consumption
-#    - monthly_current_consumption
-#    - yearly_current_consumption
+- platform: linky
+  username: !secret linky_username
+  password: !secret linky_password
 
 #- platform: template
 #  sensors:
@@ -113,3 +88,7 @@
 #    - download
 #    - upload
 
+- platform: template
+  sensors:
+    mapquest_api_key:
+      value_template: !secret mapquest_api_key

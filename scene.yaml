@@ -1,32 +1,26 @@
 - name: Movie time
   entities:
-    switch.chromecast:
-      state: on
     light.living_room_ceiling:
       state: off
     light.dining_room_ceiling:
       state: off
-    light.ambient_light:
-      state: off
-    light.sofa_yeelight_strip:
+    light.yeelight_strip:
       state: on
       effect: Stop
       color_name: white
       brightness_pct: 100
+    switch.chromecast:
+      state: on
 
 - name: Good night
   entities:
-    group.all_switches:
+    switch.chromecast:
       state: off
-#    group.all_lights:
-#      state: off
     light.living_room_ceiling:
       state: off
     light.dining_room_ceiling:
       state: off
-    light.ambient_light:
-      state: off
-    light.sofa_yeelight_strip:
+    light.yeelight_strip:
       state: off
     light.mp_bed_light:
       state: on

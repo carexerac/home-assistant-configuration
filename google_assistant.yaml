@@ -1,38 +1,37 @@
-project_id: asssitant-ha
+project_id: !secret ga_project_id
 api_key: !secret ga_api_key
 expose_by_default: false
 entity_config:
-# Lights
   light.mp_bed_light:
-    name: "Lampe de chevet"
-    room: "Chambre"
+    name: Lampe de chevet
+    room: Chambre
     expose: true
     aliases:
       - Lampe de Matthieu
       - Petite lampe
       - Lit
       - Lampe du lit
-  light.bedroom_ceiling:
-    name: "Lustre chambre"
-    room: "Chambre"
-    expose: true
+#  light.bedroom_ceiling:
+#    name: Lustre
+#    room: Chambre
+#    expose: true
   light.living_room_ceiling:
-    name: "Lustre canapé"
-    room: "Salon"
+    name: Lustre canapé
+    room: Salon
     expose: true
     aliases:
       - Canapé
   light.dining_room_ceiling:
-    name: "Lustre table"
-    room: "Salon"
+    name: Lustre table
+    room: Salon
     expose: true
     aliases:
       - Table
       - Salle à manger
       - Cuisine
   light.yeelight_strip:
-    name: "Bandeau"
-    room: "Salon"
+    name: Bandeau
+    room: Salon
     expose: true
     aliases:
       - Bandeau lumineux
@@ -42,62 +41,51 @@ entity_config:
       - Meubles
       - Bureau
   light.gateway_light_f0b429cc58ea:
-    name: "Lumière d'entrée"
-    room: "Entrée"
+    name: Lobby
+    room: Entrée
     expose: true
     aliases:
-      - Hall
+      - Lumière de l'entrée
+      - Lumière d'entrée
       - Lampe de l'entrée
       - Lampe d'entrée
-      - Lumière de l'entrée
-# Switches
-  switch.vacuum:
-    name: "Mi Robot"
-    room: "Salon"
+  switch.sound:
+    name: Son
+    room: Scripts
     expose: true
-    aliases:
-      - Aspirateur
-      - Robot
-  switch.tv:
-#  media_player.television:
-    name: "TV"
-    room: "Salon"
+  media_player.television:
+    name: TV
+    room: Salon
     expose: true
     aliases:
       - Télévision
       - Télé
-  switch.console:
-    name: "Console"
-    room: "Salon"
-    expose: true
-    aliases:
-      - Console de jeux
-      - Switch
-      - Nintendo Switch
-  switch.music:
-    name: "Ampli"
-    room: "Salon"
-    expose: true
-    aliases:
-      - Chaine HiFi
-      - HiFi
-      - Enceintes
-  switch.sound:
-    name: "Son"
-    room: "Scripts"
-    expose: true
-# Thermostats
   climate.living_room:
-    name: "Chauffage"
-    room: "Salon"
+    name: Chauffage
+    room: Salon
     expose: true
     aliases:
       - Radiateur
   climate.bathroom:
-    name: "Température salle de bain"
-    room: "Salle de bain"
+    name: Température salle de bain
+    room: Salle de bain
     expose: true
   climate.bedroom:
-    name: "Température chambre"
-    room: "Chambre"
+    name: Température chambre
+    room: Chambre
+    expose: true
+  vacuum.xiaomi_mi_robot:
+    name: Aspirateur
+    room: Salon
+    expose: true
+    aliases:
+      - Aspirateur
+      - Robot
+  scene.movie_time:
+    name: Movie time
+    room: Scripts
+    expose: true
+  scene.good_night:
+    name: Good night
+    room: Scripts
     expose: true

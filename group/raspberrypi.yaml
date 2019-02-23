@@ -1,13 +1,11 @@
 name: "Raspberry Pi"
 control: hidden
 entities:
-  - sensor.last_boot
-  - sensor.since_last_boot
   - sensor.uptime
   - sensor.processor_use
   - sensor.load_1m
   - sensor.memory_use_percent
-  - sensor.disk_use_percent_
+  - sensor.disk_use_percent
   - sensor.swap_use_percent
   - sensor.network_in_eth0
   - sensor.network_out_eth0

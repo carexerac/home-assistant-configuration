@@ -15,6 +15,6 @@ condition:
 action:
   - service: script.turn_on
     entity_id: script.geek_inc
-  - service: notify.google_assistant
-    data:
-      message: "C'est l'heure de StudioRenegade"
+#  - service: notify.google_assistant
+#    data:
+#      message: "C'est l'heure de StudioRenegade"

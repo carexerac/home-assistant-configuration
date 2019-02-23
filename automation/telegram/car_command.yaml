@@ -1,0 +1,21 @@
+id: telegram_car
+alias: 'Get car location on Google Maps'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/car'
+action:
+  - service_template: >
+      {% if states.device_tracker.ford_fiesta.attributes.latitude is defined and states.device_tracker.ford_fiesta.attributes.longitude is defined %}
+      telegram_bot.send_location
+      {% else %}
+      telegram_bot.send_message
+      {% endif %}
+    data_template: 
+      disable_notification: true
+      target: '{{ trigger.event.data.chat_id }}'
+      latitude: '{{ states.device_tracker.ford_fiesta.attributes.latitude }}'
+      longitude: '{{ states.device_tracker.ford_fiesta.attributes.longitude }}'
+      message: 'Unable to locate the car. Sorry :/'

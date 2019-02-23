@@ -1,4 +1,0 @@
-view: yes
-icon: mdi:weather-partlycloudy
-entities:
-  - group.weather

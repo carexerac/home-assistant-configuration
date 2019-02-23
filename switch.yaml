@@ -9,19 +9,8 @@
 
 - platform: template
   switches:
-    tv:
-      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'TV') %}on{% else %}off{% endif %}"
-      turn_on:
-        service: remote.turn_on
-        entity_id: remote.harmony_hub
-        data:
-          activity: "24399786"
-      turn_off:
-        service: remote.turn_off
-        entity_id: remote.harmony_hub
-    console:
-      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Console') %}on{% else %}off{% 
-endif %}"
+    chromecast:
+      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Chromecast') %}on{% else %}off{% endif %}"
       turn_on:
         service: remote.turn_on
         entity_id: remote.harmony_hub
@@ -30,26 +19,6 @@ endif %}"
       turn_off:
         service: remote.turn_off
         entity_id: remote.harmony_hub
-    music:
-      value_template: "{% if is_state('remote.harmony_hub.current_activity', 'Listen to Music') %}on{% else 
-%}off{%
-endif %}"
-      turn_on:
-        service: remote.turn_on
-        entity_id: remote.harmony_hub
-        data:
-          activity: "33584591"
-      turn_off:
-        service: remote.turn_off
-        entity_id: remote.harmony_hub
-    vacuum:
-      value_template: "{{ is_state('vacuum.xiaomi_mi_robot', 'cleaning') }}"
-      turn_on:
-        service: vacuum.turn_on
-        entity_id: vacuum.xiaomi_mi_robot
-      turn_off:
-        service: vacuum.turn_off
-        entity_id: vacuum.xiaomi_mi_robot
     sound:
       value_template: false
       turn_on:

@@ -14,5 +14,5 @@ info.log
 entity_registry.yaml
 .storage/
 .logi_cache.pickle
-www/tmp/
+www/
 core

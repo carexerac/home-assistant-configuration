@@ -2,8 +2,6 @@ name: "Bedroom"
 icon: mdi:bed-empty
 control: hidden
 entities:
-  - light.bedroom_ceiling
   - light.mp_bed_light
   - sensor.bedroom_temperature
   - sensor.bedroom_humidity
-#  - climate.bedroom

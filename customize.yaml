@@ -20,7 +20,7 @@ light.mp_bed_light:
   friendly_name: "Matthieu's Bed Light"
   icon: mdi:lamp
 light.hall_yeelight:
-  friendly_name: "Hall Light"
+  friendly_name: "Lobby Light"
   icon: mdi:lightbulb-on-outline
 light.toilet_yeelight:
   friendly_name: "Toilet Light"
@@ -70,6 +70,9 @@ binary_sensor.door_window_sensor_158d0001a1f304:
 binary_sensor.motion_sensor_158d00016dad0e:
   friendly_name: "Motion"
   icon: mdi:run-fast
+binary_sensor.vibration_158d0002a4f770:
+  friendly_name: "CatBox"
+  icon: mdi:cat
 sensor.illumination_158d00016dad0e:
   friendly_name: "Illuminance"
   icon: mdi:white-balance-sunny

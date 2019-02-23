@@ -1,0 +1,10 @@
+title: Bibou's Home
+# resources:
+#   - url: /local/components/linky-card.js
+#     type: module
+views:
+  - !include lovelace/views/overview.yaml
+  - !include lovelace/views/people.yaml
+  - !include lovelace/views/car.yaml
+  - !include lovelace/views/raspberry.yaml
+  - !include lovelace/views/alarm.yaml

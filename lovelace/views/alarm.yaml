@@ -1,0 +1,8 @@
+title: Alarm
+icon: mdi:shield-key
+path: alarm
+cards:
+  - type: alarm-panel
+    entity: alarm_control_panel.ha_alarm
+    states:
+      - arm_away
