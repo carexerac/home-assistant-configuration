@@ -2,6 +2,7 @@ title: Bibou's Home
 # resources:
 #   - url: /local/components/linky-card.js
 #     type: module
+background: center / cover no-repeat url("/local/themes/clear_background.jpeg") fixed
 views:
   - !include lovelace/views/overview.yaml
   - !include lovelace/views/people.yaml

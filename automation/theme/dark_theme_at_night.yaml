@@ -11,5 +11,4 @@ trigger:
 action:
   - service: frontend.set_theme
     data:
-      name: 'midnight'
-
+      name: 'clear_dark'

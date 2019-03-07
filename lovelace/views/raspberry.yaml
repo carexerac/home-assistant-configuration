@@ -1,6 +1,7 @@
 title: Server
 icon: mdi:raspberrypi
 path: server
+theme: clear
 cards:
   - type: vertical-stack
     cards:

@@ -1,6 +1,7 @@
 title: Overview
 icon: mdi:home
 path: overview
+theme: clear
 cards:
   - type: picture-glance
     title: Living room

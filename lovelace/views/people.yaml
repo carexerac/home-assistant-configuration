@@ -1,6 +1,7 @@
 title: People
 icon: mdi:account-multiple
 path: people
+theme: clear
 cards:
   - type: vertical-stack
     cards:

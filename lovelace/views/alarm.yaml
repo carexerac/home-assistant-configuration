@@ -1,6 +1,7 @@
 title: Alarm
 icon: mdi:shield-key
 path: alarm
+theme: clear
 cards:
   - type: alarm-panel
     entity: alarm_control_panel.ha_alarm

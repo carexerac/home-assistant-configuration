@@ -17,7 +17,12 @@ homeassistant:
 logger: !include logger.yaml
 
 # Enable the frontend
-frontend: !include frontend.yaml
+frontend:
+  themes:
+    clear: !include themes/clear.yaml
+    clear_dark: !include themes/clear_dark.yaml
+    midnight: !include themes/midnight.yaml
+    darkcyan: !include themes/darkcyan.yaml
 
 # Enable Hassio configuration
 hassio:

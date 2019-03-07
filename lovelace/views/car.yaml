@@ -1,6 +1,7 @@
 title: Car
 icon: mdi:car
 path: car
+theme: clear
 cards:
   - type: vertical-stack
     cards:

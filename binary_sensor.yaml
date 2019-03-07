@@ -6,7 +6,6 @@
   payload_on: "ON"
   payload_off: "OFF"
   qos: 0
-  retain: true
 
 # Test if somehome is currently at home
 - platform: template
