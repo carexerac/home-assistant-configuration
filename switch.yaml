@@ -7,6 +7,15 @@
   payload_off: "OFF"
   retain: true
 
+- platform: mqtt
+  unique_id: shp5_usb
+  state_topic: "stat/shp5/POWER2"
+  command_topic: "cmnd/shp5/POWER2"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
 - platform: template
   switches:
     chromecast:

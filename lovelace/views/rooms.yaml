@@ -1,0 +1,67 @@
+title: Rooms
+icon: mdi:home
+path: rooms
+theme: clear
+cards:
+  - type: picture-glance
+    title: Living room
+    image: /local/rooms/living_room.jpg
+    entities:
+      - light.yeelight_strip
+      - media_player.television
+      - sensor.0x00158d0001a35a71_temperature
+      - plant.yuka
+    entity: group.living_room
+  - type: picture-glance
+    title: Dining room
+    image: /local/rooms/dining_room.jpg
+    entities:
+      - vacuum.xiaomi_mi_robot
+      - media_player.google_home
+    entity: group.dining_room
+  - type: picture-glance
+    title: Office
+    image: /local/rooms/office.jpg
+    entity: group.office
+    # camera_image: camera.les_bibous
+    entities:
+      - camera.les_bibous
+  - type: picture-glance
+    title: Bedroom
+    image: /local/rooms/bedroom.jpg
+    entity: group.bedroom
+    entities:
+      - media_player.chromecast
+      - light.bedlight_julie
+  - type: horizontal-stack
+    cards:
+      - type: picture-glance
+        title: Bathroom
+        image: /local/rooms/bathroom.jpg
+        entities:
+          - sensor.0x00158d0001a23103_temperature
+          - sensor.0x00158d0001a23103_humidity
+        entity: group.bathroom
+      - type: picture-glance
+        title: Kitchen
+        image: /local/rooms/kitchen.jpg
+        entities:
+          - sensor.0x00158d0002a4f770_action
+        entity: group.kitchen
+  - type: horizontal-stack
+    cards:
+      - type: picture-glance
+        title: Lobby
+        image: /local/rooms/lobby.jpg
+        entities:
+          - binary_sensor.0x00158d0001a64dd9_contact
+          - binary_sensor.0x00158d00016dad0e_occupancy
+          - sensor.0x00158d00016dad0e_illuminance
+        entity: group.lobby
+      - type: picture-glance
+        title: Toilet
+        image: /local/rooms/toilet.jpg
+        entities:
+          - light.toilet
+          - binary_sensor.0x00158d0001a1f304_contact
+        entity: group.toilet

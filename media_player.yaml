@@ -8,7 +8,7 @@
       service: remote.turn_on
       data:
         entity_id: remote.harmony_hub
-        activity: "24399786"
+        activity: "39820530"
     turn_off:
       service: remote.turn_off
       data:
@@ -34,9 +34,3 @@
   attributes:
     state: remote.harmony_hub
     is_volume_muted: false
-
-- platform: androidtv
-  host: 192.168.254.103
-  name: "Freebox mini 4k"
-  adb_server_ip: 127.0.0.1
-  adb_server_port: 5037

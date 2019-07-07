@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 49.358707
-  longitude: 6.167673
+  latitude: 49.358256
+  longitude: 6.160630
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 156
   # metric for Metric, imperial for Imperial
@@ -13,6 +13,8 @@ homeassistant:
 
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
+
+system_health:
 
 logger: !include logger.yaml
 
@@ -60,10 +62,17 @@ lovelace:
 
 # MQTT Broker
 mqtt:
-#  broker: localhost
+  broker: localhost
 #  client_id: home-assistant
   username: !secret mqtt_user
   password: !secret mqtt_password
+  discovery: true
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
 
 # Emulated Hue Bridge
 emulated_hue:
@@ -100,8 +109,13 @@ script: !include script.yaml
 alarm_control_panel: !include alarm_control_panel.yaml
 telegram_bot: !include telegram_bot.yaml
 google_assistant: !include google_assistant.yaml
-logi_circle: !include logi_circle.yaml
-xiaomi_aqara: !include xiaomi_aqara.yaml
+googlehome: !include googlehome.yaml
+#logi_circle: !include logi_circle.yaml
+#xiaomi_aqara: !include xiaomi_aqara.yaml
 vacuum: !include vacuum.yaml
 panel_iframe: !include panel_iframe.yaml
 owntracks: !include owntracks.yaml
+plant: !include plant.yaml
+input_boolean: !include input_boolean.yaml
+timer: !include timer.yaml
+yeelight: !include yeelight.yaml

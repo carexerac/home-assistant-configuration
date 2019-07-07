@@ -2,7 +2,7 @@
 #  title: Transmission
 #  icon: mdi:cloud-download
 #  url: !secret transmission_url
-#pihole:
+# pihole:
 #  title: PiHole
 #  icon: mdi:radar
 #  url: !secret pihole_url

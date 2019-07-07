@@ -1,3 +1,2 @@
 gateways:
-  - mac:
-    key: !secret xiaomi_gateway_password
+  - key: !secret xiaomi_gateway_password

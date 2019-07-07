@@ -2,33 +2,24 @@ project_id: !secret ga_project_id
 api_key: !secret ga_api_key
 expose_by_default: false
 entity_config:
-  light.mp_bed_light:
-    name: Lampe de chevet
+  light.bedlight_julie:
+    name: Lampe
     room: Chambre
     expose: true
     aliases:
-      - Lampe de Matthieu
-      - Petite lampe
+      - Lape de chevet
       - Lit
-      - Lampe du lit
-#  light.bedroom_ceiling:
-#    name: Lustre
-#    room: Chambre
-#    expose: true
   light.living_room_ceiling:
-    name: Lustre canapé
+    name: Lustre salon
     room: Salon
     expose: true
-    aliases:
-      - Canapé
   light.dining_room_ceiling:
-    name: Lustre table
-    room: Salon
+    name: Lustre séjour
+    room: Séjour
     expose: true
     aliases:
       - Table
       - Salle à manger
-      - Cuisine
   light.yeelight_strip:
     name: Bandeau
     room: Salon
@@ -37,9 +28,7 @@ entity_config:
       - Bandeau lumineux
       - Bande lumineuse
       - Bande
-      - Cube
-      - Meubles
-      - Bureau
+      - Canapé
   light.gateway_light_f0b429cc58ea:
     name: Lobby
     room: Entrée
@@ -49,6 +38,14 @@ entity_config:
       - Lumière d'entrée
       - Lampe de l'entrée
       - Lampe d'entrée
+  switch.chromecast:
+    name: Console
+    room: Salon
+    expose: true
+    aliases:
+      - Console de jeu
+      - Nintendo Switch
+      - Switch
   switch.sound:
     name: Son
     room: Scripts
@@ -70,13 +67,9 @@ entity_config:
     name: Température salle de bain
     room: Salle de bain
     expose: true
-  climate.bedroom:
-    name: Température chambre
-    room: Chambre
-    expose: true
   vacuum.xiaomi_mi_robot:
     name: Aspirateur
-    room: Salon
+    room: Séjour
     expose: true
     aliases:
       - Aspirateur

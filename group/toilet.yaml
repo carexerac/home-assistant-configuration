@@ -3,4 +3,4 @@ icon: mdi:toilet
 control: hidden
 entities:
   - light.toilet
-  - binary_sensor.door_window_sensor_158d0001a1f304
+  - binary_sensor.0x00158d0001a1f304_contact

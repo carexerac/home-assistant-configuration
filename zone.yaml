@@ -1,31 +1,31 @@
 - name: Home
-  latitude: 49.358707
-  longitude: 6.167673
+  latitude: 49.358256
+  longitude: 6.160630
   radius: 50
   icon: mdi:home
 
 - name: ING
-  latitude: 49.600176
-  longitude: 6.133044
-  radius: 25
+  latitude: 49.600194
+  longitude: 6.132580
+  radius: 50
   icon: mdi:briefcase
 
 - name: Concept Factory
   latitude: 49.595498
   longitude: 6.144146
-  radius: 50
+  radius: 75
   icon: mdi:briefcase-outline
 
 - name: Luxembourg Gare
-  latitude: 49.600357          
-  longitude: 6.134966
-  radius: 25
+  latitude: 49.599849
+  longitude: 6.135198
+  radius: 100
   icon: mdi:train-variant
 
 - name: Thionville Gare
-  latitude: 49.354116   
+  latitude: 49.354116
   longitude: 6.169686
-  radius: 50
+  radius: 100
   icon: mdi:train
 
 - name: Charlotte

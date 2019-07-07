@@ -30,10 +30,9 @@
   value_template: "{{ value_json.SI7021.Humidity }}"
   unit_of_measurement: "%"
 
-#- platform: miflora
-#  mac: C4:7C:8D:62:E8:72
-#  name: Flower
-#  force_update: false
+- platform: miflora
+  mac: C4:7C:8D:6A:75:6E
+  name: Flora
 
 #- platform: citybikes
 #  name: Nancy Stations
@@ -49,9 +48,9 @@
   channels:
     - studiorenegade
 
-- platform: linky
-  username: !secret linky_username
-  password: !secret linky_password
+# - platform: linky
+#   username: !secret linky_username
+#   password: !secret linky_password
 
 #- platform: template
 #  sensors:
@@ -92,3 +91,8 @@
   sensors:
     mapquest_api_key:
       value_template: !secret mapquest_api_key
+
+- platform: mqtt
+  name: Bridge state
+  state_topic: "zigbee2mqtt/bridge/state"
+  icon: mdi:router-wireless

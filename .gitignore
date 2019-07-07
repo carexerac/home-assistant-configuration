@@ -19,3 +19,4 @@ entity_registry.yaml
 .logi_cache.pickle
 www/
 core
+TODO.md

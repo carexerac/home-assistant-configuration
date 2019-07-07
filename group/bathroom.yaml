@@ -2,6 +2,7 @@ name: "Bathroom"
 icon: mdi:shower
 control: hidden
 entities:
-  - sensor.temperature_158d0001a35a71
-  - sensor.humidity_158d0001a35a71
-  - sensor.pressure_158d0001a35a71
+  - sensor.0x00158d0001a23103_temperature
+  - sensor.0x00158d0001a23103_humidity
+  - sensor.0x00158d0001a23103_pressure
+  - media_player.google_home_mini_2

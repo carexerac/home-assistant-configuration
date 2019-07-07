@@ -1,2 +1,4 @@
-username: !secret logi_circle_email
-password: !secret logi_circle_password
+client_id:
+client_secret:
+api_key:
+redirect_uri: !secret logi_circle_redirect_uri

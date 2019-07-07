@@ -1,0 +1,5 @@
+name: "Kitchen"
+icon: mdi:fridge-outline
+control: hidden
+entities:
+  - sensor.0x00158d0002a4f770_action

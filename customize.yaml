@@ -15,15 +15,26 @@ climate.living_room_valve:
   friendly_name: "Window radiator"
   icon: mdi:radiator
 
+# media players
+media_player.google_home:
+  icon: mdi:google-home
+media_player.google_home_mini_2:
+  icon: mdi:dots-horizontal-circle
+media_player.enceintes:
+  icon: mdi:speaker-multiple
+media_player.television:
+  icon: mdi:television
+media_player.chromecast:
+  friendly_name: "Chromecast"
+  icon: mdi:google-chrome
+
 # lights
-light.mp_bed_light:
-  friendly_name: "Matthieu's Bed Light"
+light.bedlight_julie:
+  friendly_name: "Julie's Bed Light"
   icon: mdi:lamp
 light.hall_yeelight:
   friendly_name: "Lobby Light"
   icon: mdi:lightbulb-on-outline
-light.toilet_yeelight:
-  friendly_name: "Toilet Light"
 light.yeelight_strip:
   friendly_name: "Light Strip"
   icon: mdi:led-strip
@@ -36,6 +47,8 @@ light.living_room_ceiling:
 light.dining_room_ceiling:
   friendly_name: "Table"
   icon: mdi:ceiling-light
+light.toilet:
+  icon: mdi:ceiling-light
 
 # switches
 switch.smart_power_socket:
@@ -47,33 +60,25 @@ switch.chromecast:
 switch.rpi:
   friendly_name: "Raspberry Pi"
 
-# Xiaomi Gateway
-light.gateway_light_f0b429cc58ea:
-  friendly_name: "Xiaomi Gateway"
-  icon: mdi:google-circles-communities
-sensor.illumination_f0b429cc58ea:
-  friendly_name: "Illuminance"
-  icon: mdi:white-balance-sunny
 
-# Sensor
-binary_sensor.door_window_sensor_158d0001a64dd9:
+# sensors
+binary_sensor.0x00158d0001a64dd9_contact:
   friendly_name: "Main Door"
-  #  icon: mdi:door
-  icon: mdi:locker
+binary_sensor.0x00158d0001a1f304_contact:
+  friendly_name: "Toilet door"
+binary_sensor.0x00158d00016dad0e_occupancy:
+  friendly_name: "Occupancy"
 sensor.weather_temperature_max:
   friendly_name: "Maximum temperature"
 sensor.weather_temperature_min:
   friendly_name: "Minimum temperature"
-binary_sensor.door_window_sensor_158d0001a1f304:
-  friendly_name: "Door"
-  icon: mdi:door
 binary_sensor.motion_sensor_158d00016dad0e:
   friendly_name: "Motion"
   icon: mdi:run-fast
-binary_sensor.vibration_158d0002a4f770:
+sensor.0x00158d0002a4f770_action:
   friendly_name: "CatBox"
   icon: mdi:cat
-sensor.illumination_158d00016dad0e:
+sensor.0x00158d00016dad0e_illuminance:
   friendly_name: "Illuminance"
   icon: mdi:white-balance-sunny
 
@@ -87,64 +92,4 @@ sensor.flower_moisture:
   icon: mdi:water
 sensor.flower_temperature:
   icon: mdi:thermometer
-
-# Bikes Stations
-sensor.velostanlib_nancy_stations_10cd7436fee13bc82f9a1de82d55ae2f:
-  friendly_name: Place de la Commanderie
-sensor.velostanlib_nancy_stations_18528a8fcb0fd547eb7c929c15eeac40:
-  friendly_name: Saint Nicolas
-sensor.velostanlib_nancy_stations_18706dcba496e8c7c7416cdd27fa7a37:
-  friendly_name: Porte Sainte Catherine
-sensor.velostanlib_nancy_stations_19c3949daf1136d9b593f87c3ed67277:
-  friendly_name: Cours Leopold
-sensor.velostanlib_nancy_stations_2b6a62371b1b45a936468c9cf16a3528:
-  friendly_name: Place Barrois
-sensor.velostanlib_nancy_stations_2c96e9ec111a7ac31507a2d7932f7191:
-  friendly_name: Place des Vosges
-sensor.velostanlib_nancy_stations_34746e69b4b089019c6d95e041134fd4:
-  friendly_name: Les 2 Rives
-sensor.velostanlib_nancy_stations_63129120dfe828b8568df56e7f7accc6:
-  friendly_name: Gare Thiers
-sensor.velostanlib_nancy_stations_67a2688328c4cd17cc3ab69321edc42e:
-  friendly_name: 3 Maisons
-sensor.velostanlib_nancy_stations_6a5ee24122c78bdbd0b18e710de66012:
-  friendly_name: Dominicains - Fourrier
-sensor.velostanlib_nancy_stations_726ef4c09e7d2137f9dda4dc0d707857:
-  friendly_name: Commanderie - Chalnot
-sensor.velostanlib_nancy_stations_7bd334f83d16f15e923e21e53beca572:
-  friendly_name: Promenade des Canaux
-sensor.velostanlib_nancy_stations_91e114170a5f8b6d3d7f75a762368ac7:
-  friendly_name: Place Saint Epvre
-sensor.velostanlib_nancy_stations_94bfafc292252438f023bb79938dc795:
-  friendly_name: Fac de Lettres
-sensor.velostanlib_nancy_stations_95eeed3ddbdbd13c0212312a029772ea:
-  friendly_name: Place Dombasle
-sensor.velostanlib_nancy_stations_99c80bacb965d235c4edbca5fcee930f:
-  friendly_name: Velodrome
-sensor.velostanlib_nancy_stations_9d3f49929f6d5a8731b523c524505dc6:
-  friendly_name: Hopital Central
-sensor.velostanlib_nancy_stations_a09205bd630b4d1a23d2bd50428b13b0:
-  friendly_name: Marche Central
-sensor.velostanlib_nancy_stations_a5587c8197681bdb17ca04d359769ca6:
-  friendly_name: Nancy Thermal
-sensor.velostanlib_nancy_stations_a6ccf4c7e55dfb1288606f3b10cbb69e:
-  friendly_name: Gare Saint Leon
-sensor.velostanlib_nancy_stations_ab4126483d8e61e7d6d8b4e85aab7f3f:
-  friendly_name: Place Carriere
-sensor.velostanlib_nancy_stations_bf951da92ffe051752f657de2f2487d4:
-  friendly_name: Porte de la Craffe
-sensor.velostanlib_nancy_stations_d39d77ba479c42dd67f0eb3661f840ed:
-  friendly_name: Place Colonel Driant
-sensor.velostanlib_nancy_stations_de0bce341b81c9ea19fbc7d60eacfec8:
-  friendly_name: Saint Sebastien
-sensor.velostanlib_nancy_stations_de3cd1e32c9110db3372feaa85d52e57:
-  friendly_name: Mazagran - Foch
-sensor.velostanlib_nancy_stations_dfbc1a6beddebf43ff4bd15728148d75:
-  friendly_name: Baudricourt Haussonville
-sensor.velostanlib_nancy_stations_e40523f1637e10e585d511b2033aed56:
-  friendly_name: Conservatoire - Manufacture
-sensor.velostanlib_nancy_stations_e439a3cb38c6ab7d21ea80b833d41ea2:
-  friendly_name: Hopital Saint Julien
-sensor.velostanlib_nancy_stations_f40c9fbafe43def3ec1899aafc3c8588:
-  friendly_name: Marché d'Haussonville
 

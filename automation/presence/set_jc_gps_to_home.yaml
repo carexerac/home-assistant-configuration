@@ -11,7 +11,7 @@ action:
   - service: device_tracker.see
     data_template:
       dev_id: jc_iphone
-      gps: 
+      gps:
         - '{{states.zone.home.attributes.latitude}}'
         - '{{states.zone.home.attributes.longitude}}'
       gps_accuracy: 100

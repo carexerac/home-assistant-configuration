@@ -2,6 +2,5 @@ name: "Bedroom"
 icon: mdi:bed-empty
 control: hidden
 entities:
-  - light.mp_bed_light
-  - sensor.bedroom_temperature
-  - sensor.bedroom_humidity
+  - media_player.chromecast
+  - light.bedlight_julie

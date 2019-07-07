@@ -1,65 +1,21 @@
 - platform: mqtt
-  name: mp_bed_light
-  state_topic: "stat/bedlight/POWER"
-  command_topic: "cmnd/bedlight/POWER"
+  unique_id: shp5_power
+  name: "Bedlight Julie"
+  state_topic: "stat/shp5/POWER1"
+  command_topic: "cmnd/shp5/POWER1"
   qos: 1
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
 
-- platform: yeelight
-  devices:
-#    192.168.254.238:
-#      name: Toilet Yeelight
-#      transition: 1000
-#      use_music_mode: True #defaults to False
-#      save_on_change: False #defaults to True
-    192.168.254.237:
-      name: Yeelight Strip
-      transition: 1000
-      use_music_mode: True #defaults to False
-      save_on_change: False #defaults to True
-#    192.168.254.236:
-#      name: Hall Yeelight
-#      transition: 1000
-#      use_music_mode: True #defaults to False
-#      save_on_change: False #defaults to True
-
 - platform: template
   lights:
-#    bedroom_ceiling:
-#      friendly_name: 'Bedroom ceiling'
-#      value_template: '{{ states("switch.wall_switch_158d00014a1a13") }}'
-#      turn_on:
-#        service: switch.turn_on
-#        entity_id: switch.wall_switch_158d00014a1a13
-#      turn_off:
-#        service: switch.turn_off
-#        entity_id: switch.wall_switch_158d00014a1a13
     toilet:
-      friendly_name: 'Toilet'
-      value_template: '{{ states("switch.wall_switch_158d0001a4c24e") }}'
+      friendly_name: 'Toilet light'
+      value_template: '{{ states("switch.0x00158d0001a4c24e_switch") }}'
       turn_on:
         service: switch.turn_on
-        entity_id: switch.wall_switch_158d0001a4c24e
+        entity_id: switch.0x00158d0001a4c24e_switch
       turn_off:
         service: switch.turn_off
-        entity_id: switch.wall_switch_158d0001a4c24e
-    living_room_ceiling:
-      friendly_name: 'Living room ceiling'
-      value_template: '{{ states("switch.wall_switch_right_158d00026dfd4b") }}'
-      turn_on:
-        service: switch.turn_on
-        entity_id: switch.wall_switch_right_158d00026dfd4b
-      turn_off:
-        service: switch.turn_off
-        entity_id: switch.wall_switch_right_158d00026dfd4b
-    dining_room_ceiling:
-      friendly_name: 'Dining room ceiling'
-      value_template: '{{ states("switch.wall_switch_left_158d00026dfd4b") }}'
-      turn_on:
-        service: switch.turn_on
-        entity_id: switch.wall_switch_left_158d00026dfd4b
-      turn_off:
-        service: switch.turn_off
-        entity_id: switch.wall_switch_left_158d00026dfd4b
+        entity_id: switch.0x00158d0001a4c24e_switch

@@ -1,0 +1,12 @@
+yuka:
+  sensors:
+    moisture: sensor.flora_moisture
+    battery: sensor.flora_battery
+    temperature: sensor.flora_temperature
+    conductivity: sensor.flora_conductivity
+    brightness: sensor.flora_light_intensity
+  min_moisture: 20
+  max_moisture: 60
+  min_battery: 17
+  min_conductivity: 200
+  min_temperature: 15

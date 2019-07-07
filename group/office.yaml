@@ -1,0 +1,5 @@
+name: "Office"
+icon: mdi:desk-lamp
+control: hidden
+entities:
+  - camera.les_bibous
