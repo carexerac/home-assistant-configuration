@@ -52,7 +52,8 @@ light.toilet:
 
 # switches
 switch.smart_power_socket:
-  icon: mdi:power-socket-eu
+#  icon: mdi:power-socket-eu
+  icon: mdi:fan
 switch.tv:
   friendly_name: "TV"
 switch.chromecast:

@@ -33,6 +33,7 @@ cards:
     entities:
       - media_player.chromecast
       - light.bedlight_julie
+      - switch.smart_power_socket
   - type: horizontal-stack
     cards:
       - type: picture-glance
