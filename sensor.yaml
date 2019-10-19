@@ -34,15 +34,6 @@
   mac: C4:7C:8D:6A:75:6E
   name: Flora
 
-#- platform: citybikes
-#  name: Nancy Stations
-#  radius: 5000
-
-# - platform: waqi
-#   token: !secret aqicn_token
-#   locations:
-#     - Charles III, Nancy-Centre
-
 - platform: twitch
   client_id: !secret twitch_client_id
   channels:
@@ -75,18 +66,6 @@
 #      icon_template: mdi:currency-eur
 #      value_template: "{{ (states.sensor.linky_yearly_current_consumption.state | float) * (states.sensor.kwh_unit_cost.state | float) }}"
 
-
-#- platform: speedtest
-#  hour:
-#    - 8
-#    - 12
-#    - 16
-#    - 20
-#  monitored_conditions:
-#    - ping
-#    - download
-#    - upload
-
 - platform: template
   sensors:
     mapquest_api_key:
@@ -96,3 +75,14 @@
   name: Bridge state
   state_topic: "zigbee2mqtt/bridge/state"
   icon: mdi:router-wireless
+
+- platform: rest
+  resource: http://192.168.254.235/api/map/latest
+  name: xiaomi_map
+  json_attributes:
+    - image
+    - path
+    - charger
+    - robot
+  value_template: 'OK'
+  scan_interval: 5

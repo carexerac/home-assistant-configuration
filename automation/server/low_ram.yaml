@@ -2,8 +2,8 @@
 alias: "Server is using too much RAM"
 trigger:
   platform: numeric_state
-  entity_id: sensor.ram_used
-  above: 60
+  entity_id: sensor.memory_use
+  above: 850
   for:
     hours: 0
     minutes: 2

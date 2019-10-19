@@ -15,7 +15,3 @@
 - name: Google Assistant
   platform: rest
   resource: !secret ga_broadcast
-
-- name: Freebox
-  platform: nfandroidtv
-  host: !secret freebox_tv_host

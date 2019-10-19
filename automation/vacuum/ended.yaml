@@ -5,9 +5,10 @@ trigger:
   from: 'cleaning'
 #  to: 'error'
 action:
-  - service: telegram_bot.send_message
+  - service: telegram_bot.send_photo
     data_template:
-      message: "Vacuum just finished cleaning {{ states.vacuum.xiaomi_mi_robot.attributes.cleaned_area }} m² in {{ (states.vacuum.xiaomi_mi_robot.attributes.cleaning_time / 60) | int }}h {{ states.vacuum.xiaomi_mi_robot.attributes.cleaning_time % 60 }}m with {{ states.vacuum.xiaomi_mi_robot.attributes.fan_speed }} mode and {{ states.vacuum.xiaomi_mi_robot.attributes.battery_level }}% battery remaining. Status is now {{ states.vacuum.xiaomi_mi_robot.attributes.status }}"
+      caption: "Vacuum just finished cleaning {{ states.vacuum.xiaomi_mi_robot.attributes.cleaned_area }} m² in {{ (states.vacuum.xiaomi_mi_robot.attributes.cleaning_time / 60) | int }}h {{ states.vacuum.xiaomi_mi_robot.attributes.cleaning_time % 60 }}m with {{ states.vacuum.xiaomi_mi_robot.attributes.fan_speed }} mode and {{ states.vacuum.xiaomi_mi_robot.attributes.battery_level }}% battery remaining. Status is now {{ states.vacuum.xiaomi_mi_robot.attributes.status }}"
+      url: http://127.0.0.1:30000/api/map/image
       target:
         - !secret telegram_mp_chat_id
         - !secret telegram_jc_chat_id

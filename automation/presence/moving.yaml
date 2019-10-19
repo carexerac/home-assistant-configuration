@@ -3,7 +3,7 @@ trigger:
   platform: state
   entity_id: device_tracker.mp_s9, device_tracker.jc_iphone
 condition:
-# dont send a notification if
+# don't send a notification if
 # - someone is not moving
   - condition: template
     value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
@@ -12,7 +12,7 @@ condition:
     value_template: "{{ not (is_state('group.matthieu', 'home') and is_state('group.julie', 'home')) }}"
 # - someone is leaving the other in a zone
   - condition: template
-    value_template: "{{ not (trigger.to_state.state == 'not_home' and trigger.from_state.state in [states.device_tracker.mp_s9.state, states.device_tracker.jc_iphone.state]) }}"
+    value_template: "{{ not (trigger.to_state.state == 'not_home' and trigger.from_state.state == states.device_tracker.mp_s9.state and trigger.from_state.state == states.device_tracker.jc_iphone.state) }}"
 # - someone is joining the other at home
   - condition: template
     value_template: "{{ not (trigger.to_state.state == 'home' and states.device_tracker.mp_s9.state == states.device_tracker.jc_iphone.state) }}"

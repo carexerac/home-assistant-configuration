@@ -37,9 +37,6 @@ map:
 
 # WebServer
 http:
-  # Uncomment this to add a password (recommended!)
-#  api_password: !secret http_password
-  # Uncomment this if you are using SSL or running in Docker etc
   base_url: !secret http_base_url
   server_port: !secret http_server_port
   ssl_certificate: !secret http_ssl_certificate
@@ -63,7 +60,6 @@ lovelace:
 # MQTT Broker
 mqtt:
   broker: localhost
-#  client_id: home-assistant
   username: !secret mqtt_user
   password: !secret mqtt_password
   discovery: true
@@ -84,38 +80,37 @@ emulated_hue:
 # Misc
 sun:
 media_extractor:
+python_script:
 
 # IFTTT service
 ifttt:
   key: !secret ifttt_key
 
-sensor: !include sensor.yaml
+alarm_control_panel: !include alarm_control_panel.yaml
+automation: !include_dir_list automation/
 binary_sensor: !include binary_sensor.yaml
 camera: !include camera.yaml
-device_tracker: !include device_tracker.yaml
-switch: !include switch.yaml
-light: !include light.yaml
-remote: !include remote.yaml
-media_player: !include media_player.yaml
 cast: !include cast.yaml
-scene: !include scene.yaml
 climate: !include climate.yaml
-#weather: !include weather.yaml
-zone: !include zone.yaml
-group: !include_dir_named group/
-notify: !include notify.yaml
-automation: !include_dir_list automation/
-script: !include script.yaml
-alarm_control_panel: !include alarm_control_panel.yaml
-telegram_bot: !include telegram_bot.yaml
+device_tracker: !include device_tracker.yaml
 google_assistant: !include google_assistant.yaml
-googlehome: !include googlehome.yaml
-#logi_circle: !include logi_circle.yaml
-#xiaomi_aqara: !include xiaomi_aqara.yaml
-vacuum: !include vacuum.yaml
-panel_iframe: !include panel_iframe.yaml
-owntracks: !include owntracks.yaml
-plant: !include plant.yaml
+group: !include_dir_named group/
 input_boolean: !include input_boolean.yaml
+light: !include light.yaml
+# logi_circle: !include logi_circle.yaml
+media_player: !include media_player.yaml
+notify: !include notify.yaml
+owntracks: !include owntracks.yaml
+panel_iframe: !include panel_iframe.yaml
+plant: !include plant.yaml
+remote: !include remote.yaml
+scene: !include scene.yaml
+script: !include script.yaml
+sensor: !include sensor.yaml
+switch: !include switch.yaml
+telegram_bot: !include telegram_bot.yaml
 timer: !include timer.yaml
+vacuum: !include vacuum.yaml
+# weather: !include weather.yaml
 yeelight: !include yeelight.yaml
+zone: !include zone.yaml

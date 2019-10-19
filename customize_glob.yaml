@@ -11,7 +11,7 @@
   friendly_name: "Illuminance"
   icon: mdi:white-balance-sunny
 
-### Homebridge ###
+# Homebridge
 "light.*":
   homebridge_visible: true
 "switch.tv":

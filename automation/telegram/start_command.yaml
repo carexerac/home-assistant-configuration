@@ -15,6 +15,5 @@ action:
         {{ '\tArm the alarm : /arm\n' }}
         {{ '\tDisarm the alarm : /disarm\n' }}
         {{ '\tLocate someone : /location {mp|jc}\n' }}
-        {{ '\Get car location : /car\n' }}
         {{ '\tSpeak through Google Home : {message}\n' }}
       disable_notification: true

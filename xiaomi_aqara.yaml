@@ -1,2 +1,0 @@
-gateways:
-  - key: !secret xiaomi_gateway_password

@@ -1,7 +1,0 @@
-devices:
-  - host: !secret google_home_host
-    track_alarms: true
-    track_devices: false
-  - host: !secret google_home_mini_host
-    track_alarms: false
-    track_devices: false

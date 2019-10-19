@@ -1,0 +1,18 @@
+alias: "Set GPS to home when arriving"
+trigger:
+  platform: state
+  entity_id: group.matthieu, group.julie
+  to: 'home'
+condition:
+  # and user's GPS is not reaching home
+  - condition: template
+    value_template: "{{ not is_state(closest(trigger.from_state.entity_id).entity_id,'home') }}"
+action:
+  - service: python_script.set_state
+    data_template:
+      entity_id: '{{ closest(trigger.from_state.entity_id).entity_id }}'
+      state: home
+      latitude: '{{states.zone.home.attributes.latitude}}'
+      longitude: '{{states.zone.home.attributes.longitude}}'
+      gps_accuracy: 100
+      source_type: automation

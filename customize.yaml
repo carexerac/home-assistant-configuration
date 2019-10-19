@@ -24,6 +24,7 @@ media_player.enceintes:
   icon: mdi:speaker-multiple
 media_player.television:
   icon: mdi:television
+#  device_class: tv
 media_player.chromecast:
   friendly_name: "Chromecast"
   icon: mdi:google-chrome

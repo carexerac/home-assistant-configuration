@@ -17,8 +17,3 @@
 #  interval_seconds : 30
 #  track_new_devices: true
 
-#- platform: googlehome
-#  host: !secret google_home_host
-
-#- platform: googlehome
-#  host: !secret google_home_mini_host

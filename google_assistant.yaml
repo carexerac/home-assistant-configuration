@@ -7,16 +7,16 @@ entity_config:
     room: Chambre
     expose: true
     aliases:
-      - Lape de chevet
       - Lit
+      - Lampe de chevet
   light.living_room_ceiling:
     name: Lustre salon
     room: Salon
-    expose: true
+    expose: false
   light.dining_room_ceiling:
     name: Lustre séjour
     room: Séjour
-    expose: true
+    expose: false
     aliases:
       - Table
       - Salle à manger
@@ -25,31 +25,10 @@ entity_config:
     room: Salon
     expose: true
     aliases:
+      - Canapé
       - Bandeau lumineux
       - Bande lumineuse
       - Bande
-      - Canapé
-  light.gateway_light_f0b429cc58ea:
-    name: Lobby
-    room: Entrée
-    expose: true
-    aliases:
-      - Lumière de l'entrée
-      - Lumière d'entrée
-      - Lampe de l'entrée
-      - Lampe d'entrée
-  switch.chromecast:
-    name: Console
-    room: Salon
-    expose: true
-    aliases:
-      - Console de jeu
-      - Nintendo Switch
-      - Switch
-  switch.sound:
-    name: Son
-    room: Scripts
-    expose: true
   media_player.television:
     name: TV
     room: Salon
@@ -57,13 +36,15 @@ entity_config:
     aliases:
       - Télévision
       - Télé
-  climate.living_room:
-    name: Chauffage
+  switch.sound:
+    name: Son
+    room: Scripts
+    expose: true
+  sensor.0x00158d0001a35a71_temperature:
+    name: Température salon
     room: Salon
     expose: true
-    aliases:
-      - Radiateur
-  climate.bathroom:
+  sensor.0x00158d0001a23103_temperature:
     name: Température salle de bain
     room: Salle de bain
     expose: true
@@ -74,11 +55,3 @@ entity_config:
     aliases:
       - Aspirateur
       - Robot
-  scene.movie_time:
-    name: Movie time
-    room: Scripts
-    expose: true
-  scene.good_night:
-    name: Good night
-    room: Scripts
-    expose: true

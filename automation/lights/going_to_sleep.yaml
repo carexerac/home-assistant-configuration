@@ -1,0 +1,31 @@
+alias: "Toggle bedroom light when going to bed"
+# Scenario is:
+# - tv has been turned off
+# - someone is going to bed (trigger the motion sensor)
+# - turn the bedroom light on
+trigger:
+  platform: state
+  entity_id: binary_sensor.0x00158d00016dad0e_occupancy
+  from: "off"
+  to: "on"
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '21:30:00'
+      before: '23:59:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: state
+      entity_id: media_player.television
+      state: "off"
+    - condition: template
+      value_template: "{{ (as_timestamp(now()) - as_timestamp(states.media_player.television.last_changed)) < 300 }}"
+action:
+  - service: light.turn_on
+    data:
+      entity_id: group.bedroom

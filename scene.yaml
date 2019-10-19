@@ -9,12 +9,12 @@
       effect: Stop
       color_name: white
       brightness_pct: 100
-    switch.chromecast:
+    media_player.television:
       state: on
 
 - name: Good night
   entities:
-    switch.chromecast:
+    media_player.television:
       state: off
     light.living_room_ceiling:
       state: off
@@ -22,5 +22,5 @@
       state: off
     light.yeelight_strip:
       state: off
-    light.mp_bed_light:
+    light.bedlight_julie:
       state: on
