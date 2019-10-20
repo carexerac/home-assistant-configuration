@@ -110,6 +110,7 @@ sensor: !include sensor.yaml
 switch: !include switch.yaml
 telegram_bot: !include telegram_bot.yaml
 timer: !include timer.yaml
+tts: !include tts.yaml
 vacuum: !include vacuum.yaml
 # weather: !include weather.yaml
 yeelight: !include yeelight.yaml

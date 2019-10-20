@@ -12,7 +12,7 @@ condition:
     value_template: "{{ not (is_state('group.matthieu', 'home') and is_state('group.julie', 'home')) }}"
 # - someone is leaving the other in a zone
   - condition: template
-    value_template: "{{ not (trigger.to_state.state == 'not_home' and trigger.from_state.state == states.device_tracker.mp_s9.state and trigger.from_state.state == states.device_tracker.jc_iphone.state) }}"
+    value_template: "{{ trigger.from_state.state != 'not_home' and (('jc' in trigger.from_state.entity_id and trigger.from_state.state == states.device_tracker.mp_s9.state) or ('mp' in trigger.from_state.entity_id and trigger.from_state.state == states.device_tracker.jc_iphone.state)) }}"
 # - someone is joining the other at home
   - condition: template
     value_template: "{{ not (trigger.to_state.state == 'home' and states.device_tracker.mp_s9.state == states.device_tracker.jc_iphone.state) }}"

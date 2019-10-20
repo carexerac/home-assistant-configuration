@@ -24,6 +24,7 @@ action:
         - !secret telegram_jc_chat_id
       inline_keyboard:
         - "Disarm:/disarm"
-#  - service: notify.google_assistant
-#    data:
-#      message: "Alerte ! Un intrus est arrivé. Déclenchement immédiat des appels auprès des services de sécurité et démarrage de la séquence d'enregistrement vidéo."
+  - service: tts.google_translate_say
+    entity_id: 'all'
+    data:
+      message: "Alerte ! Un intrus est arrivé. Déclenchement immédiat des appels auprès des services de sécurité et démarrage de la séquence d'enregistrement vidéo."

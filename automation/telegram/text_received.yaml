@@ -5,7 +5,8 @@ trigger:
   platform: event
   event_type: telegram_text
 action:
-  - service: notify.google_assistant
+  - service: tts.google_translate_say
+    entity_id: 'all'
     data_template:
       message: >
         {{ trigger.event.data["from_first"] }} {{ [
@@ -22,8 +23,11 @@ action:
           'Yes master',
           'Of course',
           'Sure thing',
+          'Sending that right away !',
           'You know you can open your mouth right ?',
           'You owe me a flavor',
-          'Here we go again...'
+          'Here we go again...',
+          'You really need to socialize with people',
+          'One day, **I** will be the one telling you to tell something'
         ]|random }}
       disable_notification: true

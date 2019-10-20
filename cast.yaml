@@ -1,5 +1,6 @@
 media_player:
   - host: !secret google_home_host
-  - host: !secret google_home_mini_host
+  - host: !secret google_home_mini_black_host
+  - host: !secret google_home_mini_white_host
   - host: !secret chromecast_host
   - host: !secret chromecast_audio_host
