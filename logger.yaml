@@ -32,3 +32,5 @@ logs:
   homeassistant.components.climate: debug
   homeassistant.components.google_assistant: debug
   homeassistant.components.linky: debug
+  homeassistant.components.media_player: debug
+  custom_components.nabaztag: debug

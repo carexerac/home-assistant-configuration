@@ -17,7 +17,7 @@ cards:
     image: /local/rooms/dining_room.jpg
     entities:
       - vacuum.xiaomi_mi_robot
-      - media_player.google_home
+      - media_player.nabaztag
     entity: group.dining_room
   - type: picture-glance
     title: Office

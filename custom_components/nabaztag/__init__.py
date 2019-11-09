@@ -1,0 +1,1 @@
+"""The Nabaztag sensor integration."""

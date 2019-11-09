@@ -34,3 +34,6 @@
   attributes:
     state: remote.harmony_hub
     is_volume_muted: false
+
+- platform: nabaztag
+  host: !secret nabaztag_host

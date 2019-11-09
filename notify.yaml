@@ -11,7 +11,3 @@
 - name: telegram_jc
   platform: telegram
   chat_id: !secret telegram_jc_chat_id
-
-- name: Google Assistant
-  platform: rest
-  resource: !secret ga_broadcast

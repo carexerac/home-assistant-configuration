@@ -28,6 +28,8 @@ media_player.television:
 media_player.chromecast:
   friendly_name: "Chromecast"
   icon: mdi:google-chrome
+media_player.nabaztag:
+  icon: mdi:rabbit
 
 # lights
 light.bedlight_julie:

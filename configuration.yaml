@@ -42,9 +42,6 @@ http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
 
-# Checks for available updates
-updater:
-
 # Discover some devices automatically
 #discovery:
 
@@ -105,7 +102,7 @@ panel_iframe: !include panel_iframe.yaml
 plant: !include plant.yaml
 remote: !include remote.yaml
 scene: !include scene.yaml
-script: !include script.yaml
+script: !include_dir_named script/
 sensor: !include sensor.yaml
 switch: !include switch.yaml
 telegram_bot: !include telegram_bot.yaml
