@@ -1,7 +1,7 @@
 alias: "Someone is moving"
 trigger:
   platform: state
-  entity_id: device_tracker.mp_s9, device_tracker.jc_iphone
+  entity_id: device_tracker.jc_iphone
 condition:
 # don't send a notification if
 # - someone is not moving
@@ -12,10 +12,10 @@ condition:
     value_template: "{{ not (is_state('group.matthieu', 'home') and is_state('group.julie', 'home')) }}"
 # - someone is leaving the other in a zone
   - condition: template
-    value_template: "{{ trigger.from_state.state != 'not_home' and (('jc' in trigger.from_state.entity_id and trigger.from_state.state == states.device_tracker.mp_s9.state) or ('mp' in trigger.from_state.entity_id and trigger.from_state.state == states.device_tracker.jc_iphone.state)) }}"
+    value_template: "{{ not (trigger.from_state.state != 'not_home' and (('jc' in trigger.to_state.entity_id and is_state('device_tracker.mp_s9', trigger.from_state.state)) or ('mp' in trigger.to_state.entity_id and is_state('device_tracker.jc_iphone', trigger.from_state.state)))) }}"
 # - someone is joining the other at home
   - condition: template
-    value_template: "{{ not (trigger.to_state.state == 'home' and states.device_tracker.mp_s9.state == states.device_tracker.jc_iphone.state) }}"
+    value_template: "{{ not (trigger.to_state.state == 'home' and is_state('device_tracker.mp_s9.state', states.device_tracker.jc_iphone.state)) }}"
 action:
   - service_template: >
       {% if 'mp' in trigger.to_state.entity_id %}
