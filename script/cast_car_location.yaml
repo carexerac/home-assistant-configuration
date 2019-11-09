@@ -1,0 +1,7 @@
+alias: Cast car location
+sequence:
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.chromecast
+      media_content_id: "https://www.mapquestapi.com/staticmap/v4/getplacemap?key={{states.sensor.mapquest_api_key.state}}&location={{states.device_tracker.ford_fiesta.attributes.latitude}},{{states.device_tracker.ford_fiesta.attributes.longitude}}&size=1280,720&type=map&zoom=17&imagetype=png&scalebar=false&showicon=blue-C"
+      media_content_type: image/png

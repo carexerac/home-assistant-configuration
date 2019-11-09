@@ -1,0 +1,9 @@
+alias: Turn on a light for a limited period of time
+sequence:
+  - service: light.turn_on
+    data_template:
+      entity_id: '{{ entity_id }}'
+  - delay: '{{ delay }}'
+  - service: light.turn_off
+    data_template:
+      entity_id: '{{ entity_id }}'

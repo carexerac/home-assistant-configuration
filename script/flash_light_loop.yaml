@@ -1,0 +1,7 @@
+alias: Flash light loop
+sequence:
+  - delay:
+      milliseconds: 200
+  - service: script.flash_light
+    data_template:
+      light_entity_id: '{{ light_entity_id }}'

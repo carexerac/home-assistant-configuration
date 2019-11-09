@@ -1,0 +1,47 @@
+alias: Party time
+sequence:
+  - service: light.turn_on
+    entity_id: light.ambient_yeelight
+    data:
+      effect: "Strobe color"
+      brightness_pct: 100
+  - service: light.turn_off
+    entity_id: light.dining_room_ceiling
+  - service: light.turn_on
+    entity_id: light.living_room_ceiling
+  - delay:
+      milliseconds: 500
+  - service: light.turn_on
+    entity_id: light.dining_room_ceiling
+  - service: light.turn_off
+    entity_id: light.living_room_ceiling
+  - delay:
+      milliseconds: 500
+  - service: light.turn_on
+    entity_id: light.dining_room_ceiling
+  - service: light.turn_on
+    entity_id: light.living_room_ceiling
+  - delay:
+      milliseconds: 500
+  - service: light.turn_off
+    entity_id: light.dining_room_ceiling
+  - service: light.turn_off
+    entity_id: light.living_room_ceiling
+  - service: light.turn_on
+    entity_id: light.ambient_yeelight
+    data:
+      # effect: "Slowdown"
+      effect: "Disco"
+      brightness_pct: 100
+  - service: light.turn_on
+    entity_id: light.yeelight_guinea_pig
+    data:
+      # effect: "Slowdown"
+      effect: "Disco"
+      brightness_pct: 100
+  - service: light.turn_on
+    entity_id: light.sofa_yeelight_strip
+    data:
+      # effect: "Slowdown"
+      effect: "Disco"
+      brightness_pct: 100
