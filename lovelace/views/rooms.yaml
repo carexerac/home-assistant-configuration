@@ -10,7 +10,7 @@ cards:
       - light.yeelight_strip
       - media_player.television
       - sensor.0x00158d0001a35a71_temperature
-      - plant.yuka
+      - media_player.google_home
     entity: group.living_room
   - type: picture-glance
     title: Dining room
@@ -34,6 +34,7 @@ cards:
       - media_player.chromecast
       - light.bedlight_julie
       - switch.smart_power_socket
+      - plant.yuka
   - type: horizontal-stack
     cards:
       - type: picture-glance

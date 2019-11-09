@@ -6,7 +6,7 @@ entities:
   - light.yeelight_strip
   - media_player.television
   - media_player.enceintes
+  - media_player.google_home
   - sensor.0x00158d0001a35a71_temperature
   - sensor.0x00158d0001a35a71_humidity
   - sensor.0x00158d0001a35a71_pressure
-  - plant.yuka

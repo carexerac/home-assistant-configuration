@@ -30,10 +30,6 @@
   value_template: "{{ value_json.SI7021.Humidity }}"
   unit_of_measurement: "%"
 
-- platform: miflora
-  mac: C4:7C:8D:6A:75:6E
-  name: Flora
-
 - platform: twitch
   client_id: !secret twitch_client_id
   channels:
@@ -75,14 +71,3 @@
   name: Bridge state
   state_topic: "zigbee2mqtt/bridge/state"
   icon: mdi:router-wireless
-
-- platform: rest
-  resource: http://192.168.254.235/api/map/latest
-  name: xiaomi_map
-  json_attributes:
-    - image
-    - path
-    - charger
-    - robot
-  value_template: 'OK'
-  scan_interval: 5
